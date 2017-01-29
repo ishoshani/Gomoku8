@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    // commenting something. This is to test commit and push changes with ADS
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
