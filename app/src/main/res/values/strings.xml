@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Gomoku8</string>
+    <string name="action_about">About</string>
     <string name="action_settings">Settings</string>
 </resources>
