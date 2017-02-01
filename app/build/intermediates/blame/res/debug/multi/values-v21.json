@@ -26,9 +26,9 @@
                     "startLine": 3,
                     "startColumn": 4,
                     "startOffset": 124,
-                    "endLine": 8,
+                    "endLine": 9,
                     "endColumn": 12,
-                    "endOffset": 420
+                    "endOffset": 422
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/res/values-v21/styles.xml",
@@ -36,19 +36,19 @@
                         "startLine": 2,
                         "startColumn": 4,
                         "startOffset": 18,
-                        "endLine": 7,
+                        "endLine": 8,
                         "endColumn": 12,
-                        "endOffset": 314
+                        "endOffset": 316
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 9,
+                    "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 425,
+                    "startOffset": 427,
                     "endColumn": 90,
-                    "endOffset": 511
+                    "endOffset": 513
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -63,11 +63,11 @@
             },
             {
                 "to": {
-                    "startLine": 10,
+                    "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 516,
+                    "startOffset": 518,
                     "endColumn": 102,
-                    "endOffset": 614
+                    "endOffset": 616
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -82,11 +82,11 @@
             },
             {
                 "to": {
-                    "startLine": 11,
+                    "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 619,
+                    "startOffset": 621,
                     "endColumn": 102,
-                    "endOffset": 717
+                    "endOffset": 719
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -101,11 +101,11 @@
             },
             {
                 "to": {
-                    "startLine": 12,
+                    "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 722,
+                    "startOffset": 724,
                     "endColumn": 104,
-                    "endOffset": 822
+                    "endOffset": 824
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -120,11 +120,11 @@
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 827,
+                    "startOffset": 829,
                     "endColumn": 106,
-                    "endOffset": 929
+                    "endOffset": 931
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -139,11 +139,11 @@
             },
             {
                 "to": {
-                    "startLine": 14,
+                    "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 934,
+                    "startOffset": 936,
                     "endColumn": 108,
-                    "endOffset": 1038
+                    "endOffset": 1040
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -158,11 +158,11 @@
             },
             {
                 "to": {
-                    "startLine": 15,
+                    "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1043,
+                    "startOffset": 1045,
                     "endColumn": 108,
-                    "endOffset": 1147
+                    "endOffset": 1149
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -177,11 +177,11 @@
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1152,
+                    "startOffset": 1154,
                     "endColumn": 108,
-                    "endOffset": 1256
+                    "endOffset": 1258
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -196,11 +196,11 @@
             },
             {
                 "to": {
-                    "startLine": 17,
+                    "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1261,
+                    "startOffset": 1263,
                     "endColumn": 108,
-                    "endOffset": 1365
+                    "endOffset": 1367
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -215,11 +215,11 @@
             },
             {
                 "to": {
-                    "startLine": 18,
+                    "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1370,
+                    "startOffset": 1372,
                     "endColumn": 108,
-                    "endOffset": 1474
+                    "endOffset": 1476
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -234,11 +234,11 @@
             },
             {
                 "to": {
-                    "startLine": 19,
+                    "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1479,
+                    "startOffset": 1481,
                     "endColumn": 106,
-                    "endOffset": 1581
+                    "endOffset": 1583
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -253,11 +253,11 @@
             },
             {
                 "to": {
-                    "startLine": 20,
+                    "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 1586,
+                    "startOffset": 1588,
                     "endColumn": 102,
-                    "endOffset": 1684
+                    "endOffset": 1686
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -272,11 +272,11 @@
             },
             {
                 "to": {
-                    "startLine": 21,
+                    "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 1689,
+                    "startOffset": 1691,
                     "endColumn": 118,
-                    "endOffset": 1803
+                    "endOffset": 1805
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -291,12 +291,12 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 1808,
-                    "endLine": 23,
+                    "startOffset": 1810,
+                    "endLine": 24,
                     "endColumn": 12,
-                    "endOffset": 1958
+                    "endOffset": 1960
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -312,12 +312,12 @@
             },
             {
                 "to": {
-                    "startLine": 24,
+                    "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 1963,
-                    "endLine": 25,
+                    "startOffset": 1965,
+                    "endLine": 26,
                     "endColumn": 12,
-                    "endOffset": 2113
+                    "endOffset": 2115
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -333,11 +333,11 @@
             },
             {
                 "to": {
-                    "startLine": 26,
+                    "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 2118,
+                    "startOffset": 2120,
                     "endColumn": 104,
-                    "endOffset": 2218
+                    "endOffset": 2220
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -352,11 +352,11 @@
             },
             {
                 "to": {
-                    "startLine": 27,
+                    "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 2223,
+                    "startOffset": 2225,
                     "endColumn": 120,
-                    "endOffset": 2339
+                    "endOffset": 2341
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -371,11 +371,11 @@
             },
             {
                 "to": {
-                    "startLine": 28,
+                    "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 2344,
+                    "startOffset": 2346,
                     "endColumn": 100,
-                    "endOffset": 2440
+                    "endOffset": 2442
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -390,12 +390,12 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 30,
                     "startColumn": 4,
-                    "startOffset": 2445,
-                    "endLine": 30,
+                    "startOffset": 2447,
+                    "endLine": 31,
                     "endColumn": 12,
-                    "endOffset": 2587
+                    "endOffset": 2589
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -411,12 +411,12 @@
             },
             {
                 "to": {
-                    "startLine": 31,
+                    "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 2592,
-                    "endLine": 32,
+                    "startOffset": 2594,
+                    "endLine": 33,
                     "endColumn": 12,
-                    "endOffset": 2728
+                    "endOffset": 2730
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -432,11 +432,11 @@
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 2733,
+                    "startOffset": 2735,
                     "endColumn": 102,
-                    "endOffset": 2831
+                    "endOffset": 2833
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -451,11 +451,11 @@
             },
             {
                 "to": {
-                    "startLine": 34,
+                    "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 2836,
+                    "startOffset": 2838,
                     "endColumn": 118,
-                    "endOffset": 2950
+                    "endOffset": 2952
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -470,11 +470,11 @@
             },
             {
                 "to": {
-                    "startLine": 35,
+                    "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 2955,
+                    "startOffset": 2957,
                     "endColumn": 106,
-                    "endOffset": 3057
+                    "endOffset": 3059
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -489,11 +489,11 @@
             },
             {
                 "to": {
-                    "startLine": 36,
+                    "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 3062,
+                    "startOffset": 3064,
                     "endColumn": 102,
-                    "endOffset": 3160
+                    "endOffset": 3162
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -508,12 +508,12 @@
             },
             {
                 "to": {
-                    "startLine": 37,
+                    "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 3165,
-                    "endLine": 38,
+                    "startOffset": 3167,
+                    "endLine": 39,
                     "endColumn": 12,
-                    "endOffset": 3307
+                    "endOffset": 3309
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -529,12 +529,12 @@
             },
             {
                 "to": {
-                    "startLine": 39,
+                    "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 3312,
-                    "endLine": 40,
+                    "startOffset": 3314,
+                    "endLine": 41,
                     "endColumn": 12,
-                    "endOffset": 3462
+                    "endOffset": 3464
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -550,12 +550,12 @@
             },
             {
                 "to": {
-                    "startLine": 41,
+                    "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 3467,
-                    "endLine": 42,
+                    "startOffset": 3469,
+                    "endLine": 43,
                     "endColumn": 12,
-                    "endOffset": 3633
+                    "endOffset": 3635
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -571,12 +571,12 @@
             },
             {
                 "to": {
-                    "startLine": 43,
+                    "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 3638,
-                    "endLine": 44,
+                    "startOffset": 3640,
+                    "endLine": 45,
                     "endColumn": 12,
-                    "endOffset": 3782
+                    "endOffset": 3784
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -592,12 +592,12 @@
             },
             {
                 "to": {
-                    "startLine": 45,
+                    "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 3787,
-                    "endLine": 46,
+                    "startOffset": 3789,
+                    "endLine": 47,
                     "endColumn": 12,
-                    "endOffset": 3947
+                    "endOffset": 3949
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -613,12 +613,12 @@
             },
             {
                 "to": {
-                    "startLine": 47,
+                    "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 3952,
-                    "endLine": 48,
+                    "startOffset": 3954,
+                    "endLine": 49,
                     "endColumn": 12,
-                    "endOffset": 4104
+                    "endOffset": 4106
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -634,12 +634,12 @@
             },
             {
                 "to": {
-                    "startLine": 49,
+                    "startLine": 50,
                     "startColumn": 4,
-                    "startOffset": 4109,
-                    "endLine": 50,
+                    "startOffset": 4111,
+                    "endLine": 51,
                     "endColumn": 12,
-                    "endOffset": 4255
+                    "endOffset": 4257
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -655,11 +655,11 @@
             },
             {
                 "to": {
-                    "startLine": 51,
+                    "startLine": 52,
                     "startColumn": 4,
-                    "startOffset": 4260,
+                    "startOffset": 4262,
                     "endColumn": 118,
-                    "endOffset": 4374
+                    "endOffset": 4376
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -674,12 +674,12 @@
             },
             {
                 "to": {
-                    "startLine": 52,
+                    "startLine": 53,
                     "startColumn": 4,
-                    "startOffset": 4379,
-                    "endLine": 53,
+                    "startOffset": 4381,
+                    "endLine": 54,
                     "endColumn": 12,
-                    "endOffset": 4523
+                    "endOffset": 4525
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -695,12 +695,12 @@
             },
             {
                 "to": {
-                    "startLine": 54,
+                    "startLine": 55,
                     "startColumn": 4,
-                    "startOffset": 4528,
-                    "endLine": 55,
+                    "startOffset": 4530,
+                    "endLine": 56,
                     "endColumn": 12,
-                    "endOffset": 4672
+                    "endOffset": 4674
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -716,11 +716,11 @@
             },
             {
                 "to": {
-                    "startLine": 56,
+                    "startLine": 57,
                     "startColumn": 4,
-                    "startOffset": 4677,
+                    "startOffset": 4679,
                     "endColumn": 111,
-                    "endOffset": 4784
+                    "endOffset": 4786
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -735,11 +735,11 @@
             },
             {
                 "to": {
-                    "startLine": 57,
+                    "startLine": 58,
                     "startColumn": 4,
-                    "startOffset": 4789,
+                    "startOffset": 4791,
                     "endColumn": 146,
-                    "endOffset": 4931
+                    "endOffset": 4933
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -754,12 +754,12 @@
             },
             {
                 "to": {
-                    "startLine": 58,
+                    "startLine": 59,
                     "startColumn": 4,
-                    "startOffset": 4936,
-                    "endLine": 59,
+                    "startOffset": 4938,
+                    "endLine": 60,
                     "endColumn": 12,
-                    "endOffset": 5084
+                    "endOffset": 5086
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -775,12 +775,12 @@
             },
             {
                 "to": {
-                    "startLine": 60,
+                    "startLine": 61,
                     "startColumn": 4,
-                    "startOffset": 5089,
-                    "endLine": 61,
+                    "startOffset": 5091,
+                    "endLine": 62,
                     "endColumn": 12,
-                    "endOffset": 5231
+                    "endOffset": 5233
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -796,11 +796,11 @@
             },
             {
                 "to": {
-                    "startLine": 62,
+                    "startLine": 63,
                     "startColumn": 4,
-                    "startOffset": 5236,
+                    "startOffset": 5238,
                     "endColumn": 74,
-                    "endOffset": 5306
+                    "endOffset": 5308
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -815,11 +815,11 @@
             },
             {
                 "to": {
-                    "startLine": 63,
+                    "startLine": 64,
                     "startColumn": 4,
-                    "startOffset": 5311,
+                    "startOffset": 5313,
                     "endColumn": 88,
-                    "endOffset": 5395
+                    "endOffset": 5397
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -834,11 +834,11 @@
             },
             {
                 "to": {
-                    "startLine": 64,
+                    "startLine": 65,
                     "startColumn": 4,
-                    "startOffset": 5400,
+                    "startOffset": 5402,
                     "endColumn": 86,
-                    "endOffset": 5482
+                    "endOffset": 5484
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -853,11 +853,11 @@
             },
             {
                 "to": {
-                    "startLine": 65,
+                    "startLine": 66,
                     "startColumn": 4,
-                    "startOffset": 5487,
+                    "startOffset": 5489,
                     "endColumn": 100,
-                    "endOffset": 5583
+                    "endOffset": 5585
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -872,12 +872,12 @@
             },
             {
                 "to": {
-                    "startLine": 66,
+                    "startLine": 67,
                     "startColumn": 4,
-                    "startOffset": 5588,
-                    "endLine": 109,
+                    "startOffset": 5590,
+                    "endLine": 110,
                     "endColumn": 12,
-                    "endOffset": 8651
+                    "endOffset": 8653
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -893,12 +893,12 @@
             },
             {
                 "to": {
-                    "startLine": 110,
+                    "startLine": 111,
                     "startColumn": 4,
-                    "startOffset": 8656,
-                    "endLine": 112,
+                    "startOffset": 8658,
+                    "endLine": 113,
                     "endColumn": 12,
-                    "endOffset": 8837
+                    "endOffset": 8839
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -914,12 +914,12 @@
             },
             {
                 "to": {
-                    "startLine": 113,
+                    "startLine": 114,
                     "startColumn": 4,
-                    "startOffset": 8842,
-                    "endLine": 156,
+                    "startOffset": 8844,
+                    "endLine": 157,
                     "endColumn": 12,
-                    "endOffset": 11917
+                    "endOffset": 11919
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -935,12 +935,12 @@
             },
             {
                 "to": {
-                    "startLine": 157,
+                    "startLine": 158,
                     "startColumn": 4,
-                    "startOffset": 11922,
-                    "endLine": 159,
+                    "startOffset": 11924,
+                    "endLine": 160,
                     "endColumn": 12,
-                    "endOffset": 12115
+                    "endOffset": 12117
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -956,12 +956,12 @@
             },
             {
                 "to": {
-                    "startLine": 160,
+                    "startLine": 161,
                     "startColumn": 4,
-                    "startOffset": 12120,
-                    "endLine": 161,
+                    "startOffset": 12122,
+                    "endLine": 162,
                     "endColumn": 12,
-                    "endOffset": 12238
+                    "endOffset": 12240
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -977,12 +977,12 @@
             },
             {
                 "to": {
-                    "startLine": 162,
+                    "startLine": 163,
                     "startColumn": 4,
-                    "startOffset": 12243,
-                    "endLine": 163,
+                    "startOffset": 12245,
+                    "endLine": 164,
                     "endColumn": 12,
-                    "endOffset": 12361
+                    "endOffset": 12363
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -998,12 +998,12 @@
             },
             {
                 "to": {
-                    "startLine": 164,
+                    "startLine": 165,
                     "startColumn": 4,
-                    "startOffset": 12366,
-                    "endLine": 165,
+                    "startOffset": 12368,
+                    "endLine": 166,
                     "endColumn": 12,
-                    "endOffset": 12474
+                    "endOffset": 12476
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1019,12 +1019,12 @@
             },
             {
                 "to": {
-                    "startLine": 166,
+                    "startLine": 167,
                     "startColumn": 4,
-                    "startOffset": 12479,
-                    "endLine": 168,
+                    "startOffset": 12481,
+                    "endLine": 169,
                     "endColumn": 12,
-                    "endOffset": 12657
+                    "endOffset": 12659
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1040,12 +1040,12 @@
             },
             {
                 "to": {
-                    "startLine": 169,
+                    "startLine": 170,
                     "startColumn": 4,
-                    "startOffset": 12662,
-                    "endLine": 170,
+                    "startOffset": 12664,
+                    "endLine": 171,
                     "endColumn": 12,
-                    "endOffset": 12788
+                    "endOffset": 12790
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1061,12 +1061,12 @@
             },
             {
                 "to": {
-                    "startLine": 171,
+                    "startLine": 172,
                     "startColumn": 4,
-                    "startOffset": 12793,
-                    "endLine": 173,
+                    "startOffset": 12795,
+                    "endLine": 174,
                     "endColumn": 12,
-                    "endOffset": 12989
+                    "endOffset": 12991
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1082,11 +1082,11 @@
             },
             {
                 "to": {
-                    "startLine": 174,
+                    "startLine": 175,
                     "startColumn": 4,
-                    "startOffset": 12994,
+                    "startOffset": 12996,
                     "endColumn": 88,
-                    "endOffset": 13078
+                    "endOffset": 13080
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1101,11 +1101,11 @@
             },
             {
                 "to": {
-                    "startLine": 175,
+                    "startLine": 176,
                     "startColumn": 4,
-                    "startOffset": 13083,
+                    "startOffset": 13085,
                     "endColumn": 110,
-                    "endOffset": 13189
+                    "endOffset": 13191
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1120,11 +1120,11 @@
             },
             {
                 "to": {
-                    "startLine": 176,
+                    "startLine": 177,
                     "startColumn": 4,
-                    "startOffset": 13194,
+                    "startOffset": 13196,
                     "endColumn": 126,
-                    "endOffset": 13316
+                    "endOffset": 13318
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1139,11 +1139,11 @@
             },
             {
                 "to": {
-                    "startLine": 177,
+                    "startLine": 178,
                     "startColumn": 4,
-                    "startOffset": 13321,
+                    "startOffset": 13323,
                     "endColumn": 100,
-                    "endOffset": 13417
+                    "endOffset": 13419
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1158,11 +1158,11 @@
             },
             {
                 "to": {
-                    "startLine": 178,
+                    "startLine": 179,
                     "startColumn": 4,
-                    "startOffset": 13422,
+                    "startOffset": 13424,
                     "endColumn": 94,
-                    "endOffset": 13512
+                    "endOffset": 13514
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1177,11 +1177,11 @@
             },
             {
                 "to": {
-                    "startLine": 179,
+                    "startLine": 180,
                     "startColumn": 4,
-                    "startOffset": 13517,
+                    "startOffset": 13519,
                     "endColumn": 122,
-                    "endOffset": 13635
+                    "endOffset": 13637
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1196,11 +1196,11 @@
             },
             {
                 "to": {
-                    "startLine": 180,
+                    "startLine": 181,
                     "startColumn": 4,
-                    "startOffset": 13640,
+                    "startOffset": 13642,
                     "endColumn": 128,
-                    "endOffset": 13764
+                    "endOffset": 13766
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1215,11 +1215,11 @@
             },
             {
                 "to": {
-                    "startLine": 181,
+                    "startLine": 182,
                     "startColumn": 4,
-                    "startOffset": 13769,
+                    "startOffset": 13771,
                     "endColumn": 116,
-                    "endOffset": 13881
+                    "endOffset": 13883
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1234,12 +1234,12 @@
             },
             {
                 "to": {
-                    "startLine": 182,
+                    "startLine": 183,
                     "startColumn": 4,
-                    "startOffset": 13886,
-                    "endLine": 184,
+                    "startOffset": 13888,
+                    "endLine": 185,
                     "endColumn": 12,
-                    "endOffset": 14058
+                    "endOffset": 14060
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1255,11 +1255,11 @@
             },
             {
                 "to": {
-                    "startLine": 185,
+                    "startLine": 186,
                     "startColumn": 4,
-                    "startOffset": 14063,
+                    "startOffset": 14065,
                     "endColumn": 98,
-                    "endOffset": 14157
+                    "endOffset": 14159
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1274,12 +1274,12 @@
             },
             {
                 "to": {
-                    "startLine": 186,
+                    "startLine": 187,
                     "startColumn": 4,
-                    "startOffset": 14162,
-                    "endLine": 187,
+                    "startOffset": 14164,
+                    "endLine": 188,
                     "endColumn": 12,
-                    "endOffset": 14292
+                    "endOffset": 14294
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1295,12 +1295,12 @@
             },
             {
                 "to": {
-                    "startLine": 188,
+                    "startLine": 189,
                     "startColumn": 4,
-                    "startOffset": 14297,
-                    "endLine": 189,
+                    "startOffset": 14299,
+                    "endLine": 190,
                     "endColumn": 12,
-                    "endOffset": 14435
+                    "endOffset": 14437
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1316,12 +1316,12 @@
             },
             {
                 "to": {
-                    "startLine": 190,
+                    "startLine": 191,
                     "startColumn": 4,
-                    "startOffset": 14440,
-                    "endLine": 191,
+                    "startOffset": 14442,
+                    "endLine": 192,
                     "endColumn": 12,
-                    "endOffset": 14570
+                    "endOffset": 14572
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1337,12 +1337,12 @@
             },
             {
                 "to": {
-                    "startLine": 192,
+                    "startLine": 193,
                     "startColumn": 4,
-                    "startOffset": 14575,
-                    "endLine": 193,
+                    "startOffset": 14577,
+                    "endLine": 194,
                     "endColumn": 12,
-                    "endOffset": 14689
+                    "endOffset": 14691
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1358,12 +1358,12 @@
             },
             {
                 "to": {
-                    "startLine": 194,
+                    "startLine": 195,
                     "startColumn": 4,
-                    "startOffset": 14694,
-                    "endLine": 197,
+                    "startOffset": 14696,
+                    "endLine": 198,
                     "endColumn": 12,
-                    "endOffset": 14890
+                    "endOffset": 14892
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1379,12 +1379,12 @@
             },
             {
                 "to": {
-                    "startLine": 198,
+                    "startLine": 199,
                     "startColumn": 4,
-                    "startOffset": 14895,
-                    "endLine": 199,
+                    "startOffset": 14897,
+                    "endLine": 200,
                     "endColumn": 12,
-                    "endOffset": 15009
+                    "endOffset": 15011
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1400,11 +1400,11 @@
             },
             {
                 "to": {
-                    "startLine": 200,
+                    "startLine": 201,
                     "startColumn": 4,
-                    "startOffset": 15014,
+                    "startOffset": 15016,
                     "endColumn": 92,
-                    "endOffset": 15102
+                    "endOffset": 15104
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1419,11 +1419,11 @@
             },
             {
                 "to": {
-                    "startLine": 201,
+                    "startLine": 202,
                     "startColumn": 4,
-                    "startOffset": 15107,
+                    "startOffset": 15109,
                     "endColumn": 110,
-                    "endOffset": 15213
+                    "endOffset": 15215
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1438,11 +1438,11 @@
             },
             {
                 "to": {
-                    "startLine": 202,
+                    "startLine": 203,
                     "startColumn": 4,
-                    "startOffset": 15218,
+                    "startOffset": 15220,
                     "endColumn": 55,
-                    "endOffset": 15269
+                    "endOffset": 15271
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1457,12 +1457,12 @@
             },
             {
                 "to": {
-                    "startLine": 203,
+                    "startLine": 204,
                     "startColumn": 4,
-                    "startOffset": 15274,
-                    "endLine": 204,
+                    "startOffset": 15276,
+                    "endLine": 205,
                     "endColumn": 12,
-                    "endOffset": 15376
+                    "endOffset": 15378
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1478,12 +1478,12 @@
             },
             {
                 "to": {
-                    "startLine": 205,
+                    "startLine": 206,
                     "startColumn": 4,
-                    "startOffset": 15381,
-                    "endLine": 208,
+                    "startOffset": 15383,
+                    "endLine": 209,
                     "endColumn": 12,
-                    "endOffset": 15571
+                    "endOffset": 15573
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1499,12 +1499,12 @@
             },
             {
                 "to": {
-                    "startLine": 209,
+                    "startLine": 210,
                     "startColumn": 4,
-                    "startOffset": 15576,
-                    "endLine": 210,
+                    "startOffset": 15578,
+                    "endLine": 211,
                     "endColumn": 12,
-                    "endOffset": 15682
+                    "endOffset": 15684
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1520,12 +1520,12 @@
             },
             {
                 "to": {
-                    "startLine": 211,
+                    "startLine": 212,
                     "startColumn": 4,
-                    "startOffset": 15687,
-                    "endLine": 212,
+                    "startOffset": 15689,
+                    "endLine": 213,
                     "endColumn": 12,
-                    "endOffset": 15815
+                    "endOffset": 15817
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1541,11 +1541,11 @@
             },
             {
                 "to": {
-                    "startLine": 213,
+                    "startLine": 214,
                     "startColumn": 4,
-                    "startOffset": 15820,
+                    "startOffset": 15822,
                     "endColumn": 94,
-                    "endOffset": 15910
+                    "endOffset": 15912
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1560,11 +1560,11 @@
             },
             {
                 "to": {
-                    "startLine": 214,
+                    "startLine": 215,
                     "startColumn": 4,
-                    "startOffset": 15915,
+                    "startOffset": 15917,
                     "endColumn": 90,
-                    "endOffset": 16001
+                    "endOffset": 16003
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1579,11 +1579,11 @@
             },
             {
                 "to": {
-                    "startLine": 215,
+                    "startLine": 216,
                     "startColumn": 4,
-                    "startOffset": 16006,
+                    "startOffset": 16008,
                     "endColumn": 90,
-                    "endOffset": 16092
+                    "endOffset": 16094
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1598,11 +1598,11 @@
             },
             {
                 "to": {
-                    "startLine": 216,
+                    "startLine": 217,
                     "startColumn": 4,
-                    "startOffset": 16097,
+                    "startOffset": 16099,
                     "endColumn": 116,
-                    "endOffset": 16209
+                    "endOffset": 16211
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1617,12 +1617,12 @@
             },
             {
                 "to": {
-                    "startLine": 217,
+                    "startLine": 218,
                     "startColumn": 4,
-                    "startOffset": 16214,
-                    "endLine": 218,
+                    "startOffset": 16216,
+                    "endLine": 219,
                     "endColumn": 12,
-                    "endOffset": 16348
+                    "endOffset": 16350
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1638,12 +1638,12 @@
             },
             {
                 "to": {
-                    "startLine": 219,
+                    "startLine": 220,
                     "startColumn": 4,
-                    "startOffset": 16353,
-                    "endLine": 225,
+                    "startOffset": 16355,
+                    "endLine": 226,
                     "endColumn": 12,
-                    "endOffset": 16701
+                    "endOffset": 16703
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1659,12 +1659,12 @@
             },
             {
                 "to": {
-                    "startLine": 226,
+                    "startLine": 227,
                     "startColumn": 4,
-                    "startOffset": 16706,
-                    "endLine": 232,
+                    "startOffset": 16708,
+                    "endLine": 233,
                     "endColumn": 12,
-                    "endOffset": 17066
+                    "endOffset": 17068
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1680,12 +1680,12 @@
             },
             {
                 "to": {
-                    "startLine": 233,
+                    "startLine": 234,
                     "startColumn": 4,
-                    "startOffset": 17071,
-                    "endLine": 242,
+                    "startOffset": 17073,
+                    "endLine": 243,
                     "endColumn": 12,
-                    "endOffset": 17746
+                    "endOffset": 17748
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1701,11 +1701,11 @@
             },
             {
                 "to": {
-                    "startLine": 243,
+                    "startLine": 244,
                     "startColumn": 4,
-                    "startOffset": 17751,
+                    "startOffset": 17753,
                     "endColumn": 56,
-                    "endOffset": 17803
+                    "endOffset": 17805
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",
@@ -1720,11 +1720,11 @@
             },
             {
                 "to": {
-                    "startLine": 244,
+                    "startLine": 245,
                     "startColumn": 4,
-                    "startOffset": 17808,
+                    "startOffset": 17810,
                     "endColumn": 57,
-                    "endOffset": 17861
+                    "endOffset": 17863
                 },
                 "from": {
                     "file": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-v21/values-v21.xml",

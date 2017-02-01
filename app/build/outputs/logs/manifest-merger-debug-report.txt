@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml:2:1-23:12
+ADDED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml:2:1-25:12
 	package
 		ADDED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml:3:5-39
 		INJECTED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app
 		INJECTED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml:5:5-21:19
+ADDED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml:5:5-23:19
 MERGED from [com.android.support:design:23.1.1] /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
@@ -27,7 +27,7 @@ MERGED from [com.android.support:support-v4:23.1.1] /Users/mmcbee/Documents/MEGH
 	android:icon
 		ADDED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml:7:9-43
 	android:theme
-		ADDED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml:10:9-40
+		ADDED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml:10:9-52
 activity#com.example.isho.gomoku8.MainActivity
 ADDED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml:11:9-20:20
 	android:label
@@ -46,6 +46,10 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml:18:17-77
 	android:name
 		ADDED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml:18:27-74
+activity#com.example.isho.gomoku8.ChooseStartOptions
+ADDED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml:21:9-22:20
+	android:name
+		ADDED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml:21:19-53
 uses-sdk
 INJECTED from /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:23.1.1] /Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:20:5-43
