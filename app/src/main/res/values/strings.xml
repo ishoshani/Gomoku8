@@ -16,4 +16,5 @@
     <string name="standard_mode">Standard</string>
     <string name="freestyle_mode">Freestyle</string>
     <string name="how_to">How to Play</string>
+    <string name="title_activity_board_screen">BoardScreen</string>
 </resources>
