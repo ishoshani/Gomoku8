@@ -24,8 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.isho.gomoku8.ChooseStartOptions" >
-        </activity>
+        <activity android:name="com.example.isho.gomoku8.ChooseStartOptions" />
+        <activity
+            android:name="com.example.isho.gomoku8.BoardScreen"
+            android:label="@string/title_activity_board_screen"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
