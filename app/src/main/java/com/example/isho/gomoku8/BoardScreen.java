@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -18,12 +19,14 @@ import android.widget.RelativeLayout;
 public class BoardScreen extends AppCompatActivity {
     ImageButton[][] bArray;
     RelativeLayout boardView;
-    int size = 10;
+    int size;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent = getIntent();
-        size = intent.getIntExtra("size",10);
+//        Intent intent = getIntent();
+        Bundle bundle = getIntent().getExtras();
+        size = bundle.getInt("boardSize");
 
         setContentView(R.layout.activity_board_screen);
         boardView = (RelativeLayout) findViewById(R.id.boardView);
