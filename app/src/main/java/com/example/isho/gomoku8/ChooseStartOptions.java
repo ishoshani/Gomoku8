@@ -9,7 +9,7 @@ import android.widget.ToggleButton;
 public class ChooseStartOptions extends AppCompatActivity {
 
     String gameStyle;
-    int broadSize = 10;
+    int boardSize = 10;
     int playerSize = 2;
     Intent intent;
 
@@ -27,7 +27,8 @@ public class ChooseStartOptions extends AppCompatActivity {
     public void NewGame(View view){
         Intent intent = new Intent(this, BoardScreen.class);
         intent.putExtra("gameStlye",this.gameStyle);
-        intent.putExtra("size", 10);
+        intent.putExtra("size", this.boardSize);
+        intent.putExtra("players", this.playerSize);
         startActivity(intent);
     }
 }
