@@ -2194,12 +2194,13 @@ containing a value of this type.
         public static final int abc_textfield_search_activated_mtrl_alpha=0x7f020042;
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020043;
         public static final int abc_textfield_search_material=0x7f020044;
-        public static final int brown=0x7f020045;
+        public static final int black=0x7f020045;
         public static final int design_fab_background=0x7f020046;
         public static final int design_snackbar_background=0x7f020047;
-        public static final int notification_template_icon_bg=0x7f02004a;
-        public static final int wood=0x7f020048;
-        public static final int woodfloor=0x7f020049;
+        public static final int notification_template_icon_bg=0x7f02004b;
+        public static final int white=0x7f020048;
+        public static final int wood=0x7f020049;
+        public static final int woodfloor=0x7f02004a;
     }
     public static final class id {
         public static final int PlayersRadio=0x7f0c006c;
@@ -2438,20 +2439,21 @@ containing a value of this type.
         public static final int board_size=0x7f060018;
         public static final int character_counter_pattern=0x7f060019;
         public static final int freestyle_mode=0x7f06001a;
-        public static final int how_to=0x7f06001b;
-        public static final int mode_type=0x7f06001c;
-        public static final int new_game=0x7f06001d;
-        public static final int num_players=0x7f06001e;
-        public static final int one=0x7f06001f;
-        public static final int size10=0x7f060020;
-        public static final int size15=0x7f060021;
-        public static final int size20=0x7f060022;
-        public static final int standard_mode=0x7f060023;
-        public static final int start_game=0x7f060024;
-        public static final int start_screen_title=0x7f060025;
+        public static final int game_rules=0x7f06001b;
+        public static final int how_to=0x7f06001c;
+        public static final int mode_type=0x7f06001d;
+        public static final int new_game=0x7f06001e;
+        public static final int num_players=0x7f06001f;
+        public static final int one=0x7f060020;
+        public static final int size10=0x7f060021;
+        public static final int size15=0x7f060022;
+        public static final int size20=0x7f060023;
+        public static final int standard_mode=0x7f060024;
+        public static final int start_game=0x7f060025;
+        public static final int start_screen_title=0x7f060026;
         public static final int status_bar_notification_info_overflow=0x7f060013;
-        public static final int title_activity_board_screen=0x7f060026;
-        public static final int two=0x7f060027;
+        public static final int title_activity_board_screen=0x7f060027;
+        public static final int two=0x7f060028;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f09007f;

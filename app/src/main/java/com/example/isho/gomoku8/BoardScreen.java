@@ -18,7 +18,6 @@ import android.widget.RelativeLayout;
 
 public class BoardScreen extends AppCompatActivity {
     ImageButton[][] bArray;
-    GomokuLogic gameLogic;
     RelativeLayout boardView;
     int size;
 
@@ -28,7 +27,7 @@ public class BoardScreen extends AppCompatActivity {
 //        Intent intent = getIntent();
         Bundle bundle = getIntent().getExtras();
         size = bundle.getInt("boardSize");
-        gameLogic = new GomokuLogic(size);
+        gameLogic = GomokuLogic.clearBoard(size);
         setContentView(R.layout.activity_board_screen);
         boardView = (RelativeLayout) findViewById(R.id.boardView);
         bArray = new ImageButton[size][size];
@@ -50,7 +49,7 @@ public class BoardScreen extends AppCompatActivity {
                         }
                         bArray[fi][fj].setImageIcon(image);
                         bArray[fi][fj].setEnabled(false);
-                        gameLogic.placePiece(fi,fj);
+                        GomokuLogic.placePiece(fi,fj);
                     }
                 });
                 Icon image = Icon.createWithResource(getApplicationContext(),android.R.drawable.arrow_up_float);
