@@ -17,4 +17,15 @@
     <string name="freestyle_mode">Freestyle</string>
     <string name="how_to">How to Play</string>
     <string name="title_activity_board_screen">BoardScreen</string>
+    <string name="game_rules">
+        Gomoku is a two-player board game. Each player has a type
+        of stone, black or white. In each turn, a player places a
+        stone at a corner in the board. The winner must have a line
+        of first five adjacent stones vertically, horizontally, or
+        diagonally. This line must not be blocked at both ends.
+        The edge of the board is considered as a blocked end. In
+        standard mode, a line of six  or  more  adjacent stones does
+        not count. In freestyle mode, a line of six or more adjacent
+        stones is allowed.
+    </string>
 </resources>
