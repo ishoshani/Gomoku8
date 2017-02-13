@@ -19,12 +19,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*
     public void getGameRules(View view) {
         Intent intent = new Intent(this, RulesScreen.class);
         startActivity(intent);
     }
-    */
 
     /*
     @Override
