@@ -4,35 +4,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.isho.gomoku8.MainActivity">
+    tools:context="com.example.isho.gomoku8.MainActivity"
+    android:background="@drawable/woodfloor">
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:background="@android:color/holo_green_dark">
+            android:layout_gravity="center_vertical">
 
             <TextView
                 android:text="@string/start_screen_title"
                 android:id="@+id/start_screen_title"
-                android:layout_height="120dp"
-                android:layout_width="220dp"
+                android:layout_width="match_parent"
                 android:gravity="center"
-                android:textSize="50sp"
-                android:textColor="?android:attr/textColorPrimary"
-                android:layout_marginTop="50dp"
-                android:layout_weight="1" />
+                android:textSize="70sp"
+                android:textColor="@android:color/white"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold" />
 
             <Button
                 android:text="@string/new_game"
                 android:id="@+id/button_new_game"
-                style="@style/Widget.AppCompat.Button"
-                android:layout_weight="0.03"
-                android:layout_width="220dp"
-                android:textSize="24sp"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:textSize="45sp"
                 android:onClick="startNewGame"
-                android:layout_height="120dp" />
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:background="@android:color/background_dark" />
 
             <TextView
                 android:text="@string/how_to"
@@ -40,9 +44,10 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textView4"
                 android:gravity="center_horizontal"
-                android:textSize="20sp"
-                android:padding="5dp"
-                android:layout_marginTop="150dp" />
+                android:textSize="24sp"
+                android:padding="15dp"
+                android:layout_weight="4"
+                android:textColor="@android:color/white" />
 
         </LinearLayout>
 
