@@ -3,15 +3,16 @@ package com.example.isho.gomoku8;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ToggleButton;
 import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.util.Log;
 
 public class ChooseStartOptions extends AppCompatActivity {
 
-    String gameStyle = "Standard";
-    int broadSize = 10;
-    int playerSize = 1;
+    String gameStyle;
+    int boardSize = 10;
+    int playerSize = 2;
     Intent intent;
     String msg = "*******Log******* ";
 
@@ -22,32 +23,46 @@ public class ChooseStartOptions extends AppCompatActivity {
     }
 
     public void NewGame(View view){
-        ToggleButton style = (ToggleButton)findViewById(R.id.toggleButton3);
-        ToggleButton size  = (ToggleButton)findViewById(R.id.toggleButton2);
-        ToggleButton player = (ToggleButton)findViewById(R.id.toggleButton);
-
-        if(style.isChecked()) {
-            this.gameStyle = "FreeStyle";
+        RadioGroup styleID = (RadioGroup)findViewById(R.id.modeRadio);
+        int style = styleID.getCheckedRadioButtonId();
+        RadioButton radioStyle = (RadioButton) findViewById(style);
+        if(radioStyle.getText().equals("Freestyle")) {
+            this.gameStyle = "Freestyle";
         }
+        else
+            this.gameStyle = "Standard";
 
-        if (size.isChecked()) {
-            this.broadSize = 20;
+        RadioGroup sizeID = (RadioGroup)findViewById(R.id.boardRadio);
+        int board = sizeID.getCheckedRadioButtonId();
+        RadioButton radioSize = (RadioButton) findViewById(board);
+        if (radioSize.getText().equals("15x15")) {
+            this.boardSize = 15;
         }
+        else if(radioSize.getText().equals("20x20")){
+            this.boardSize = 20;
+        }
+        else
+            this.boardSize = 10;
 
-        if (player.isChecked()) {
+        RadioGroup playerID = (RadioGroup)findViewById(R.id.PlayersRadio);
+        int player = playerID.getCheckedRadioButtonId();
+        RadioButton radioPlayers = (RadioButton) findViewById(player);
+        if (radioPlayers.getText().equals("Two")){
             this.playerSize = 2;
         }
-
-//        Log.d(msg, this.gameStyle);
+        else
+            this.playerSize = 1;
 
         Intent intent = new Intent(this, BoardScreen.class);
         Bundle bundle = new Bundle();
-        bundle.putString("gameStyle", this.gameStyle);
-        bundle.putInt("boardSize",this.broadSize);
+        intent.putExtra("gameStyle",this.gameStyle);
+        bundle.putInt("boardSize",this.boardSize);
         bundle.putInt("playerSize",this.playerSize);
         intent.putExtras(bundle);
         //        Log.d(msg, this.gameStyle + this.broadSize + this.playerSize);
         startActivity(intent);
-    }
 
+
+
+    }
 }
