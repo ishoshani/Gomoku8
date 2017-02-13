@@ -8,6 +8,10 @@
         "source": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/res/drawable/woodfloor.jpg"
     },
     {
+        "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/drawable/cross.png",
+        "source": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/res/drawable/cross.png"
+    },
+    {
         "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
         "source": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/drawable/design_fab_background.xml"
     },
@@ -74,6 +78,14 @@
     {
         "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
         "source": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/drawable/black.png",
+        "source": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/res/drawable/black.png"
+    },
+    {
+        "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/drawable/white.png",
+        "source": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/src/main/res/drawable/white.png"
     },
     {
         "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",

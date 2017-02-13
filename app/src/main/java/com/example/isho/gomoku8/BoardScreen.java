@@ -1,6 +1,7 @@
 package com.example.isho.gomoku8;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -53,7 +54,7 @@ public class BoardScreen extends AppCompatActivity {
                         gameLogic.placePiece(fi,fj);
                     }
                 });
-                Icon image = Icon.createWithResource(getApplicationContext(),android.R.drawable.arrow_up_float);
+                Icon image = Icon.createWithResource(getApplicationContext(),R.drawable.cross);
                 bArray[i][j].setImageIcon(image);
                 RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(100,100);
                 if(i==0) {
@@ -67,7 +68,7 @@ public class BoardScreen extends AppCompatActivity {
                     params.addRule(RelativeLayout.RIGHT_OF,bArray[i][j-1].getId());
                 }
                 boardView.addView(bArray[i][j],params);
-                bArray[i][j].setBackgroundColor(R.color.colorPrimary);
+ //               boardView.setBackgroundColor(Color.TRANSPARENT);
 
             }
         }

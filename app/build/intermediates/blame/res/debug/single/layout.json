@@ -32,12 +32,12 @@
         "source": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
-        "source": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_tab_text.xml"
-    },
-    {
         "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
         "source": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
+        "source": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_tab_text.xml"
     },
     {
         "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
