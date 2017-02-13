@@ -20,6 +20,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
+    public void getGameRules(View view) {
+        Intent intent = new Intent(this, RulesScreen.class);
+        startActivity(intent);
+    }
+    */
+
+    /*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
