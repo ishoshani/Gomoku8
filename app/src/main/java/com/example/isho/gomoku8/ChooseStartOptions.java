@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.util.Log;
 
 public class ChooseStartOptions extends AppCompatActivity {
 
@@ -22,7 +23,6 @@ public class ChooseStartOptions extends AppCompatActivity {
     }
 
     public void NewGame(View view){
-
         RadioGroup styleID = (RadioGroup)findViewById(R.id.modeRadio);
         int style = styleID.getCheckedRadioButtonId();
         RadioButton radioStyle = (RadioButton) findViewById(style);
@@ -54,9 +54,15 @@ public class ChooseStartOptions extends AppCompatActivity {
             this.playerSize = 1;
 
         Intent intent = new Intent(this, BoardScreen.class);
+        Bundle bundle = new Bundle();
         intent.putExtra("gameStyle",this.gameStyle);
-        intent.putExtra("size", this.boardSize);
-        intent.putExtra("players", this.playerSize);
+        bundle.putInt("boardSize",this.boardSize);
+        bundle.putInt("playerSize",this.playerSize);
+        intent.putExtras(bundle);
+        //        Log.d(msg, this.gameStyle + this.broadSize + this.playerSize);
         startActivity(intent);
+
+
+
     }
 }
