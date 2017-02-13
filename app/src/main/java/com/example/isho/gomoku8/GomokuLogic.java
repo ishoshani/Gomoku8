@@ -94,7 +94,7 @@ public class GomokuLogic {
         return 0;
     }
     static public int checkDiagonals(){
-
+        return 0;
     }
     static public int checkWin(){
         int ColsWin = checkColumns();
