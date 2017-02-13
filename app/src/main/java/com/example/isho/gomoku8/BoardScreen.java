@@ -41,9 +41,16 @@ public class BoardScreen extends AppCompatActivity {
                 bArray[i][j].setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        Icon image;
+                        if(GomokuLogic.getTurn()>0) {
+                            image = Icon.createWithResource(getApplicationContext(),R.drawable.white);
+                        }
+                        else{
+                            image = Icon.createWithResource(getApplicationContext(),R.drawable.black);
+                        }
+                        bArray[fi][fj].setImageIcon(image);
+                        bArray[fi][fj].setEnabled(false);
                         gameLogic.placePiece(fi,fj);
-                        Icon image = Icon.createWithFilePath()
-                        bArray[fi][fj].setImageIcon(Image);
                     }
                 });
                 Icon image = Icon.createWithResource(getApplicationContext(),android.R.drawable.arrow_up_float);
