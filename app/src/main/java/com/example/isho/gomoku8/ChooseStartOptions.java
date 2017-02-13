@@ -4,7 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ToggleButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 public class ChooseStartOptions extends AppCompatActivity {
 
@@ -12,21 +13,48 @@ public class ChooseStartOptions extends AppCompatActivity {
     int boardSize = 10;
     int playerSize = 2;
     Intent intent;
+    String msg = "*******Log******* ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_start_options);
-        ToggleButton state = (ToggleButton)findViewById(R.id.toggleButton3);
-        if (state.isChecked()) {
-            this.gameStyle = "FreeStyle";
+    }
+
+    public void NewGame(View view){
+
+        RadioGroup styleID = (RadioGroup)findViewById(R.id.modeRadio);
+        int style = styleID.getCheckedRadioButtonId();
+        RadioButton radioStyle = (RadioButton) findViewById(style);
+        if(radioStyle.getText().equals("Freestyle")) {
+            this.gameStyle = "Freestyle";
         }
         else
             this.gameStyle = "Standard";
-    }
-    public void NewGame(View view){
+
+        RadioGroup sizeID = (RadioGroup)findViewById(R.id.boardRadio);
+        int board = sizeID.getCheckedRadioButtonId();
+        RadioButton radioSize = (RadioButton) findViewById(board);
+        if (radioSize.getText().equals("15x15")) {
+            this.boardSize = 15;
+        }
+        else if(radioSize.getText().equals("20x20")){
+            this.boardSize = 20;
+        }
+        else
+            this.boardSize = 10;
+
+        RadioGroup playerID = (RadioGroup)findViewById(R.id.PlayersRadio);
+        int player = playerID.getCheckedRadioButtonId();
+        RadioButton radioPlayers = (RadioButton) findViewById(player);
+        if (radioPlayers.getText().equals("Two")){
+            this.playerSize = 2;
+        }
+        else
+            this.playerSize = 1;
+
         Intent intent = new Intent(this, BoardScreen.class);
-        intent.putExtra("gameStlye",this.gameStyle);
+        intent.putExtra("gameStyle",this.gameStyle);
         intent.putExtra("size", this.boardSize);
         intent.putExtra("players", this.playerSize);
         startActivity(intent);
