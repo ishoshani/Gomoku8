@@ -27,7 +27,7 @@ public class BoardScreen extends AppCompatActivity {
 //        Intent intent = getIntent();
         Bundle bundle = getIntent().getExtras();
         size = bundle.getInt("boardSize");
-        gameLogic = GomokuLogic.clearBoard(size);
+        GomokuLogic.clearBoard(size);
         setContentView(R.layout.activity_board_screen);
         boardView = (RelativeLayout) findViewById(R.id.boardView);
         bArray = new ImageButton[size][size];
