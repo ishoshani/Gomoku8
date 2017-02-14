@@ -49,7 +49,11 @@ public class GomokuLogic {
                     if(boardMatrix[i][j]==1){
                         inARow++;
                         if(inARow>3){return 1;}
+                    }else{
+                        inARow =0;
                     }
+                }else{
+                    inARow = 0;
                 }
             }
         }
@@ -60,7 +64,11 @@ public class GomokuLogic {
                     if(boardMatrix[i][j]==-1){
                         inARow++;
                         if(inARow>3){return -1;}
+                    }else{
+                        inARow=0;
                     }
+                }else{
+                    inARow =0;
                 }
             }
         }
@@ -70,12 +78,19 @@ public class GomokuLogic {
     private static int checkRows(){
         for (int j = 0; j < size ; j++) {
             int inARow = 0;
-            for(int i = 1; i < size ; i++){
-                if (boardMatrix[i-1][j] == 1) {
-                    if(boardMatrix[i][j]==1){
+            for (int i = 1; i < size; i++) {
+                if (boardMatrix[i - 1][j] == 1) {
+                    if (boardMatrix[i][j] == 1) {
                         inARow++;
-                        if(inARow>3){return 1;}
+                        if (inARow > 3) {
+                            return 1;
+                        }
+                    } else {
+                        inARow = 0;
                     }
+
+                } else {
+                    inARow = 0;
                 }
             }
         }
@@ -86,14 +101,91 @@ public class GomokuLogic {
                     if(boardMatrix[i][j]==-1){
                         inARow++;
                         if(inARow>3){return -1;}
+                    }else{
+                        inARow =0;
                     }
+                }else{
+                    inARow = 0;
                 }
             }
         }
 
         return 0;
     }
-    static public int checkDiagonals(){
+    static public int checkForwardDiagonal(int row, int col){
+        int inArow=0;
+        for(int i = 1; i<(size-row-col); i++){
+            if(boardMatrix[row+i-1][col+i-1]==1){
+                if(boardMatrix[row+i][col+i]==1){
+                    inArow++;
+                            if(inArow>3){return 1;}
+                }else {
+                inArow =0;
+                }
+            }else{
+                inArow=0;
+            }
+        }
+        inArow =0;
+        for(int i = 1; i<(size-row-col-1); i++){
+            if(boardMatrix[row+i-1][col+i-1]==-1){
+                if(boardMatrix[row+i][col+i]==-1){
+                    inArow++;
+                    if(inArow>3){return -1;}
+                }else {
+                    inArow =0;
+                }
+            }else{
+                inArow=0;
+            }
+        }
+    return 0;
+    }
+    static public int checkBackDiagonal(int row, int col){
+        int inArow=0;
+        for(int i = 1; i<(col+1-row); i++){
+            if(boardMatrix[row+i-1][col-i+1]==1){
+                if(boardMatrix[row+i][col-i]==1){
+                    inArow++;
+                    if(inArow>3){return 1;}
+                }else {
+                    inArow =0;
+                }
+            }else{
+                inArow=0;
+            }
+        }
+        inArow =0;
+        for(int i = 1; i<(col+1-row); i++){
+            if(boardMatrix[row+i-1][col-i+1]==-1){
+                if(boardMatrix[row+i][col-i]==-1){
+                    inArow++;
+                    if(inArow>3){return -1;}
+                }else {
+                    inArow =0;
+                }
+            }else{
+                inArow=0;
+            }
+        }
+        return 0;
+    }
+    static public int checkAllDiagonals(){
+        int win =checkForwardDiagonal(0,0);
+        if(win!=0){return win;}
+        win = checkBackDiagonal(0,size-1);
+        if(win!=0){return win;}
+
+        for (int i = 1; i < size; i++) {
+            win=checkForwardDiagonal(0,i);
+            if(win!=0){return win;}
+            win =checkForwardDiagonal(i,0);
+            if(win!=0){return win;}
+            win = checkBackDiagonal(i,size-1);
+            if(win!=0){return win;}
+            win =checkBackDiagonal(0,size-1-i);
+            if(win!=0){return win;}
+        }
         return 0;
     }
     static public int checkWin(){
