@@ -36,8 +36,61 @@ public class WinningTest{
         assertEquals(1,GomokuLogic.boardMatrix[0][2]);
         assertEquals(1,GomokuLogic.boardMatrix[0][3]);
         assertEquals(1,GomokuLogic.boardMatrix[0][4]);
-        int winner =GomokuLogic.checkWin();
+        int winner =GomokuLogic.isWin(0,4);
         assertEquals(1,winner);
+    }
+    @Test
+    public void ColumnWinEnd(){
+        GomokuLogic.testPiece(0,9);
+        GomokuLogic.testPiece(0,8);
+        GomokuLogic.testPiece(0,7);
+        GomokuLogic.testPiece(0,6);
+        GomokuLogic.testPiece(0,5);
+        int winner =GomokuLogic.isWin(0,5);
+        assertEquals(1,winner);
+    }
+
+    @Test
+    public void ColumnBlocked(){
+        GomokuLogic.testPiece(0,0);
+        GomokuLogic.testPiece(0,1);
+        GomokuLogic.testPiece(0,2);
+        GomokuLogic.testPiece(0,3);
+        GomokuLogic.testPiece(0,4);
+        GomokuLogic.turn=-1;
+        GomokuLogic.testPiece(0,5);
+        GomokuLogic.turn=1;
+        int winner =GomokuLogic.isWin(0,2);
+        assertEquals(0,winner);
+    }
+
+    @Test
+    public void ColumnBlockedBoth(){
+        GomokuLogic.testPiece(0,1);
+        GomokuLogic.testPiece(0,2);
+        GomokuLogic.testPiece(0,3);
+        GomokuLogic.testPiece(0,4);
+        GomokuLogic.testPiece(0,5);
+        GomokuLogic.turn=-1;
+        GomokuLogic.testPiece(0,6);
+        GomokuLogic.testPiece(0,0);
+        GomokuLogic.turn = 1;
+        int winner =GomokuLogic.isWin(0,3);
+        assertEquals(0,winner);
+    }
+    @Test
+    public void BlockedBeginning(){
+        GomokuLogic.testPiece(0,9);
+        GomokuLogic.testPiece(0,8);
+        GomokuLogic.testPiece(0,7);
+        GomokuLogic.testPiece(0,6);
+        GomokuLogic.testPiece(0,5);
+        GomokuLogic.turn=-1;
+        GomokuLogic.testPiece(0,4);
+        GomokuLogic.turn=1;
+
+        int winner =GomokuLogic.isWin(0,9);
+        assertEquals(0,winner);
     }
     @Test
     public void ColumnLose(){
@@ -52,8 +105,18 @@ public class WinningTest{
         assertEquals(-1,GomokuLogic.boardMatrix[2][4]);
         assertEquals(-1,GomokuLogic.boardMatrix[2][5]);
         assertEquals(-1,GomokuLogic.boardMatrix[2][6]);
-        int winner =GomokuLogic.checkWin();
+        int winner =GomokuLogic.isWin(2,5);
         assertEquals(-1,winner);
+    }
+    @Test
+    public void ColumnShort(){
+        GomokuLogic.turn =-1;
+        GomokuLogic.testPiece(2,0);
+        GomokuLogic.testPiece(2,1);
+        GomokuLogic.testPiece(2,2);
+        GomokuLogic.testPiece(2,3);
+        int winner =GomokuLogic.isWin(2,2);
+        assertEquals(0,winner);
     }
     @Test
     public void ColumnNeither(){
@@ -71,20 +134,38 @@ public class WinningTest{
         assertEquals(1,GomokuLogic.boardMatrix[2][4]);
         assertEquals(-1,GomokuLogic.boardMatrix[2][5]);
         assertEquals(-1,GomokuLogic.boardMatrix[2][6]);
-        int winner =GomokuLogic.checkWin();
+        int winner =GomokuLogic.isWin(2,6);
         assertEquals(0,winner);
     }
+
     @Test
     public void Rows(){
         GomokuLogic.clearBoard(10);
+        GomokuLogic.testPiece(5,0);
+        GomokuLogic.testPiece(6,0);
+        GomokuLogic.testPiece(7,0);
+        GomokuLogic.testPiece(8,0);
+        GomokuLogic.testPiece(9,0);
+        int winner =GomokuLogic.isWin(8,0);
+        assertEquals(1,winner);
+    }
+    @Test
+    public void RowsBlocked(){
+        GomokuLogic.clearBoard(10);
+        GomokuLogic.testPiece(3,2);
+        GomokuLogic.testPiece(4,2);
         GomokuLogic.testPiece(5,2);
         GomokuLogic.testPiece(6,2);
         GomokuLogic.testPiece(7,2);
+        GomokuLogic.turn =-1;
+        GomokuLogic.testPiece(2,2);
         GomokuLogic.testPiece(8,2);
-        GomokuLogic.testPiece(9,2);
-        int winner =GomokuLogic.checkWin();
-        assertEquals(1,winner);
+        GomokuLogic.turn =1;
+        int winner =GomokuLogic.isWin(4,2);
+        assertEquals(0,winner);
+
     }
+
     @Test
     public void DiagonalSimple(){
         GomokuLogic.clearBoard(10);
@@ -93,7 +174,7 @@ public class WinningTest{
         GomokuLogic.testPiece(2,2);
         GomokuLogic.testPiece(3,3);
         GomokuLogic.testPiece(4,4);
-        int winner =GomokuLogic.checkAllDiagonals();
+        int winner =GomokuLogic.isWin(4,4);
         assertEquals(1,winner);
 
     }
@@ -105,7 +186,7 @@ public class WinningTest{
         GomokuLogic.testPiece(4,7);
         GomokuLogic.testPiece(5,8);
         GomokuLogic.testPiece(6,9);
-        int winner =GomokuLogic.checkAllDiagonals();
+        int winner =GomokuLogic.isWin(4,7);
         assertEquals(1,winner);
 
     }
@@ -119,19 +200,19 @@ public class WinningTest{
         GomokuLogic.turn=1;
         GomokuLogic.testPiece(5,8);
         GomokuLogic.testPiece(6,9);
-        int winner =GomokuLogic.checkAllDiagonals();
+        int winner =GomokuLogic.isWin(5,8);
         assertEquals(0,winner);
 
     }
     @Test
     public void BackDiagonalSimple(){
         GomokuLogic.clearBoard(10);
-        GomokuLogic.testPiece(9,9);
-        GomokuLogic.testPiece(8,8);
-        GomokuLogic.testPiece(7,7);
-        GomokuLogic.testPiece(6,6);
-        GomokuLogic.testPiece(5,5);
-        int winner =GomokuLogic.checkAllDiagonals();
+        GomokuLogic.testPiece(0,9);
+        GomokuLogic.testPiece(1,8);
+        GomokuLogic.testPiece(2,7);
+        GomokuLogic.testPiece(3,6);
+        GomokuLogic.testPiece(4,5);
+        int winner =GomokuLogic.isWin(0,9);
         assertEquals(1,winner);
 
     }
@@ -143,7 +224,7 @@ public class WinningTest{
         GomokuLogic.testPiece(3,4);
         GomokuLogic.testPiece(2,5);
         GomokuLogic.testPiece(1,6);
-        int winner =GomokuLogic.checkAllDiagonals();
+        int winner =GomokuLogic.isWin(2,5);
         assertEquals(1,winner);
 
     }
@@ -155,7 +236,7 @@ public class WinningTest{
         GomokuLogic.testPiece(2,5);
         GomokuLogic.testPiece(1,6);
         GomokuLogic.testPiece(0,7);
-        int winner =GomokuLogic.checkAllDiagonals();
+        int winner =GomokuLogic.isWin(4,3);
         assertEquals(0,winner);
 
     }
@@ -167,9 +248,8 @@ public class WinningTest{
         GomokuLogic.testPiece(2,2);
         GomokuLogic.testPiece(4,4);
         GomokuLogic.testPiece(5,5);
-        int winner =GomokuLogic.checkAllDiagonals();
+        int winner =GomokuLogic.isWin(5,5);
         assertEquals(0,winner);
 
     }
-
 }
