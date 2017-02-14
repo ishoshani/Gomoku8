@@ -77,13 +77,99 @@ public class WinningTest{
     @Test
     public void Rows(){
         GomokuLogic.clearBoard(10);
-        GomokuLogic.testPiece(2,3);
-        GomokuLogic.testPiece(2,4);
-        GomokuLogic.testPiece(2,5);
-        GomokuLogic.testPiece(2,6);
-        GomokuLogic.testPiece(2,7);
+        GomokuLogic.testPiece(5,2);
+        GomokuLogic.testPiece(6,2);
+        GomokuLogic.testPiece(7,2);
+        GomokuLogic.testPiece(8,2);
+        GomokuLogic.testPiece(9,2);
         int winner =GomokuLogic.checkWin();
         assertEquals(1,winner);
+    }
+    @Test
+    public void DiagonalSimple(){
+        GomokuLogic.clearBoard(10);
+        GomokuLogic.testPiece(0,0);
+        GomokuLogic.testPiece(1,1);
+        GomokuLogic.testPiece(2,2);
+        GomokuLogic.testPiece(3,3);
+        GomokuLogic.testPiece(4,4);
+        int winner =GomokuLogic.checkAllDiagonals();
+        assertEquals(1,winner);
+
+    }
+    @Test
+    public void DiagonalHard(){
+        GomokuLogic.clearBoard(10);
+        GomokuLogic.testPiece(2,5);
+        GomokuLogic.testPiece(3,6);
+        GomokuLogic.testPiece(4,7);
+        GomokuLogic.testPiece(5,8);
+        GomokuLogic.testPiece(6,9);
+        int winner =GomokuLogic.checkAllDiagonals();
+        assertEquals(1,winner);
+
+    }
+    @Test
+    public void DiagonalHardNot(){
+        GomokuLogic.clearBoard(10);
+        GomokuLogic.testPiece(2,5);
+        GomokuLogic.testPiece(3,6);
+        GomokuLogic.turn=-1;
+        GomokuLogic.testPiece(4,7);
+        GomokuLogic.turn=1;
+        GomokuLogic.testPiece(5,8);
+        GomokuLogic.testPiece(6,9);
+        int winner =GomokuLogic.checkAllDiagonals();
+        assertEquals(0,winner);
+
+    }
+    @Test
+    public void BackDiagonalSimple(){
+        GomokuLogic.clearBoard(10);
+        GomokuLogic.testPiece(9,9);
+        GomokuLogic.testPiece(8,8);
+        GomokuLogic.testPiece(7,7);
+        GomokuLogic.testPiece(6,6);
+        GomokuLogic.testPiece(5,5);
+        int winner =GomokuLogic.checkAllDiagonals();
+        assertEquals(1,winner);
+
+    }
+    @Test
+    public void BackDiagonalHard(){
+        GomokuLogic.clearBoard(10);
+        GomokuLogic.testPiece(5,2);
+        GomokuLogic.testPiece(4,3);
+        GomokuLogic.testPiece(3,4);
+        GomokuLogic.testPiece(2,5);
+        GomokuLogic.testPiece(1,6);
+        int winner =GomokuLogic.checkAllDiagonals();
+        assertEquals(1,winner);
+
+    }
+    @Test
+    public void BackDiagonalHardLose(){
+        GomokuLogic.clearBoard(10);
+        GomokuLogic.testPiece(5,2);
+        GomokuLogic.testPiece(4,3);
+        GomokuLogic.testPiece(2,5);
+        GomokuLogic.testPiece(1,6);
+        GomokuLogic.testPiece(0,7);
+        int winner =GomokuLogic.checkAllDiagonals();
+        assertEquals(0,winner);
+
+    }
+    @Test
+    public void DiagonalSimpleLose(){
+        GomokuLogic.clearBoard(10);
+        GomokuLogic.testPiece(0,0);
+        GomokuLogic.testPiece(1,1);
+        GomokuLogic.testPiece(2,2);
+        GomokuLogic.testPiece(4,4);
+        GomokuLogic.testPiece(5,5);
+        int winner =GomokuLogic.checkAllDiagonals();
+        assertEquals(0,winner);
+
     }
 
 }
