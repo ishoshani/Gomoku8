@@ -28,4 +28,8 @@
         not count. In freestyle mode, a line of six or more adjacent
         stones is allowed.
     </string>
+    <string name="rematch">Rematch</string>
+    <string name="exit">Quit</string>
+    <string name="menu">Menu</string>
+    <string name="end">Game Finished</string>
 </resources>
