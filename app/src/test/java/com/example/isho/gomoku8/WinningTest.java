@@ -40,6 +40,20 @@ public class WinningTest{
         assertEquals(1,winner);
     }
     @Test
+    public void StrictColumnWin(){
+        GomokuLogic.clearBoard(10,false);
+        GomokuLogic.testPiece(0,0);
+        GomokuLogic.testPiece(0,1);
+        GomokuLogic.testPiece(0,2);
+        GomokuLogic.testPiece(0,3);
+        GomokuLogic.testPiece(0,4);
+        GomokuLogic.testPiece(0,5);
+        assertEquals(1,GomokuLogic.boardMatrix[0][5]);
+        int winner =GomokuLogic.isWin(0,4);
+        assertEquals(0,winner);
+    }
+
+    @Test
     public void ColumnWinEnd(){
         GomokuLogic.testPiece(0,9);
         GomokuLogic.testPiece(0,8);
@@ -248,6 +262,21 @@ public class WinningTest{
         GomokuLogic.testPiece(2,2);
         GomokuLogic.testPiece(4,4);
         GomokuLogic.testPiece(5,5);
+        int winner =GomokuLogic.isWin(5,5);
+        assertEquals(0,winner);
+
+    }
+    @Test
+    public void StrictDiagonalSimpleLose(){
+        GomokuLogic.clearBoard(10,false);
+        GomokuLogic.clearBoard(10);
+        GomokuLogic.testPiece(0,0);
+        GomokuLogic.testPiece(1,1);
+        GomokuLogic.testPiece(2,2);
+        GomokuLogic.testPiece(4,4);
+        GomokuLogic.testPiece(5,5);
+        GomokuLogic.testPiece(6,6);
+
         int winner =GomokuLogic.isWin(5,5);
         assertEquals(0,winner);
 

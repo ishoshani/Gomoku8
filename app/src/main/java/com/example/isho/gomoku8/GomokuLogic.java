@@ -30,6 +30,17 @@ public class GomokuLogic {
             }
         }
     }
+    static public void clearBoard(int n, boolean style) {
+        freestyle = style;
+        turn = 1;
+        size = n;
+        boardMatrix = new int[n][n];
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                boardMatrix[i][j] = 0;
+            }
+        }
+    }
 
     static public int getTurn() {
         return turn;
@@ -55,24 +66,39 @@ public class GomokuLogic {
         int checkJ = j;
         boolean closed = false;
         checkJ++;
-        while (checkJ < size && boardMatrix[checkI][checkJ] == turn && toWin > 0) {
+        while (checkJ < size && boardMatrix[checkI][checkJ] == turn) {
             toWin--;
             checkJ++;
         }
         if (checkJ == size) {
             closed = true;
-        } else if (boardMatrix[checkI][checkJ] == -1) {
-            closed = true;
+        }
+        else if (freestyle) {
+            if (boardMatrix[checkI][checkJ] == -turn) {
+                closed = true;
+            }
+        }else if (!freestyle){
+             if (boardMatrix[checkI][checkJ] != 0){
+                closed = true;
+            }
         }
         checkI = i;
         checkJ = j;
         checkJ--;
-        while (checkJ >= 0 && boardMatrix[checkI][checkJ] == turn && toWin > 0) {
+        while (checkJ >= 0 && boardMatrix[checkI][checkJ] == turn) {
             toWin--;
             checkJ--;
         }
-        if (checkJ > -1 && boardMatrix[checkI][checkJ] != -1) {
-            closed = false;
+        if (checkJ > -1 ) {
+            if (freestyle) {
+                if (boardMatrix[checkI][checkJ] != -turn) {
+                    closed = false;
+                }
+            }else{
+                if (boardMatrix[checkI][checkJ] == 0){
+                    closed = false;
+                }
+            }
         }
         if (!closed && toWin == 0) {
             return turn;
@@ -86,24 +112,31 @@ public class GomokuLogic {
         int checkJ = j;
         boolean closed = false;
         checkI++;
-        while (checkI < size && boardMatrix[checkI][checkJ] == turn && toWin > 0) {
+        while (checkI < size && boardMatrix[checkI][checkJ] == turn) {
             toWin--;
             checkI++;
         }
         if (checkI == size) {
             closed = true;
-        } else if (boardMatrix[checkI][checkJ] == -1) {
+        } else if (freestyle && boardMatrix[checkI][checkJ] == -turn) {
+            closed = true;
+        } else if(!freestyle && boardMatrix[checkI][checkJ] != 0){
             closed = true;
         }
         checkI = i;
         checkJ = j;
         checkI--;
-        while (checkI >= 0 && boardMatrix[checkI][checkJ] == turn && toWin > 0) {
+        while (checkI >= 0 && boardMatrix[checkI][checkJ] == turn) {
             toWin--;
             checkI--;
         }
-        if (checkI > -1 && boardMatrix[checkI][checkJ] != -1) {
-            closed = false;
+        if (checkI > -1){
+            if(freestyle && boardMatrix[checkI][checkJ]!=-turn) {
+                closed = false;
+            }
+            else if(!freestyle && boardMatrix[checkI][checkJ]==0) {
+                closed = false;
+            }
         }
         if (!closed && toWin == 0) {
             return turn;
@@ -127,19 +160,26 @@ public class GomokuLogic {
             closed = true;
         } else if (checkJ == size) {
             closed = true;
-        } else if (boardMatrix[checkI][checkJ] == -1) {
+        } else if (freestyle && boardMatrix[checkI][checkJ] == -turn) {
+            closed = true;
+        } else if(!freestyle && boardMatrix[checkI][checkJ] != 0){
             closed = true;
         }
         checkI = i;
         checkJ = j;
         checkI--;
         checkJ--;
-        while (checkI >= 0 && checkJ >= 0 && boardMatrix[checkI][checkJ] == turn && toWin > 0) {
+        while (checkI >= 0 && checkJ >= 0 && boardMatrix[checkI][checkJ] == turn) {
             toWin--;
             checkI--;
             checkJ--;
         }
-        if ((checkI >= 0 && checkJ >= 0) && boardMatrix[checkI][checkJ] != -1) {
+        if ((checkI >= 0 && checkJ >= 0)
+                && (
+                (freestyle && boardMatrix[checkI][checkJ] != -turn)
+                        ||
+                (!freestyle && boardMatrix[checkI][checkJ] ==0)
+            )){
             closed = false;
         }
         if (!closed && toWin == 0) {
@@ -155,7 +195,7 @@ public class GomokuLogic {
         boolean closed = false;
         checkI--;
         checkJ++;
-        while (checkI >= 0 && checkJ < size && boardMatrix[checkI][checkJ] == turn && toWin > 0) {
+        while (checkI >= 0 && checkJ < size && boardMatrix[checkI][checkJ] == turn) {
             toWin--;
             checkI--;
             checkJ++;
@@ -164,19 +204,23 @@ public class GomokuLogic {
             closed = true;
         } else if (checkJ == size) {
             closed = true;
-        } else if (boardMatrix[checkI][checkJ] == -1) {
+        } else if (freestyle && boardMatrix[checkI][checkJ] == -turn) {
+            closed = true;
+        } else if(!freestyle && boardMatrix[checkI][checkJ] != 0){
             closed = true;
         }
         checkI = i;
         checkJ = j;
         checkI++;
         checkJ--;
-        while (checkI < size && checkJ >= 0 && boardMatrix[checkI][checkJ] == turn && toWin > 0) {
+        while (checkI < size && checkJ >= 0 && boardMatrix[checkI][checkJ] == turn) {
             toWin--;
             checkI++;
             checkJ--;
         }
-        if ((checkI < size && checkJ >= 0) && boardMatrix[checkI][checkJ] != -1) {
+        if ((checkI < size && checkJ >= 0) &&
+                ((freestyle && boardMatrix[checkI][checkJ] != -turn)||(!freestyle && boardMatrix[checkI][checkJ] == 0))
+                ){
             closed = false;
         }
         if (!closed && toWin == 0) {
@@ -184,7 +228,10 @@ public class GomokuLogic {
         }
         return 0;
     }
-
+/**
+checks each direction to see if a win is found. returns the players int, 1 for white and -1 for black,
+ of the winning player. 0 for no win.
+ */
     public static int isWin(int i, int j) {
         int win = isColWin(i, j);
         if (win != 0) {
@@ -207,9 +254,4 @@ public class GomokuLogic {
         return 0;
     }
 
-
-
-    /*
-    goes over board to check for a win. return 1 for white win, -1 for black win, return 0 for no win. 3 for draw.
-     */
 }
