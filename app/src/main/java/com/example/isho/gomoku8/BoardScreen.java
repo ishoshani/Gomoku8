@@ -87,13 +87,19 @@ public class BoardScreen extends AppCompatActivity {
         }
     }
     public void endGame(int winner){
+        String player;
+        if (winner == 1)
+            player = "Player 1";
+        else
+            player = "Player 2";
 
+        showDialog(player);
     }
 
     // call this method to show dialog
-    private void showDialog() {
+    private void showDialog(String args) {
         FragmentManager fm = getSupportFragmentManager();
-        GameDialogFragment frag = GameDialogFragment.newInstance("title here");
+        GameDialogFragment frag = GameDialogFragment.newInstance("winner: " + args);
         frag.show(fm, "activity_end_game_dialog");
     }
 
