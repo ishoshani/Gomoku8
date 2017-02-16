@@ -2195,14 +2195,18 @@ containing a value of this type.
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020043;
         public static final int abc_textfield_search_material=0x7f020044;
         public static final int black=0x7f020045;
-        public static final int brown=0x7f020046;
-        public static final int cross=0x7f020047;
-        public static final int design_fab_background=0x7f020048;
-        public static final int design_snackbar_background=0x7f020049;
-        public static final int notification_template_icon_bg=0x7f02004d;
-        public static final int white=0x7f02004a;
-        public static final int wood=0x7f02004b;
-        public static final int woodfloor=0x7f02004c;
+        public static final int black20=0x7f020046;
+        public static final int brown=0x7f020047;
+        public static final int cross=0x7f020048;
+        public static final int design_fab_background=0x7f020049;
+        public static final int design_snackbar_background=0x7f02004a;
+        public static final int grid10=0x7f02004b;
+        public static final int grid15=0x7f02004c;
+        public static final int notification_template_icon_bg=0x7f020051;
+        public static final int white=0x7f02004d;
+        public static final int white20=0x7f02004e;
+        public static final int wood=0x7f02004f;
+        public static final int woodfloor=0x7f020050;
     }
     public static final class id {
         public static final int MenuButton=0x7f0c007b;

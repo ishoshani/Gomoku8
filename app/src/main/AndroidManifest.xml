@@ -18,11 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChooseStartOptions"></activity>
+        <activity android:name=".ChooseStartOptions" />
         <activity
             android:name=".BoardScreen"
             android:label="@string/title_activity_board_screen"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".RulesScreen"></activity>
     </application>
 
 </manifest>
