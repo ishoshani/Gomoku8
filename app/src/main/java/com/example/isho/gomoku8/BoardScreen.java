@@ -86,7 +86,7 @@ public class BoardScreen extends AppCompatActivity {
         }
     }
     public void endGame(int winner){
-
+        Log.d("winning", winner +" is the winner");
     }
 
 
