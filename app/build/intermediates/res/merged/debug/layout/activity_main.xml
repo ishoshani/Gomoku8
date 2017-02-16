@@ -49,7 +49,7 @@
                 android:layout_weight="4"
                 android:onClick="getGameRules"
                 android:textColor="@android:color/white"
-                android:background="#80000000"/>
+                android:background="#80000000" />
 
         </LinearLayout>
 
