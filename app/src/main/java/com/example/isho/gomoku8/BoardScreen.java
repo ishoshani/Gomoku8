@@ -67,9 +67,8 @@ public class BoardScreen extends AppCompatActivity {
 
                     }
                 });
-                Icon image = Icon.createWithResource(getApplicationContext(),R.drawable.cross);
-                bArray[i][j].setImageIcon(image);
-                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(100,100);
+                bArray[i][j].setBackgroundColor(Color.TRANSPARENT);
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(85,85);
                 if(i==0) {
                     params.addRule(RelativeLayout.ALIGN_PARENT_TOP,RelativeLayout.TRUE);
                 }else{
@@ -81,8 +80,6 @@ public class BoardScreen extends AppCompatActivity {
                     params.addRule(RelativeLayout.RIGHT_OF,bArray[i][j-1].getId());
                 }
                 boardView.addView(bArray[i][j],params);
- //               boardView.setBackgroundColor(Color.TRANSPARENT);
-
             }
         }
     }
