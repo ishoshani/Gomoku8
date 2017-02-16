@@ -2205,7 +2205,9 @@ containing a value of this type.
         public static final int woodfloor=0x7f02004c;
     }
     public static final class id {
+        public static final int MenuButton=0x7f0c007b;
         public static final int PlayersRadio=0x7f0c006c;
+        public static final int QuitButton=0x7f0c007c;
         public static final int StartGameButton=0x7f0c0078;
         public static final int action0=0x7f0c0087;
         public static final int action_bar=0x7f0c005a;
@@ -2231,9 +2233,6 @@ containing a value of this type.
         public static final int boardView=0x7f0c0069;
         public static final int board_size=0x7f0c006f;
         public static final int bottom=0x7f0c001c;
-        public static final int button=0x7f0c007a;
-        public static final int button2=0x7f0c007b;
-        public static final int button3=0x7f0c007c;
         public static final int buttonPanel=0x7f0c0044;
         public static final int button_new_game=0x7f0c007e;
         public static final int cancel_action=0x7f0c0088;
@@ -2303,6 +2302,7 @@ containing a value of this type.
         public static final int radio2player=0x7f0c006e;
         public static final int radioFreestyle=0x7f0c0077;
         public static final int radioStandard=0x7f0c0076;
+        public static final int rematchButton=0x7f0c007a;
         public static final int right=0x7f0c0023;
         public static final int screen=0x7f0c0027;
         public static final int scroll=0x7f0c0018;

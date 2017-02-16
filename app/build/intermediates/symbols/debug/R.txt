@@ -559,7 +559,9 @@ int drawable notification_template_icon_bg 0x7f02004d
 int drawable white 0x7f02004a
 int drawable wood 0x7f02004b
 int drawable woodfloor 0x7f02004c
+int id MenuButton 0x7f0c007b
 int id PlayersRadio 0x7f0c006c
+int id QuitButton 0x7f0c007c
 int id StartGameButton 0x7f0c0078
 int id action0 0x7f0c0087
 int id action_bar 0x7f0c005a
@@ -585,9 +587,6 @@ int id boardRadio 0x7f0c0070
 int id boardView 0x7f0c0069
 int id board_size 0x7f0c006f
 int id bottom 0x7f0c001c
-int id button 0x7f0c007a
-int id button2 0x7f0c007b
-int id button3 0x7f0c007c
 int id buttonPanel 0x7f0c0044
 int id button_new_game 0x7f0c007e
 int id cancel_action 0x7f0c0088
@@ -657,6 +656,7 @@ int id radio20 0x7f0c0073
 int id radio2player 0x7f0c006e
 int id radioFreestyle 0x7f0c0077
 int id radioStandard 0x7f0c0076
+int id rematchButton 0x7f0c007a
 int id right 0x7f0c0023
 int id screen 0x7f0c0027
 int id scroll 0x7f0c0018

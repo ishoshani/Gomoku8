@@ -8,12 +8,17 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.GridLayout;
 
 /**
  * Created by Jason on 2/15/2017.
  */
 
 public class GameDialogFragment extends DialogFragment {
+    Button RematchButton;
+    Button MenuButton;
+    Button ExitButton;
     public GameDialogFragment() {
         // need a free constructor
     }
@@ -36,6 +41,32 @@ public class GameDialogFragment extends DialogFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        RematchButton = (Button)view.findViewById(R.id.rematchButton);
+        MenuButton = (Button)view.findViewById(R.id.MenuButton);
+        ExitButton = (Button)view.findViewById(R.id.QuitButton);
+        RematchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BoardScreen parent = (BoardScreen)getActivity();
+                parent.resetMatch();
+            }
+        });
+        MenuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BoardScreen parent = (BoardScreen)getActivity();
+                parent.finish();
+            }
+        });
+        ExitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BoardScreen parent = (BoardScreen)getActivity();
+                parent.finish();
+            }
+        });
+
+
         // fetches title from Bundle and sets it
 //        String title = getArguments().getString("title", "Game Finished");
 //        getDialog().setTitle(title);
@@ -52,5 +83,6 @@ public class GameDialogFragment extends DialogFragment {
     public void returnToMenu() {
 
     }
+
 
 }
