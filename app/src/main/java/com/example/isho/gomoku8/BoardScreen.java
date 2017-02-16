@@ -21,6 +21,8 @@ public class BoardScreen extends AppCompatActivity {
     ImageButton[][] bArray;
     RelativeLayout boardView;
     int size;
+    String style;
+    boolean isFreeStyle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,13 @@ public class BoardScreen extends AppCompatActivity {
 //        Intent intent = getIntent();
         Bundle bundle = getIntent().getExtras();
         size = bundle.getInt("boardSize");
-        GomokuLogic.clearBoard(size);
+        style = bundle.getString("gameStyle","freestyle");
+        if(style.equals("Standard")){
+            isFreeStyle = false;
+        }else{
+            isFreeStyle = true;
+        }
+        GomokuLogic.clearBoard(size,isFreeStyle);
         setContentView(R.layout.activity_board_screen);
         boardView = (RelativeLayout) findViewById(R.id.boardView);
         bArray = new ImageButton[size][size];
@@ -51,6 +59,11 @@ public class BoardScreen extends AppCompatActivity {
                         bArray[fi][fj].setImageIcon(image);
                         bArray[fi][fj].setEnabled(false);
                         GomokuLogic.placePiece(fi,fj);
+                        int winner = GomokuLogic.isWin(fi,fj);
+                        if(winner != 0){
+                            BoardScreen.this.endGame(winner);
+                        }
+
                     }
                 });
                 Icon image = Icon.createWithResource(getApplicationContext(),R.drawable.cross);
@@ -71,6 +84,9 @@ public class BoardScreen extends AppCompatActivity {
 
             }
         }
+    }
+    public void endGame(int winner){
+
     }
 
 

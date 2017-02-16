@@ -281,4 +281,16 @@ public class WinningTest{
         assertEquals(0,winner);
 
     }
+    @Test
+    public void TieTest(){
+        GomokuLogic.clearBoard(10);
+        for (int i = 0; i <GomokuLogic.size ; i++) {
+            for (int j = 0; j < GomokuLogic.size; j++) {
+                GomokuLogic.placePiece(i,j);
+            }
+        }
+        int winner = GomokuLogic.isWin(4,4);
+        assertEquals(-3,winner);
+
+    }
 }

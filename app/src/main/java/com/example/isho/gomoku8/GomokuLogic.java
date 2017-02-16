@@ -10,6 +10,7 @@ import android.util.Log;
 public class GomokuLogic {
     static int[][] boardMatrix;
     static int size;
+    static int turnsTaken;
     static boolean freestyle;
     static int turn;//goes between 1 and -1 two decide between players
 
@@ -34,6 +35,7 @@ public class GomokuLogic {
         freestyle = style;
         turn = 1;
         size = n;
+        turnsTaken = 0;
         boardMatrix = new int[n][n];
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
@@ -51,10 +53,10 @@ public class GomokuLogic {
     }
 
     static public void placePiece(int i, int j) {
-        Log.d("gameLogic", "placed piece at " + i + " and " + j);
 
         boardMatrix[i][j] = turn;
         turn *= -1;
+        turnsTaken++;
     }
 
     /*
@@ -248,6 +250,9 @@ checks each direction to see if a win is found. returns the players int, 1 for w
         win = isBackDagWin(i, j);
         if (win != 0) {
             return win;
+        }
+        if(turnsTaken > ((size * size)-1)){
+            return -3;
         }
 
 
