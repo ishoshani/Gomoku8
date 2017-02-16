@@ -6,6 +6,7 @@ import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.Toolbar;
@@ -86,9 +87,21 @@ public class BoardScreen extends AppCompatActivity {
         }
     }
     public void endGame(int winner){
-        Log.d("winning", winner +" is the winner");
+        String player;
+        if (winner == 1)
+            player = "Player 1";
+        else
+            player = "Player 2";
+
+        showDialog(player);
     }
 
+    // call this method to show dialog
+    private void showDialog(String args) {
+        FragmentManager fm = getSupportFragmentManager();
+        GameDialogFragment frag = GameDialogFragment.newInstance("winner: " + args);
+        frag.show(fm, "activity_end_game_dialog");
+    }
 
 
 
