@@ -8,12 +8,22 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.GridLayout;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by Jason on 2/15/2017.
  */
 
 public class GameDialogFragment extends DialogFragment {
+    Button RematchButton;
+    Button MenuButton;
+    Button ExitButton;
+    TextView Title;
+    static String winner;
     public GameDialogFragment() {
         // need a free constructor
     }
@@ -21,6 +31,7 @@ public class GameDialogFragment extends DialogFragment {
     public static GameDialogFragment newInstance(String title) {
         GameDialogFragment frag = new GameDialogFragment();
         Bundle args = new Bundle();
+        winner = title;
         args.putString("title", title);
         frag.setArguments(args);
         return frag;
@@ -36,6 +47,34 @@ public class GameDialogFragment extends DialogFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        Title = (TextView)view.findViewById(R.id.VictoryText);
+        RematchButton = (Button)view.findViewById(R.id.rematchButton);
+        MenuButton = (Button)view.findViewById(R.id.MenuButton);
+        ExitButton = (Button)view.findViewById(R.id.QuitButton);
+        Title.setText(winner);
+        RematchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BoardScreen parent = (BoardScreen)getActivity();
+                parent.resetMatch();
+            }
+        });
+        MenuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BoardScreen parent = (BoardScreen)getActivity();
+                parent.finish();
+            }
+        });
+        ExitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BoardScreen parent = (BoardScreen)getActivity();
+                parent.finish();
+            }
+        });
+
+
         // fetches title from Bundle and sets it
 //        String title = getArguments().getString("title", "Game Finished");
 //        getDialog().setTitle(title);
@@ -52,5 +91,6 @@ public class GameDialogFragment extends DialogFragment {
     public void returnToMenu() {
 
     }
+
 
 }

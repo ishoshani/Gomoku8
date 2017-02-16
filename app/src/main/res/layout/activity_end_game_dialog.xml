@@ -8,7 +8,7 @@
         android:text="@string/end"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
+        android:id="@+id/VictoryText"
         android:fontFamily="sans-serif"
         android:textSize="24sp" />
 
@@ -16,17 +16,18 @@
         android:text="@string/rematch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button" />
+        android:id="@+id/rematchButton"
+        android:onClick="resetMatch"/>
 
     <Button
         android:text="@string/menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button2" />
+        android:id="@+id/MenuButton" />
 
     <Button
         android:text="@string/exit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button3" />
+        android:id="@+id/QuitButton" />
 </LinearLayout>
