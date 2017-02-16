@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_rules_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.isho.gomoku8.RulesScreen"
+    android:background="@drawable/woodfloor"
+    android:gravity="center_horizontal">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/game_rules"
+            android:id="@+id/textView"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:layout_marginTop="50dp"
+            android:textColor="@android:color/background_light"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" />
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>
