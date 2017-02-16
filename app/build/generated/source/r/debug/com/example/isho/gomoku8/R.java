@@ -2209,6 +2209,7 @@ containing a value of this type.
         public static final int PlayersRadio=0x7f0c006c;
         public static final int QuitButton=0x7f0c007c;
         public static final int StartGameButton=0x7f0c0078;
+        public static final int VictoryText=0x7f0c0079;
         public static final int action0=0x7f0c0087;
         public static final int action_bar=0x7f0c005a;
         public static final int action_bar_activity_content=0x7f0c0000;
@@ -2341,7 +2342,6 @@ containing a value of this type.
         public static final int text=0x7f0c0091;
         public static final int text2=0x7f0c008f;
         public static final int textSpacerNoButtons=0x7f0c004d;
-        public static final int textView2=0x7f0c0079;
         public static final int textView4=0x7f0c007f;
         public static final int time=0x7f0c008d;
         public static final int title=0x7f0c0043;

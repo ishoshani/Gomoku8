@@ -108,7 +108,7 @@ public class BoardScreen extends AppCompatActivity {
     // call this method to show dialog
     private void showDialog(String args) {
         FragmentManager fm = getSupportFragmentManager();
-        frag = GameDialogFragment.newInstance("winner: " + args);
+        frag = GameDialogFragment.newInstance("Winner: " + args);
         frag.show(fm, "activity_end_game_dialog");
     }
 

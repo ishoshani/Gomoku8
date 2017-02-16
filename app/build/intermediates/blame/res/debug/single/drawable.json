@@ -20,12 +20,12 @@
         "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
-        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_dialog_material_background_dark.xml"
-    },
-    {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/drawable/black.png",
         "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/src/main/res/drawable/black.png"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_dialog_material_background_dark.xml"
     },
     {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
