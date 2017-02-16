@@ -36,6 +36,10 @@
         "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/layout/activity_end_game_dialog.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/src/main/res/layout/activity_end_game_dialog.xml"
+    },
+    {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
         "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_item.xml"
     },
