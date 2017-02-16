@@ -68,7 +68,7 @@ public class GomokuLogic {
         int checkJ = j;
         boolean closed = false;
         checkJ++;
-        while (checkJ < size && boardMatrix[checkI][checkJ] == turn) {
+        while (checkJ < size && boardMatrix[checkI][checkJ] == turn && toWin>0) {
             toWin--;
             checkJ++;
         }
@@ -87,7 +87,7 @@ public class GomokuLogic {
         checkI = i;
         checkJ = j;
         checkJ--;
-        while (checkJ >= 0 && boardMatrix[checkI][checkJ] == turn) {
+        while (checkJ >= 0 && boardMatrix[checkI][checkJ] == turn && toWin >0) {
             toWin--;
             checkJ--;
         }
@@ -114,7 +114,7 @@ public class GomokuLogic {
         int checkJ = j;
         boolean closed = false;
         checkI++;
-        while (checkI < size && boardMatrix[checkI][checkJ] == turn) {
+        while (checkI < size && boardMatrix[checkI][checkJ] == turn && toWin > 0) {
             toWin--;
             checkI++;
         }
@@ -128,7 +128,7 @@ public class GomokuLogic {
         checkI = i;
         checkJ = j;
         checkI--;
-        while (checkI >= 0 && boardMatrix[checkI][checkJ] == turn) {
+        while (checkI >= 0 && boardMatrix[checkI][checkJ] == turn && toWin > 0) {
             toWin--;
             checkI--;
         }
@@ -171,7 +171,7 @@ public class GomokuLogic {
         checkJ = j;
         checkI--;
         checkJ--;
-        while (checkI >= 0 && checkJ >= 0 && boardMatrix[checkI][checkJ] == turn) {
+        while (checkI >= 0 && checkJ >= 0 && boardMatrix[checkI][checkJ] == turn && toWin > 0) {
             toWin--;
             checkI--;
             checkJ--;
@@ -197,7 +197,7 @@ public class GomokuLogic {
         boolean closed = false;
         checkI--;
         checkJ++;
-        while (checkI >= 0 && checkJ < size && boardMatrix[checkI][checkJ] == turn) {
+        while (checkI >= 0 && checkJ < size && boardMatrix[checkI][checkJ] == turn && toWin > 0) {
             toWin--;
             checkI--;
             checkJ++;
@@ -215,7 +215,7 @@ public class GomokuLogic {
         checkJ = j;
         checkI++;
         checkJ--;
-        while (checkI < size && checkJ >= 0 && boardMatrix[checkI][checkJ] == turn) {
+        while (checkI < size && checkJ >= 0 && boardMatrix[checkI][checkJ] == turn && toWin > 0) {
             toWin--;
             checkI++;
             checkJ--;

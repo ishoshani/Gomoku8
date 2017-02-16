@@ -48,11 +48,29 @@ public class WinningTest{
         GomokuLogic.testPiece(0,3);
         GomokuLogic.testPiece(0,4);
         GomokuLogic.testPiece(0,5);
+        GomokuLogic.turn *= -1;
+        GomokuLogic.testPiece(0,6);
+        GomokuLogic.turn *= -1;
         assertEquals(1,GomokuLogic.boardMatrix[0][5]);
-        int winner =GomokuLogic.isWin(0,4);
+        int winner =GomokuLogic.isWin(0,3);
         assertEquals(0,winner);
     }
-
+    @Test
+    public void FreestyleColumnWin(){
+        GomokuLogic.clearBoard(10,true);
+        GomokuLogic.testPiece(0,0);
+        GomokuLogic.testPiece(0,1);
+        GomokuLogic.testPiece(0,2);
+        GomokuLogic.testPiece(0,3);
+        GomokuLogic.testPiece(0,4);
+        GomokuLogic.testPiece(0,5);
+        GomokuLogic.turn *= -1;
+        GomokuLogic.testPiece(0,6);
+        GomokuLogic.turn *= -1;
+        assertEquals(1,GomokuLogic.boardMatrix[0][3]);
+        int winner =GomokuLogic.isWin(0,3);
+        assertEquals(1,winner);
+    }
     @Test
     public void ColumnWinEnd(){
         GomokuLogic.testPiece(0,9);
@@ -283,13 +301,13 @@ public class WinningTest{
     }
     @Test
     public void TieTest(){
-        GomokuLogic.clearBoard(10);
+        GomokuLogic.clearBoard(10,false);
         for (int i = 0; i <GomokuLogic.size ; i++) {
             for (int j = 0; j < GomokuLogic.size; j++) {
                 GomokuLogic.placePiece(i,j);
             }
         }
-        int winner = GomokuLogic.isWin(4,4);
+        int winner = GomokuLogic.isWin(0,4);
         assertEquals(-3,winner);
 
     }
