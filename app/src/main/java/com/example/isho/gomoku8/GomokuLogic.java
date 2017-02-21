@@ -1,5 +1,6 @@
 package com.example.isho.gomoku8;
 
+import android.os.AsyncTask;
 import android.provider.Settings;
 import android.util.Log;
 
@@ -7,7 +8,7 @@ import android.util.Log;
  * Created by Jason on 2/12/2017.
  */
 
-public class GomokuLogic {
+public class GomokuLogic{
     static int[][] boardMatrix;
     static int size;
     static int turnsTaken;
@@ -19,6 +20,8 @@ public class GomokuLogic {
         size = n;
         turn = 1;
     }
+
+
 
     static public void clearBoard(int n) {
         freestyle = true;
