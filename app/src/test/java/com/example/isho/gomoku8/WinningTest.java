@@ -64,12 +64,24 @@ public class WinningTest{
         GomokuLogic.testPiece(0,3);
         GomokuLogic.testPiece(0,4);
         GomokuLogic.testPiece(0,5);
-        GomokuLogic.turn *= -1;
-        GomokuLogic.testPiece(0,6);
-        GomokuLogic.turn *= -1;
         assertEquals(1,GomokuLogic.boardMatrix[0][3]);
         int winner =GomokuLogic.isWin(0,3);
         assertEquals(1,winner);
+    }
+    @Test
+    public void FreestyleColumnBlocked(){
+        GomokuLogic.clearBoard(10,true);
+        GomokuLogic.testPiece(0,0);
+        GomokuLogic.testPiece(0,1);
+        GomokuLogic.testPiece(0,2);
+        GomokuLogic.testPiece(0,3);
+        GomokuLogic.testPiece(0,4);
+        GomokuLogic.testPiece(0,5);
+        GomokuLogic.turn=-1;
+        GomokuLogic.testPiece(0,6);
+        GomokuLogic.turn=1;
+        int winner =GomokuLogic.isWin(0,3);
+        assertEquals(0,winner);
     }
     @Test
     public void ColumnWinEnd(){

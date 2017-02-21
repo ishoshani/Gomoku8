@@ -33,7 +33,7 @@ public class BoardScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white);
         blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black);
-        backRoundImage = Icon.createWithResource(getApplicationContext(),R.drawable.cross);
+       // backRoundImage = Icon.createWithResource(getApplicationContext(),R.drawable.cross);
 
         super.onCreate(savedInstanceState);
 //        Intent intent = getIntent();
@@ -77,8 +77,8 @@ public class BoardScreen extends AppCompatActivity {
 
                     }
                 });
-                bArray[i][j].setImageIcon(backRoundImage);
-                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(100,100);
+                bArray[i][j].setBackgroundColor(Color.TRANSPARENT);
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(85,85);
                 if(i==0) {
                     params.addRule(RelativeLayout.ALIGN_PARENT_TOP,RelativeLayout.TRUE);
                 }else{
