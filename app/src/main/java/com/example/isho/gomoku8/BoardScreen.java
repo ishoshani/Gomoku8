@@ -26,14 +26,12 @@ public class BoardScreen extends AppCompatActivity {
     boolean isFreeStyle;
     Icon whitePieceImage;
     Icon blackPieceImage;
-    Icon backRoundImage;
     GameDialogFragment frag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white);
         blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black);
-        backRoundImage = Icon.createWithResource(getApplicationContext(),R.drawable.cross);
 
         super.onCreate(savedInstanceState);
 //        Intent intent = getIntent();
@@ -77,7 +75,6 @@ public class BoardScreen extends AppCompatActivity {
 
                     }
                 });
-                bArray[i][j].setImageIcon(backRoundImage);
                 RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(100,100);
                 if(i==0) {
                     params.addRule(RelativeLayout.ALIGN_PARENT_TOP,RelativeLayout.TRUE);
@@ -116,7 +113,7 @@ public class BoardScreen extends AppCompatActivity {
         GomokuLogic.clearBoard(size,isFreeStyle);
         for (int i = 0; i < size ; i++) {
             for (int j = 0; j < size; j++) {
-                bArray[i][j].setImageIcon(backRoundImage);
+                bArray[i][j].setBackgroundColor(Color.TRANSPARENT);
                 bArray[i][j].setEnabled(true);
             }
         }
