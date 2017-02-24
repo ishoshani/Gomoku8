@@ -18,7 +18,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-public class BoardScreen extends AppCompatActivity implements AsyncResponse {
+public class BoardScreen extends AppCompatActivity {
     ImageButton[][] bArray;
     RelativeLayout boardView;
     int size;
@@ -28,17 +28,16 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
     Icon blackPieceImage;
     Icon backRoundImage;
     GameDialogFragment frag;
-    GomokuHandler GomHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white);
         blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black);
-       // backRoundImage = Icon.createWithResource(getApplicationContext(),R.drawable.cross);
+        backRoundImage = Icon.createWithResource(getApplicationContext(),R.drawable.cross);
+
         super.onCreate(savedInstanceState);
 //        Intent intent = getIntent();
         Bundle bundle = getIntent().getExtras();
-        GomHandler = new GomokuHandler();
         size = bundle.getInt("boardSize");
         style = bundle.getString("gameStyle","freestyle");
         if(style.equals("Standard")){
@@ -54,15 +53,12 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
             for(int j = 0; j<size; j++){
                 final int fi = i;
                 final int fj = j;
-
                 bArray[i][j]= new ImageButton(getApplicationContext());
                 bArray[i][j].setId(View.generateViewId());
                 bArray[i][j].setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         Icon image;
-                        final GomokuHandler localHandler = new GomokuHandler();
-                        localHandler.delegate = BoardScreen.this;
                         if(GomokuLogic.getTurn()>0) {
                             image = whitePieceImage;
                         }
@@ -71,12 +67,18 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
                         }
                         bArray[fi][fj].setImageIcon(image);
                         bArray[fi][fj].setEnabled(false);
-                        localHandler.execute(fi,fj);
+                        GomokuLogic.testPiece(fi,fj);
+                        GomokuLogic.turnsTaken++;
+                        int winner = GomokuLogic.isWin(fi,fj);
+                        if(winner != 0){
+                            BoardScreen.this.endGame(winner);
+                        }
+                        GomokuLogic.turn*=-1;
 
                     }
                 });
-                bArray[i][j].setBackgroundColor(Color.TRANSPARENT);
-                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(85,85);
+                bArray[i][j].setImageIcon(backRoundImage);
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(100,100);
                 if(i==0) {
                     params.addRule(RelativeLayout.ALIGN_PARENT_TOP,RelativeLayout.TRUE);
                 }else{
@@ -101,12 +103,6 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
             player = "Player 2";
 
         showDialog(player);
-    }
-    public void FinishProcess(Integer result){
-        if(result!=0) {
-            endGame(result);
-        }
-
     }
 
     // call this method to show dialog

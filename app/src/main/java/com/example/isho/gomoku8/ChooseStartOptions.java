@@ -59,7 +59,7 @@ public class ChooseStartOptions extends AppCompatActivity {
         bundle.putInt("boardSize",this.boardSize);
         bundle.putInt("playerSize",this.playerSize);
         intent.putExtras(bundle);
-        //        Log.d(msg, this.gameStyle + this.broadSize + this.playerSize);
+        //        Log.d(msg, this.gameStyle + this.boardSize + this.playerSize);
         startActivity(intent);
 
 
