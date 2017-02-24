@@ -6,6 +6,7 @@ import android.media.Image;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
+import android.graphics.Color;
 
 /**
  * Created by isho on 2/15/17.
@@ -44,8 +45,7 @@ public class BoardPrototype {
 
                     }
                 });
-                Icon image = Icon.createWithResource(appContext,R.drawable.cross);
-                blankBoard[i][j].setImageIcon(image);
+                blankBoard[i][j].setBackgroundColor(Color.TRANSPARENT);
                 RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(100,100);
                 if(i==0) {
                     params.addRule(RelativeLayout.ALIGN_PARENT_TOP,RelativeLayout.TRUE);
