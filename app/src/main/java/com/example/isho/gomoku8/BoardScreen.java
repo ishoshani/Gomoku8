@@ -128,3 +128,28 @@ public class BoardScreen extends AppCompatActivity {
 
 
 }
+/*
+ setContentView(R.layout.activity_board_screen);
+
+        // Image/background sizing for chosen board size
+        // currently not working as intended
+  //      bGrid = (LinearLayout) findViewById(R.id.boardGrid);
+        if(size==10){
+            lsize = 85; // do not change
+         //   bGrid.setBackgroundResource(R.drawable.grid10);
+            wPieceID = R.drawable.white; //30
+            bPieceID = R.drawable.black;
+        }
+        else if(size==15){
+            lsize = 58; // do not change
+        //    bGrid.setBackgroundResource(R.drawable.grid15);
+            wPieceID = R.drawable.white20; //20
+            bPieceID = R.drawable.black20;
+        }
+        else if(size==20){
+            lsize = 35;
+        //    bGrid.setBackgroundResource(R.drawable.grid20);
+            wPieceID = R.drawable.white14; //10?
+            bPieceID = R.drawable.black14;
+        }
+ */
