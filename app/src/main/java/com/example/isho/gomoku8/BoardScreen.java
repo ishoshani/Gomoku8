@@ -21,20 +21,13 @@ import android.widget.RelativeLayout;
 public class BoardScreen extends AppCompatActivity {
     ImageButton[][] bArray;
     RelativeLayout boardView;
-    int size;
+    LinearLayout bGrid;
+    int size, lsize, wPieceID, bPieceID;
     String style;
     boolean isFreeStyle;
-    Icon whitePieceImage;
-    Icon blackPieceImage;
-    Icon backRoundImage;
-    GameDialogFragment frag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white);
-        blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black);
-        backRoundImage = Icon.createWithResource(getApplicationContext(),R.drawable.cross);
-
         super.onCreate(savedInstanceState);
 //        Intent intent = getIntent();
         Bundle bundle = getIntent().getExtras();
@@ -46,8 +39,32 @@ public class BoardScreen extends AppCompatActivity {
             isFreeStyle = true;
         }
         GomokuLogic.clearBoard(size,isFreeStyle);
-        setContentView(R.layout.activity_board_screen);
+
         boardView = (RelativeLayout) findViewById(R.id.boardView);
+        setContentView(R.layout.activity_board_screen);
+
+        // Image/background sizing for chosen board size
+        // currently not working as intended
+  //      bGrid = (LinearLayout) findViewById(R.id.boardGrid);
+        if(size==10){
+            lsize = 85; // do not change
+         //   bGrid.setBackgroundResource(R.drawable.grid10);
+            wPieceID = R.drawable.white; //30
+            bPieceID = R.drawable.black;
+        }
+        else if(size==15){
+            lsize = 58; // do not change
+        //    bGrid.setBackgroundResource(R.drawable.grid15);
+            wPieceID = R.drawable.white20; //20
+            bPieceID = R.drawable.black20;
+        }
+        else if(size==20){
+            lsize = 35;
+        //    bGrid.setBackgroundResource(R.drawable.grid20);
+            wPieceID = R.drawable.white14; //10?
+            bPieceID = R.drawable.black14;
+        }
+
         bArray = new ImageButton[size][size];
         for (int i =0; i<size; i++){
             for(int j = 0; j<size; j++){
@@ -60,25 +77,23 @@ public class BoardScreen extends AppCompatActivity {
                     public void onClick(View view) {
                         Icon image;
                         if(GomokuLogic.getTurn()>0) {
-                            image = whitePieceImage;
+                            image = Icon.createWithResource(getApplicationContext(),wPieceID);
                         }
                         else{
-                            image = blackPieceImage;
+                            image = Icon.createWithResource(getApplicationContext(),bPieceID);
                         }
                         bArray[fi][fj].setImageIcon(image);
                         bArray[fi][fj].setEnabled(false);
-                        GomokuLogic.testPiece(fi,fj);
-                        GomokuLogic.turnsTaken++;
+                        GomokuLogic.placePiece(fi,fj);
                         int winner = GomokuLogic.isWin(fi,fj);
                         if(winner != 0){
                             BoardScreen.this.endGame(winner);
                         }
-                        GomokuLogic.turn*=-1;
 
                     }
                 });
-                bArray[i][j].setImageIcon(backRoundImage);
-                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(100,100);
+                bArray[i][j].setBackgroundColor(Color.TRANSPARENT);
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(lsize,lsize);
                 if(i==0) {
                     params.addRule(RelativeLayout.ALIGN_PARENT_TOP,RelativeLayout.TRUE);
                 }else{
@@ -90,12 +105,10 @@ public class BoardScreen extends AppCompatActivity {
                     params.addRule(RelativeLayout.RIGHT_OF,bArray[i][j-1].getId());
                 }
                 boardView.addView(bArray[i][j],params);
- //               boardView.setBackgroundColor(Color.TRANSPARENT);
-
             }
         }
     }
-    public void endGame(int winner) {
+    public void endGame(int winner){
         String player;
         if (winner == 1)
             player = "Player 1";
@@ -108,22 +121,8 @@ public class BoardScreen extends AppCompatActivity {
     // call this method to show dialog
     private void showDialog(String args) {
         FragmentManager fm = getSupportFragmentManager();
-        frag = GameDialogFragment.newInstance("Winner: " + args);
+        GameDialogFragment frag = GameDialogFragment.newInstance("winner: " + args);
         frag.show(fm, "activity_end_game_dialog");
-    }
-
-    public void resetMatch(){
-        GomokuLogic.clearBoard(size,isFreeStyle);
-        for (int i = 0; i < size ; i++) {
-            for (int j = 0; j < size; j++) {
-                bArray[i][j].setImageIcon(backRoundImage);
-                bArray[i][j].setEnabled(true);
-            }
-        }
-        frag.dismiss();
-    }
-    public void returnToMenu(){
-        finishActivity(0);
     }
 
 
