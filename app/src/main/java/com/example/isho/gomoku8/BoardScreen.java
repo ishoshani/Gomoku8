@@ -18,7 +18,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-public class BoardScreen extends AppCompatActivity {
+public class BoardScreen extends AppCompatActivity implements AsyncResponse {
     ImageButton[][] bArray;
     RelativeLayout boardView;
     int size;
@@ -57,6 +57,8 @@ public class BoardScreen extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Icon image;
+                        GomokuHandler localHandler = new GomokuHandler();
+                        localHandler.delegate = BoardScreen.this;
                         if(GomokuLogic.getTurn()>0) {
                             image = whitePieceImage;
                         }
@@ -65,13 +67,7 @@ public class BoardScreen extends AppCompatActivity {
                         }
                         bArray[fi][fj].setImageIcon(image);
                         bArray[fi][fj].setEnabled(false);
-                        GomokuLogic.testPiece(fi,fj);
-                        GomokuLogic.turnsTaken++;
-                        int winner = GomokuLogic.isWin(fi,fj);
-                        if(winner != 0){
-                            BoardScreen.this.endGame(winner);
-                        }
-                        GomokuLogic.turn*=-1;
+                        localHandler.execute(fi,fj);
 
                     }
                 });
@@ -121,6 +117,11 @@ public class BoardScreen extends AppCompatActivity {
     }
     public void returnToMenu(){
         finishActivity(0);
+    }
+    public void finishProcess(Integer output){
+        if(output!=0){
+            endGame(output);
+        }
     }
 
 

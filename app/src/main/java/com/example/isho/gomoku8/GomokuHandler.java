@@ -21,7 +21,7 @@ class GomokuHandler extends AsyncTask<Integer,Void,Integer> {
     }
     @Override
     protected void onPostExecute(Integer result){
-        delegate.FinishProcess(result);
+        delegate.finishProcess(result);
     }
 
 }
