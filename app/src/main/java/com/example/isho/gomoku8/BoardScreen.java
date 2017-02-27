@@ -27,6 +27,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
     Icon whitePieceImage;
     Icon blackPieceImage;
     GameDialogFragment frag;
+    int playerSize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         Bundle bundle = getIntent().getExtras();
         size = bundle.getInt("boardSize");
         style = bundle.getString("gameStyle","freestyle");
+        playerSize = bundle.getInt("playerSize");
         if(style.equals("Standard")){
             isFreeStyle = false;
         }else{
@@ -59,6 +61,9 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
                         Icon image;
                         GomokuHandler localHandler = new GomokuHandler();
                         localHandler.delegate = BoardScreen.this;
+                        if(playerSize == 1) {
+                            localHandler.isAI = true;
+                        }
                         if(GomokuLogic.getTurn()>0) {
                             image = whitePieceImage;
                         }
@@ -118,7 +123,11 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
     public void returnToMenu(){
         finishActivity(0);
     }
-    public void finishProcess(Integer output){
+    public void finishProcess(Integer output, int aiRow, int aiCol){
+        if(playerSize == 1) {
+            bArray[aiRow][aiCol].setEnabled(false);
+            bArray[aiRow][aiCol].setImageIcon(blackPieceImage);
+        }
         if(output!=0){
             endGame(output);
         }
