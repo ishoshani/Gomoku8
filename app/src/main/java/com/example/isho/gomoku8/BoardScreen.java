@@ -18,7 +18,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-public class BoardScreen extends AppCompatActivity {
+public class BoardScreen extends AppCompatActivity implements AsyncResponse {
     ImageButton[][] bArray;
     RelativeLayout boardView;
     int size;
@@ -26,20 +26,20 @@ public class BoardScreen extends AppCompatActivity {
     boolean isFreeStyle;
     Icon whitePieceImage;
     Icon blackPieceImage;
-    Icon backRoundImage;
     GameDialogFragment frag;
+    int playerSize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white);
         blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black);
-        backRoundImage = Icon.createWithResource(getApplicationContext(),R.drawable.cross);
 
         super.onCreate(savedInstanceState);
 //        Intent intent = getIntent();
         Bundle bundle = getIntent().getExtras();
         size = bundle.getInt("boardSize");
         style = bundle.getString("gameStyle","freestyle");
+        playerSize = bundle.getInt("playerSize");
         if(style.equals("Standard")){
             isFreeStyle = false;
         }else{
@@ -59,6 +59,11 @@ public class BoardScreen extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Icon image;
+                        GomokuHandler localHandler = new GomokuHandler();
+                        localHandler.delegate = BoardScreen.this;
+                        if(playerSize == 1) {
+                            localHandler.isAI = true;
+                        }
                         if(GomokuLogic.getTurn()>0) {
                             image = whitePieceImage;
                         }
@@ -67,17 +72,10 @@ public class BoardScreen extends AppCompatActivity {
                         }
                         bArray[fi][fj].setImageIcon(image);
                         bArray[fi][fj].setEnabled(false);
-                        GomokuLogic.testPiece(fi,fj);
-                        GomokuLogic.turnsTaken++;
-                        int winner = GomokuLogic.isWin(fi,fj);
-                        if(winner != 0){
-                            BoardScreen.this.endGame(winner);
-                        }
-                        GomokuLogic.turn*=-1;
+                        localHandler.execute(fi,fj);
 
                     }
                 });
-                bArray[i][j].setImageIcon(backRoundImage);
                 RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(100,100);
                 if(i==0) {
                     params.addRule(RelativeLayout.ALIGN_PARENT_TOP,RelativeLayout.TRUE);
@@ -116,7 +114,7 @@ public class BoardScreen extends AppCompatActivity {
         GomokuLogic.clearBoard(size,isFreeStyle);
         for (int i = 0; i < size ; i++) {
             for (int j = 0; j < size; j++) {
-                bArray[i][j].setImageIcon(backRoundImage);
+                bArray[i][j].setBackgroundColor(Color.TRANSPARENT);
                 bArray[i][j].setEnabled(true);
             }
         }
@@ -125,6 +123,40 @@ public class BoardScreen extends AppCompatActivity {
     public void returnToMenu(){
         finishActivity(0);
     }
+    public void finishProcess(Integer output, int aiRow, int aiCol){
+        if(playerSize == 1) {
+            bArray[aiRow][aiCol].setEnabled(false);
+            bArray[aiRow][aiCol].setImageIcon(blackPieceImage);
+        }
+        if(output!=0){
+            endGame(output);
+        }
+    }
 
 
 }
+/*
+ setContentView(R.layout.activity_board_screen);
+
+        // Image/background sizing for chosen board size
+        // currently not working as intended
+  //      bGrid = (LinearLayout) findViewById(R.id.boardGrid);
+        if(size==10){
+            lsize = 85; // do not change
+         //   bGrid.setBackgroundResource(R.drawable.grid10);
+            wPieceID = R.drawable.white; //30
+            bPieceID = R.drawable.black;
+        }
+        else if(size==15){
+            lsize = 58; // do not change
+        //    bGrid.setBackgroundResource(R.drawable.grid15);
+            wPieceID = R.drawable.white20; //20
+            bPieceID = R.drawable.black20;
+        }
+        else if(size==20){
+            lsize = 35;
+        //    bGrid.setBackgroundResource(R.drawable.grid20);
+            wPieceID = R.drawable.white14; //10?
+            bPieceID = R.drawable.black14;
+        }
+ */
