@@ -1,10 +1,6 @@
 [
     {
-        "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
-        "source": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout-sw600dp/design_layout_snackbar.xml"
-    },
-    {
-        "merged": "/home/b/Gomoku/Gomoku8/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
-        "source": "/home/b/Gomoku/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout-sw600dp/design_layout_snackbar.xml"
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout-sw600dp/design_layout_snackbar.xml"
     }
 ]

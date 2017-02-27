@@ -10,6 +10,8 @@ import android.os.AsyncTask;
 class GomokuHandler extends AsyncTask<Integer,Void,Integer> {
     public AsyncResponse delegate = null;
     public boolean isAI = false;
+
+
     int aiRow = 0, aiCol = 0 ;
 
     @Override
