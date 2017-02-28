@@ -18,6 +18,7 @@ public class OnlineClient {
     private static ObjectInputStream in;
     public  boolean isOpenConnection;
     public  boolean inGame;
+    public static  boolean isFirst;
     public static boolean isMyTurn;
     public Integer NextRow;
     public Integer NextCol;
@@ -25,7 +26,10 @@ public class OnlineClient {
     public OnlineClient(OnMoveReceived listener){
         this.onMoveReceived = listener;
     }
+
+
     public static void SendMove(int i, int j)throws IOException{
+        Log.i("online","writing Move");
         out.writeObject(new GamePacket("MOVE",i,j));
         NextMoveReady = true;
     }
@@ -53,40 +57,45 @@ public class OnlineClient {
             out.writeObject(new GamePacket("BEGINPLAY"));
             response = (GamePacket) in.readObject();
             if (response.packetType.equals("YOURTURN")) {
+                isFirst = true;
+                isMyTurn = true;
                 while (!NextMoveReady) {
-                    Log.i("online","waiting for move");
+                    Thread.sleep(2000);
                 }
                 response = (GamePacket) in.readObject();
                 NextMoveReady = false;
 
             } else {
+                isMyTurn = false;
+                isFirst = false;
                 while (!response.packetType.equals("YOURTURN") && !response.packetType.equals("GAMEOVER")) {
+                    Log.i("online",response.packetType);
                     out.writeObject(new GamePacket("WAITINGFORTURN"));
                     response = (GamePacket) in.readObject();
                 }
-                NextRow = response.row;
-                NextCol = response.col;
-                onMoveReceived.moveReceived(NextRow, NextCol);
+                onMoveReceived.moveReceived(response.row, response.col);
 
             }
             while (inGame) {
                 if (response.packetType.equals("YOURTURN")) {
+                    isMyTurn = true;
                     while (!NextMoveReady) {
-                        Log.i("online","waiting for move");
+                        Thread.sleep(2000);
 
                     }
                     response = (GamePacket) in.readObject();
                     NextMoveReady = false;
 
                 } else {
+                    isMyTurn = false;
                     while (!response.packetType.equals("YOURTURN") && !response.packetType.equals("GAMEOVER")) {
+                        Log.i("online",response.packetType);
+                        Thread.sleep(2000);
                         out.writeObject(new GamePacket("WAITINGFORTURN"));
                         response = (GamePacket) in.readObject();
                     }
+                        onMoveReceived.moveReceived(response.row, response.col);
                     if (response.packetType.equals("GAMEOVER")) {
-                        NextRow = response.row;
-                        NextCol = response.col;
-                        onMoveReceived.moveReceived(NextRow, NextCol);
                         inGame = false;
                     }
 
@@ -103,6 +112,9 @@ public class OnlineClient {
 
         }catch(ClassNotFoundException CNF){
             Log.e("online","C:Error:",CNF);
+
+        }catch (InterruptedException Interrupt){
+            Log.e("online","C:Error:",Interrupt);
 
         }
     }

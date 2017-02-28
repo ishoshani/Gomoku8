@@ -62,22 +62,24 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
                 bArray[i][j].setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Icon image;
-                        GomokuHandler localHandler = new GomokuHandler();
-                        localHandler.delegate = OnlineBoard.this;
-                        if(GomokuLogic.getTurn()>0) {
-                            image = whitePieceImage;
-                        }
-                        else{
-                            image = blackPieceImage;
-                        }
+                        if(OnlineClient.isMyTurn) {
+                            Icon image;
+                            GomokuHandler localHandler = new GomokuHandler();
+                            localHandler.delegate = OnlineBoard.this;
+                            localHandler.isOnline = true;
+                            if (OnlineClient.isFirst) {
+                                image = whitePieceImage;
+                            } else {
+                                image = blackPieceImage;
+                            }
                             bArray[fi][fj].setImageIcon(image);
                             bArray[fi][fj].setEnabled(false);
                             localHandler.execute(fi, fj);
-                        try {
-                            OnlineClient.SendMove(fi, fj);
-                        }catch (IOException e){
-                            endGame(-5);
+                            try {
+                                OnlineClient.SendMove(fi, fj);
+                            } catch (IOException e) {
+                                endGame(-5);
+                            }
                         }
 
 
@@ -148,15 +150,15 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
     }
     public  void processOnlineMove(int row, int col, int winner) {
         bArray[row][col].setEnabled(false);
-        if(GomokuLogic.turn>0) {
+        if (!OnlineClient.isFirst) {
             bArray[row][col].setImageIcon(whitePieceImage);
-        }else{
+        } else {
             bArray[row][col].setImageIcon(blackPieceImage);
         }
-        if(winner!=0){
+        if (winner != 0) {
             endGame(winner);
         }
-}
+    }
 /*
  setContentView(R.layout.activity_board_screen);
 

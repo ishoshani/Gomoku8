@@ -14,8 +14,12 @@ class TCPtask extends AsyncTask<Integer,Integer,OnlineClient>{
         online = new OnlineClient(new OnMoveReceived() {
             @Override
             public void moveReceived(int row, int col) {
-                GomokuLogic.testPiece(row,col);
-                int winner = GomokuLogic.isWin(row,col);
+                int winner;
+                if(OnlineClient.isFirst) {
+                    winner = GomokuLogic.placePieceforPlayer(row, col, -1);
+                }else{
+                    winner = GomokuLogic.placePieceforPlayer(row, col, 1);
+                }
                 publishProgress(row,col,winner);
             }
         });
