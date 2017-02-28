@@ -30,7 +30,6 @@
             android:label="@string/title_activity_board_screen"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.example.isho.gomoku8.RulesScreen" />
-        <activity android:name="com.example.isho.gomoku8.Timer" />
     </application>
 
 </manifest>

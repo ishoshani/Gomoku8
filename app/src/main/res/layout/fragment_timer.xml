@@ -4,10 +4,30 @@
     android:layout_height="match_parent"
     tools:context="com.example.isho.gomoku8.TimerFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Time: " />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/timer1"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/timer2"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 </FrameLayout>

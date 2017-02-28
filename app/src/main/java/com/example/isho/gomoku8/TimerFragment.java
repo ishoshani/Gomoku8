@@ -7,6 +7,9 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.os.CountDownTimer;
+
+import java.util.concurrent.TimeUnit;
 import android.widget.TextView;
 
 
@@ -19,19 +22,17 @@ import android.widget.TextView;
  * create an instance of this fragment.
  */
 public class TimerFragment extends Fragment {
-    Timer timer;
-    TextView textView;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    static String player;
+    CountDownTimer timer;
+    TextView timerText;
+    int initialTime = 600000, timeUnit = 1000, sec, min;
+    boolean running;
+    long timeLeft;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    public static final String FORMAT = "%02d:%02d";
 
-    private OnFragmentInteractionListener mListener;
+    //private OnFragmentInteractionListener mListener;
 
     public TimerFragment() {
         // Required empty public constructor
@@ -40,60 +41,67 @@ public class TimerFragment extends Fragment {
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment TimerFragment.
      */
-    // TODO: Rename and change types and number of parameters
-    public static TimerFragment newInstance(String param1, String param2) {
+
+    public static TimerFragment newInstance(String timerView) {
         TimerFragment fragment = new TimerFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        player = timerView;
+        args.putString("Player", timerView);
         fragment.setArguments(args);
         return fragment;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+    /*
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            if (getArguments() != null) {
+                mParam1 = getArguments().getString(ARG_PARAM1);
+                mParam2 = getArguments().getString(ARG_PARAM2);
+            }
         }
-    }
-
+    */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_timer, container, false);
+        View timerView;
+
+        timerView = inflater.inflate(R.layout.fragment_timer, container, false);
+        timerText = (TextView) timerView.findViewById(R.id.timer);
+        timerText.setText(player);
+        timer = new MyCountDownTimer(initialTime, timeUnit, timerText);
+
+        return timerView;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
+/*
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
     }
-
+*/
+/*
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
+    public static final String FORMAT = "%02d:%02d";    if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
     }
-
+*/
+/*
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
     }
+*/
 
     /**
      * This interface must be implemented by activities that contain this
@@ -105,8 +113,127 @@ public class TimerFragment extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
+/*
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 }
+*/
+    public void start() {
+        timer.start();
+    }
+
+    public void stop() {
+        timer.cancel();
+    }
+
+    public void timerReset() {
+        //
+    }
+
+    public class MyCountDownTimer extends CountDownTimer {
+        long initial, unit;
+        boolean running = true;
+        long timeLeft;
+        TextView countDownText;
+
+        public MyCountDownTimer(long initial, long unit, TextView timerText) {
+            super(initial, unit);
+            timeLeft = initial;
+            countDownText = timerText;
+        }
+
+        @Override
+        //required onTick() method
+        //countDownText.setText("seconds remaining: " + millisUntilFinished / 1000);
+        public void onTick(long msLeft) {
+            countDownText.setText("Time: " + String.format(FORMAT,
+                    TimeUnit.MILLISECONDS.toMinutes(msLeft)
+            ));
+        }
+
+        public void pauseTimer() {
+            running = false;
+        }
+
+        public void resumeTimer() {
+            running = true;
+        }
+
+        //required onFinish() method
+        public void onFinish() {
+            countDownText.setText("Game Over!");
+        }
+    }
+}
+
+/*
+public class Timer extends AppCompatActivity {
+
+    CountDownTimer timer;
+    TextView timerText;
+    int initial = 600000, timeUnit = 1000, sec, min;
+    boolean running;
+    long timeLeft;
+
+    // Display format for min:sec
+    public static final String FORMAT = "%02d:%02d";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_board_screen);
+
+        timerText = (TextView) findViewById(R.id.timer);
+        timer = new MyCountDownTimer(initial, timeUnit, timerText);
+    }
+
+    public void start() {
+        timer.start();
+    }
+
+    public void stop() {
+        timer.cancel();
+    }
+
+    public void timerReset() {
+        //
+    }
+
+    public class MyCountDownTimer extends CountDownTimer {
+        long initial, unit;
+        boolean running = true;
+        long timeLeft;
+        TextView countDownText;
+
+        public MyCountDownTimer(long initial, long unit, TextView timerText) {
+            super(initial, unit);
+            timeLeft = initial;
+            countDownText = timerText;
+        }
+
+        @Override
+        //required onTick() method
+        //countDownText.setText("seconds remaining: " + millisUntilFinished / 1000);
+        public void onTick(long msLeft) {
+            countDownText.setText("Time: " + String.format(FORMAT,
+                    TimeUnit.MILLISECONDS.toMinutes(msLeft)
+            ));
+        }
+
+        public void pauseTimer(){
+            running = false;
+        }
+
+        public void resumeTimer() {
+            running = true;
+        }
+
+        //required onFinish() method
+        public void onFinish() {
+            countDownText.setText("Game Over!");
+        }
+    }
+}
+*/
