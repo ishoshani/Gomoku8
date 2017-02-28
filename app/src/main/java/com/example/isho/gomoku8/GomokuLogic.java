@@ -18,7 +18,7 @@ public class GomokuLogic{
     public GomokuLogic(int n) {
         boardMatrix = new int[n][n];
         size = n;
-        turn = 1;
+        turn = -1;
     }
 
 
