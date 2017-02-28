@@ -2,6 +2,7 @@ package com.example.isho.gomoku8;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -21,30 +22,52 @@ import android.widget.RelativeLayout;
 public class BoardScreen extends AppCompatActivity {
     ImageButton[][] bArray;
     RelativeLayout boardView;
-    int size;
+    LinearLayout bGrid;
+    int size, lsize;
     String style;
     boolean isFreeStyle;
-    Icon whitePieceImage;
-    Icon blackPieceImage;
+    Icon wPieceID, bPieceID;
     GameDialogFragment frag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white);
-        blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black);
+        isFreeStyle = false;
 
+
+        // Import menu settings and game style
         super.onCreate(savedInstanceState);
-//        Intent intent = getIntent();
         Bundle bundle = getIntent().getExtras();
         size = bundle.getInt("boardSize");
         style = bundle.getString("gameStyle","freestyle");
-        if(style.equals("Standard")){
+        if(style.equals("Standard")) {
             isFreeStyle = false;
-        }else{
-            isFreeStyle = true;
         }
-        GomokuLogic.clearBoard(size,isFreeStyle);
+
+        // Dynamic board/piece sizing
         setContentView(R.layout.activity_board_screen);
+        bGrid = new LinearLayout(getApplicationContext());
+        bGrid = (LinearLayout) findViewById(R.id.boardGrid);
+        if(size==10){
+            lsize = 85; // do not change
+            bGrid.setBackgroundResource(R.drawable.grid10);
+            wPieceID = Icon.createWithResource(getApplicationContext(),R.drawable.white); //30
+            bPieceID = Icon.createWithResource(getApplicationContext(),R.drawable.black);
+        }
+        else if(size==15){
+            lsize = 58; // do not change
+            bGrid.setBackgroundResource(R.drawable.grid15);
+            wPieceID = Icon.createWithResource(getApplicationContext(),R.drawable.white20); //20
+            bPieceID = Icon.createWithResource(getApplicationContext(),R.drawable.black20);
+        }
+        else {
+            lsize = 42;
+            bGrid.setBackgroundResource(R.drawable.grid20);
+            wPieceID = Icon.createWithResource(getApplicationContext(),R.drawable.white14); //10?
+            bPieceID = Icon.createWithResource(getApplicationContext(),R.drawable.black14);
+        }
+
+        // Create board and dynamically create buttons for each space
+        GomokuLogic.clearBoard(size,isFreeStyle);
         boardView = (RelativeLayout) findViewById(R.id.boardView);
         bArray = new ImageButton[size][size];
         for (int i =0; i<size; i++){
@@ -58,10 +81,10 @@ public class BoardScreen extends AppCompatActivity {
                     public void onClick(View view) {
                         Icon image;
                         if(GomokuLogic.getTurn()>0) {
-                            image = whitePieceImage;
+                            image = wPieceID;
                         }
                         else{
-                            image = blackPieceImage;
+                            image = bPieceID;
                         }
                         bArray[fi][fj].setImageIcon(image);
                         bArray[fi][fj].setEnabled(false);
@@ -75,7 +98,10 @@ public class BoardScreen extends AppCompatActivity {
 
                     }
                 });
-                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(100,100);
+
+                // Board layout parameters
+                bArray[i][j].setBackgroundColor(Color.TRANSPARENT);
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(lsize,lsize);
                 if(i==0) {
                     params.addRule(RelativeLayout.ALIGN_PARENT_TOP,RelativeLayout.TRUE);
                 }else{
@@ -87,8 +113,6 @@ public class BoardScreen extends AppCompatActivity {
                     params.addRule(RelativeLayout.RIGHT_OF,bArray[i][j-1].getId());
                 }
                 boardView.addView(bArray[i][j],params);
- //               boardView.setBackgroundColor(Color.TRANSPARENT);
-
             }
         }
     }
