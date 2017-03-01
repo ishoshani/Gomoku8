@@ -61,7 +61,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black20);
         }
         else { //20x20
-            lsize = 42;
+            lsize = 44;
             bGrid.setBackgroundResource(R.drawable.grid20);
             whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white14); //10?
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black14);
