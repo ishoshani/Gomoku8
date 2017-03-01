@@ -11,7 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.Toolbar;
-
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -31,8 +31,6 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        isFreeStyle = true;
-
 
         // Import menu settings and game style
         super.onCreate(savedInstanceState);
@@ -42,6 +40,8 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         playerSize = bundle.getInt("playerSize");
         if(style.equals("Standard")){
             isFreeStyle = false;
+        }else{
+            isFreeStyle = true;
         }
 
         // Dynamic board/piece sizing
@@ -60,7 +60,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
             whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white20); //20
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black20);
         }
-        else {
+        else { //20x20
             lsize = 42;
             bGrid.setBackgroundResource(R.drawable.grid20);
             whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white14); //10?
@@ -116,6 +116,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
             }
         }
     }
+
     public void endGame(int winner) {
         String player;
         if (winner == 1)
@@ -156,6 +157,16 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         }
         TCPtask sendInfo = new TCPtask();
         sendInfo.execute();
+    }
+
+    public int dpToPX(int dp) {
+        DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
+        return (int)((dp * displayMetrics.density) + 0.5);
+    }
+    public int pxToDP(int px) {
+        DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
+        return (int)((px/displayMetrics.density) + 0.5);
+
     }
 
 }

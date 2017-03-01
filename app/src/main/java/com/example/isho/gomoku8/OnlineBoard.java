@@ -10,7 +10,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.Toolbar;
-
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -23,23 +23,22 @@ import java.io.IOException;
 public class OnlineBoard extends AppCompatActivity implements AsyncResponse,OnlineMoveProcessor {
     ImageButton[][] bArray;
     RelativeLayout boardView;
-    int size;
+    LinearLayout bGrid;
+    int size, lsize;
     String style;
     boolean isFreeStyle;
-    Icon whitePieceImage;
-    Icon blackPieceImage;
+    Icon whitePieceImage, blackPieceImage;
     GameDialogFragment frag;
     int playerSize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white);
-        blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black);
         TCPtask connect = new TCPtask();
         connect.delegate = this;
         connect.execute();
+
+        // Import menu settings and game style
         super.onCreate(savedInstanceState);
-//        Intent intent = getIntent();
         Bundle bundle = getIntent().getExtras();
         size = bundle.getInt("boardSize");
         style = bundle.getString("gameStyle","freestyle");
@@ -49,8 +48,32 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
         }else{
             isFreeStyle = true;
         }
-        GomokuLogic.clearBoard(size,isFreeStyle);
+
+        // Dynamic board/piece sizing
         setContentView(R.layout.activity_board_screen);
+        bGrid = new LinearLayout(getApplicationContext());
+        bGrid = (LinearLayout) findViewById(R.id.boardGrid);
+        if(size==10){
+            lsize = 85; // do not change
+            bGrid.setBackgroundResource(R.drawable.grid10);
+            whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white); //30
+            blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black);
+        }
+        else if(size==15){
+            lsize = 58; // do not change
+            bGrid.setBackgroundResource(R.drawable.grid15);
+            whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white20); //20
+            blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black20);
+        }
+        else {
+            lsize = 42;
+            bGrid.setBackgroundResource(R.drawable.grid20);
+            whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white14); //10?
+            blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black14);
+        }
+
+        // Create board and dynamically create buttons for each space
+        GomokuLogic.clearBoard(size,isFreeStyle);
         boardView = (RelativeLayout) findViewById(R.id.boardView);
         bArray = new ImageButton[size][size];
         for (int i =0; i<size; i++){
@@ -86,7 +109,10 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
 
                     }
                 });
-                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(100,100);
+
+                // Board layout parameters
+                bArray[i][j].setBackgroundColor(Color.TRANSPARENT);
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(lsize,lsize);
                 if(i==0) {
                     params.addRule(RelativeLayout.ALIGN_PARENT_TOP,RelativeLayout.TRUE);
                 }else{
@@ -98,11 +124,10 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
                     params.addRule(RelativeLayout.RIGHT_OF,bArray[i][j-1].getId());
                 }
                 boardView.addView(bArray[i][j],params);
-                //               boardView.setBackgroundColor(Color.TRANSPARENT);
-
             }
         }
     }
+
     public void endGame(int winner) {
         String player;
         if (winner == 1)
@@ -159,30 +184,16 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
             endGame(winner);
         }
     }
-/*
- setContentView(R.layout.activity_board_screen);
 
-        // Image/background sizing for chosen board size
-        // currently not working as intended
-  //      bGrid = (LinearLayout) findViewById(R.id.boardGrid);
-        if(size==10){
-            lsize = 85; // do not change
-         //   bGrid.setBackgroundResource(R.drawable.grid10);
-            wPieceID = R.drawable.white; //30
-            bPieceID = R.drawable.black;
-        }
-        else if(size==15){
-            lsize = 58; // do not change
-        //    bGrid.setBackgroundResource(R.drawable.grid15);
-            wPieceID = R.drawable.white20; //20
-            bPieceID = R.drawable.black20;
-        }
-        else if(size==20){
-            lsize = 35;
-        //    bGrid.setBackgroundResource(R.drawable.grid20);
-            wPieceID = R.drawable.white14; //10?
-            bPieceID = R.drawable.black14;
-        }
- */
+    // Image sizing conversions
+    public int dpToPX(int dp) {
+        DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
+        return (int)((dp * displayMetrics.density) + 0.5);
+    }
+    public int pxToDP(int px) {
+        DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
+        return (int)((px/displayMetrics.density) + 0.5);
+
+    }
 
 }
