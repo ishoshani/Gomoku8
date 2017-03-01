@@ -155,8 +155,6 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         if(output!=0){
             endGame(output);
         }
-        TCPtask sendInfo = new TCPtask();
-        sendInfo.execute();
     }
 
     public int dpToPX(int dp) {

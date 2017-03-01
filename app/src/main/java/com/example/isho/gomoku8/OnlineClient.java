@@ -33,8 +33,6 @@ public class OnlineClient {
         out.writeObject(new GamePacket("MOVE",i,j));
         NextMoveReady = true;
     }
-
-
     public void OpenConnection() {
         try {
             InetAddress servAddress = InetAddress.getByName(ServerIP);
