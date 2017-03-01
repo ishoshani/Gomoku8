@@ -157,6 +157,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         }
     }
 
+    // image sizing conversions
     public int dpToPX(int dp) {
         DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
         return (int)((dp * displayMetrics.density) + 0.5);
