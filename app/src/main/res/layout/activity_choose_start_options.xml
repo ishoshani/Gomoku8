@@ -164,6 +164,22 @@
                 android:onClick="NewGame"
                 android:textColor="@android:color/white"
                 android:background="@android:color/background_dark" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        <Button
+            android:text="@string/start_game_online"
+            android:id="@+id/OnlineStartGameButton"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="35sp"
+            android:onClick="NewOnlineGame"
+            android:textColor="@android:color/white"
+            android:background="@android:color/background_dark" />
+
 
         <Space
             android:layout_width="match_parent"

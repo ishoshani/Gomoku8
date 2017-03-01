@@ -10,6 +10,7 @@
     <string name="mode_type">Game Mode</string>
     <string name="one">One</string>
     <string name="two">Two</string>
+    <string name = "start_game_online">Play Online</string>
     <string name="size10">10x10</string>
     <string name="size15">15x15</string>
     <string name="size20">20x20</string>
@@ -32,4 +33,5 @@
     <string name="exit">Quit</string>
     <string name="menu">Menu</string>
     <string name="end">Game Finished</string>
+    <string name="title_activity_online_board">OnlineBoard</string>
 </resources>

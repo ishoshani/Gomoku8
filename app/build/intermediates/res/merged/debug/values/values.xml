@@ -301,9 +301,11 @@
     <string name="size20">20x20</string>
     <string name="standard_mode">Standard</string>
     <string name="start_game">Start</string>
+    <string name="start_game_online">Play Online</string>
     <string name="start_screen_title">GOMOKU</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_board_screen">BoardScreen</string>
+    <string name="title_activity_online_board">OnlineBoard</string>
     <string name="two">Two</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

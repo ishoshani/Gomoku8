@@ -21,6 +21,16 @@ public class ChooseStartOptions extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_start_options);
     }
+    public void NewOnlineGame(View view){
+        Intent intent = new Intent(this, OnlineBoard.class);
+        Bundle bundle = new Bundle();
+        intent.putExtra("gameStyle","freeStyle");
+        bundle.putInt("boardSize",this.boardSize);
+        bundle.putInt("playerSize",this.playerSize);
+        intent.putExtras(bundle);
+        //        Log.d(msg, this.gameStyle + this.boardSize + this.playerSize);
+        startActivity(intent);
+    }
 
     public void NewGame(View view){
         RadioGroup styleID = (RadioGroup)findViewById(R.id.modeRadio);
