@@ -29,22 +29,21 @@ class GomokuHandler extends AsyncTask<Integer,Void,Integer> {
         }else {
             winner = GomokuLogic.placePiece(row, col);
         }
+        SinglePlayerAI AI = new SinglePlayerAI(row, col);
         if (isAI && winner == 0) {
-         //   SinglePlayerAI AI = new SinglePlayerAI();
-         //   AI.aiMove(row, col);
-            Log.i("AI","AIMOVE");
-            GomokuLogic.turnsTaken++;
-            GomokuLogic.testPiece(row+1,col+1);
-            winner = GomokuLogic.isWin(row+1, col+1);
-            aiRow = row+1;
-            aiCol = col+1;
-            GomokuLogic.turn*=-1;
+            //AI.aiMove(row, col);
+            AI.setPlayerMove(row, col);
+            Log.d("GomokuHandler Debug", "Player move was " + row + " " + col);
+            int[] aiMoves = AI.aiMove();
+            aiRow = aiMoves[0];
+            aiCol = aiMoves[1];
+            Log.d("GomokuHandler Debug", "genereated AI move was " + aiRow + " " + aiCol);
+            winner = GomokuLogic.placePiece(aiRow, aiCol);
         }
         return winner;
     }
     @Override
     protected void onPostExecute(Integer result){
-
         delegate.finishProcess(result, aiRow, aiCol);
     }
 
