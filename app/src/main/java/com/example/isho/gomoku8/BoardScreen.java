@@ -138,6 +138,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         GomokuLogic.clearBoard(size, isFreeStyle);
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
+                bArray[i][j].setImageIcon(null);
                 bArray[i][j].setBackgroundColor(Color.TRANSPARENT);
                 bArray[i][j].setEnabled(true);
             }
