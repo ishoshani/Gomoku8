@@ -34,4 +34,7 @@
     <string name="menu">Menu</string>
     <string name="end">Game Finished</string>
     <string name="title_activity_online_board">OnlineBoard</string>
+    <string name="PlayerTurn">Player 1</string>
+    <string name="Player1">Player 1</string>
+    <string name="Player2">Player 2</string>
 </resources>
