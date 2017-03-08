@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import java.io.IOException;
-
 /**
  * Created by isho on 2/20/17.
  */
@@ -16,36 +14,31 @@ class GomokuHandler extends AsyncTask<Integer,Void,Integer> {
     public boolean isOnline = false;
 
     int aiRow = 0, aiCol = 0 ;
-    int lastRow = 0, lastCol;
 
     @Override
     protected Integer doInBackground(Integer... position){
         int row = position[0];
         int col = position[1];
-        lastRow = row;
-        lastCol = col;
         Integer winner=0;
-        Log.i("online", "handler is online"+isOnline);
-        if(isOnline) {
-            if (OnlineClient.isFirst) {
-                winner = GomokuLogic.placePieceforPlayer(row, col, 1);
-            } else {
-                winner = GomokuLogic.placePieceforPlayer(row, col, -1);
+        if(isOnline){
+            if(OnlineClient.isFirst){
+                GomokuLogic.placePieceforPlayer(row,col,1);
+            }else{
+                GomokuLogic.placePieceforPlayer(row,col,-1);
             }
-
         }else {
             winner = GomokuLogic.placePiece(row, col);
         }
+        SinglePlayerAI AI = new SinglePlayerAI(row, col);
         if (isAI && winner == 0) {
-         //   SinglePlayerAI AI = new SinglePlayerAI();
-         //   AI.aiMove(row, col);
-            Log.i("AI","AIMOVE");
-            GomokuLogic.turnsTaken++;
-            GomokuLogic.testPiece(row+1,col+1);
-            winner = GomokuLogic.isWin(row+1, col+1);
-            aiRow = row+1;
-            aiCol = col+1;
-            GomokuLogic.turn*=-1;
+            //AI.aiMove(row, col);
+            AI.setPlayerMove(row, col);
+            Log.d("GomokuHandler Debug", "Player move was " + row + " " + col);
+            int[] aiMoves = AI.aiMove();
+            aiRow = aiMoves[0];
+            aiCol = aiMoves[1];
+            Log.d("GomokuHandler Debug", "genereated AI move was " + aiRow + " " + aiCol);
+            winner = GomokuLogic.placePiece(aiRow, aiCol);
         }
         return winner;
     }
