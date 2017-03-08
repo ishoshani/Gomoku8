@@ -14,7 +14,7 @@ class GomokuHandler extends AsyncTask<Integer,Void,Integer> {
     public boolean isOnline = false;
 
     int aiRow = 0, aiCol = 0 ;
-    int lastRow, int lastCol;
+    int lastRow, lastCol;
 
     @Override
     protected Integer doInBackground(Integer... position){
