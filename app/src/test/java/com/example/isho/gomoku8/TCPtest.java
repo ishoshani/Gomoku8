@@ -19,6 +19,15 @@ public class TCPtest {
         public void moveReceived(int row, int col) {
             GomokuLogic.testPiece(row,col);
         }
+
+        @Override
+        public void ConnectionComplete() {
+            return;
+        }
+        @Override
+        public void onConnectionProblem(int type){
+            return;
+        }
     });
     @Test
     public void ConnectionTest(){

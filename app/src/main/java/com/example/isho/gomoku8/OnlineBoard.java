@@ -3,6 +3,7 @@ package com.example.isho.gomoku8;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Icon;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -28,7 +29,7 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
     String style;
     boolean isFreeStyle;
     Icon whitePieceImage, blackPieceImage;
-    GameDialogFragment frag;
+    OnlineDialogFragment frag;
     int playerSize;
 
     @Override
@@ -51,6 +52,7 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
 
         // Dynamic board/piece sizing
         setContentView(R.layout.activity_board_screen);
+        Snackbar.make(findViewById(android.R.id.content),"Looking For Game",Snackbar.LENGTH_SHORT).show();
         bGrid = new LinearLayout(getApplicationContext());
         bGrid = (LinearLayout) findViewById(R.id.boardGrid);
         if(size==10){
@@ -97,12 +99,9 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
                             }
                             bArray[fi][fj].setImageIcon(image);
                             bArray[fi][fj].setEnabled(false);
-                            localHandler.execute(fi, fj);
-                            try {
-                                OnlineClient.SendMove(fi, fj);
-                            } catch (IOException e) {
-                                endGame(-5);
-                            }
+                            localHandler.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, fi, fj);
+                            Snackbar.make(findViewById(android.R.id.content),"Waiting For Opponents Turn",Snackbar.LENGTH_LONG).show();
+
                         }
 
 
@@ -140,6 +139,7 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
             player = "connection Error";
         else
             player = "wut";
+        OnlineClient.inGame = false;
 
         showDialog(player);
     }
@@ -147,7 +147,7 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
     // call this method to show dialog
     private void showDialog(String args) {
         FragmentManager fm = getSupportFragmentManager();
-        frag = GameDialogFragment.newInstance("Winner: " + args);
+        frag = OnlineDialogFragment.newInstance("Winner: " + args);
         frag.show(fm, "activity_end_game_dialog");
     }
 
@@ -164,17 +164,28 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
     public void returnToMenu(){
         finishActivity(0);
     }
-    public void finishProcess(Integer output, int aiRow, int aiCol){
+    public void finishProcess(Integer output, int aiRow, int aiCol, int row, int col){
         if(playerSize == 1) {
             bArray[aiRow][aiCol].setEnabled(false);
             bArray[aiRow][aiCol].setImageIcon(blackPieceImage);
         }
-        if(output!=0) {
-            endGame(output);
+        try {
+            OnlineClient.SendMove(row, col);
+        }catch(IOException e){
+            endGame(-5);
         }
+
+        if (output != 0) {
+            Log.i("online","win Discovered");
+            OnlineClient.inGame=false;
+            endGame(output);
+            }
+
+
     }
     public  void processOnlineMove(int row, int col, int winner) {
         bArray[row][col].setEnabled(false);
+
         if (!OnlineClient.isFirst) {
             bArray[row][col].setImageIcon(whitePieceImage);
         } else {
@@ -183,6 +194,28 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
         if (winner != 0) {
             endGame(winner);
         }
+        Snackbar.make(findViewById(android.R.id.content),"Your Turn",Snackbar.LENGTH_SHORT).show();
+
+    }
+    public void showConnectionStart(){
+        if(OnlineClient.isFirst) {
+            Snackbar.make(findViewById(android.R.id.content), "Found Game,Your Turn", Snackbar.LENGTH_LONG).show();
+        }else{
+            Snackbar.make(findViewById(android.R.id.content),"Found Game, Other Player's Turn",Snackbar.LENGTH_LONG).show();
+        }
+    }
+    public void handleProblem(int type){
+        if(type ==1){
+            Snackbar.make(findViewById(android.R.id.content), "The Other Player Disconnected", Snackbar.LENGTH_LONG).show();
+            endGame(-5);
+        }
+        if(type ==2){
+            Snackbar.make(findViewById(android.R.id.content), "The Server had an Error", Snackbar.LENGTH_LONG).show();
+            endGame(-5);
+        }
+    }
+    public void handleError(){
+        endGame(-5);
     }
 
     // Image sizing conversions

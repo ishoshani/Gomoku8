@@ -134,9 +134,9 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         frag.show(fm, "activity_end_game_dialog");
     }
 
-    public void resetMatch(){
-        GomokuLogic.clearBoard(size,isFreeStyle);
-        for (int i = 0; i < size ; i++) {
+    public void resetMatch() {
+        GomokuLogic.clearBoard(size, isFreeStyle);
+        for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 bArray[i][j].setBackgroundColor(Color.TRANSPARENT);
                 bArray[i][j].setEnabled(true);
@@ -147,7 +147,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
     public void returnToMenu(){
         finishActivity(0);
     }
-    public void finishProcess(Integer output, int aiRow, int aiCol){
+    public void finishProcess(Integer output, int aiRow, int aiCol, int row, int col){
         if(playerSize == 1) {
             bArray[aiRow][aiCol].setEnabled(false);
             bArray[aiRow][aiCol].setImageIcon(blackPieceImage);
@@ -156,6 +156,10 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
             endGame(output);
         }
     }
+    public void handleError(){
+        endGame(-5);
+    }
+
 
     // image sizing conversions
     public int dpToPX(int dp) {

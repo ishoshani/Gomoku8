@@ -6,4 +6,6 @@ package com.example.isho.gomoku8;
 
 public interface OnMoveReceived {
     void moveReceived(int row, int col);
+    void ConnectionComplete();
+    void onConnectionProblem(int type);
 }

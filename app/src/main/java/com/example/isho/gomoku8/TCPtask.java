@@ -20,15 +20,32 @@ class TCPtask extends AsyncTask<Integer,Integer,OnlineClient>{
                 }else{
                     winner = GomokuLogic.placePieceforPlayer(row, col, 1);
                 }
-                publishProgress(row,col,winner);
+                publishProgress(1,row,col,winner);
             }
-        });
+            @Override
+            public void ConnectionComplete(){
+                publishProgress(2);
+            }
+            public void onConnectionProblem(int type){
+                publishProgress(3,type);
+            }
+        }
+
+        );
         online.OpenConnection();
         return null;
     }
     protected void onProgressUpdate(Integer...received){
         super.onProgressUpdate(received);
-        delegate.processOnlineMove(received[0],received[1],received[2]);
+        if(received[0]==1) {
+            delegate.processOnlineMove(received[1], received[2], received[3]);
+        }
+        if(received[0]==2){
+            delegate.showConnectionStart();
+        }
+        if(received[0]==3){
+            delegate.handleProblem(1);
+        }
 
     }
 

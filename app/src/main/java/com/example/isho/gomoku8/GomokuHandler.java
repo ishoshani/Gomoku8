@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import java.io.IOException;
+
 /**
  * Created by isho on 2/20/17.
  */
@@ -14,18 +16,23 @@ class GomokuHandler extends AsyncTask<Integer,Void,Integer> {
     public boolean isOnline = false;
 
     int aiRow = 0, aiCol = 0 ;
+    int lastRow = 0, lastCol;
 
     @Override
     protected Integer doInBackground(Integer... position){
         int row = position[0];
         int col = position[1];
+        lastRow = row;
+        lastCol = col;
         Integer winner=0;
-        if(isOnline){
-            if(OnlineClient.isFirst){
-                GomokuLogic.placePieceforPlayer(row,col,1);
-            }else{
-                GomokuLogic.placePieceforPlayer(row,col,-1);
+        Log.i("online", "handler is online"+isOnline);
+        if(isOnline) {
+            if (OnlineClient.isFirst) {
+                winner = GomokuLogic.placePieceforPlayer(row, col, 1);
+            } else {
+                winner = GomokuLogic.placePieceforPlayer(row, col, -1);
             }
+
         }else {
             winner = GomokuLogic.placePiece(row, col);
         }
@@ -45,7 +52,7 @@ class GomokuHandler extends AsyncTask<Integer,Void,Integer> {
     @Override
     protected void onPostExecute(Integer result){
 
-        delegate.finishProcess(result, aiRow, aiCol);
+        delegate.finishProcess(result, aiRow, aiCol, lastRow, lastCol);
     }
 
 }

@@ -16,12 +16,6 @@ public class GomokuLogic{
     static int turn;//goes between 1 and -1 two decide between players
     final static Boolean Mutex=true;
 
-    public GomokuLogic(int n) {
-        boardMatrix = new int[n][n];
-        size = n;
-        turn = -1;
-    }
-
 
 
     static public void clearBoard(int n) {
