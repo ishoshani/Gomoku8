@@ -161,9 +161,6 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
         }
         frag.dismiss();
     }
-    public void returnToMenu(){
-        finishActivity(0);
-    }
     public void finishProcess(Integer output, int aiRow, int aiCol, int row, int col){
         if(playerSize == 1) {
             bArray[aiRow][aiCol].setEnabled(false);

@@ -289,6 +289,7 @@
         not count. In freestyle mode, a line of six or more adjacent
         stones is allowed.
     </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="how_to">How to Play</string>
     <string name="menu">Menu</string>
     <string name="mode_type">Game Mode</string>
