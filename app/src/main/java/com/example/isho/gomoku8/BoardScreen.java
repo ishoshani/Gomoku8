@@ -33,24 +33,24 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
     int playerSize;
 
     //TimerFragment fragment;
-    //TimerFragment p1timer;
-    //TimerFragment p2timer;
+    Timer p1timer;
+    Timer p2timer;
     //View timerView;
     TextView p1timerView;
     TextView p2timerView;
-    Chronometer p1timer;
-    Chronometer p2timer;
+    //Chronometer p1timer;
+    //Chronometer p2timer;
     int playerTurn;
-    boolean p2;
-    long initTime;
-    long p1time;
-    long p2time;
-    long minuteTime;
+    //boolean p2;
+    //long initTime;
+    //long p1time;
+    //long p2time;
+    //long minuteTime;
     boolean minuteTimer;
-    boolean p1set;
-    boolean p2set;
-    long deltap1time;
-    long deltap2time;
+    //boolean p1set;
+    //boolean p2set;
+    //long deltap1time;
+    //long deltap2time;
 
 
     @Override
