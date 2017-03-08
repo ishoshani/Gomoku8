@@ -32,20 +32,19 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
     GameDialogFragment frag;
     int playerSize;
 
-    //TimerFragment fragment;
-    Timer p1timer;
-    Timer p2timer;
+    //Timer p1timer;
+    //Timer p2timer;
     //View timerView;
-    TextView p1timerView;
-    TextView p2timerView;
-    //Chronometer p1timer;
-    //Chronometer p2timer;
+    //TextView p1timerView;
+    //TextView p2timerView;
+    Chronometer p1timer;
+    Chronometer p2timer;
     int playerTurn;
     //boolean p2;
-    //long initTime;
-    //long p1time;
-    //long p2time;
-    //long minuteTime;
+    long initTime;
+    long p1time;
+    long p2time;
+    long minuteTime;
     boolean minuteTimer;
     //boolean p1set;
     //boolean p2set;
@@ -72,40 +71,30 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
 
         //p1timer.isCountDown();
 
-        /*
-        p1time = initTime;
-        p2 = false;
-        p1timerView = (TextView) findViewById(R.id.timer1);
-        p1timer = new TimerFragment();
-        playerTurn = 1;
-        if (playerSize == 2) {
-            p2timerView = (TextView) findViewById(R.id.timer2);
-            p2timer = new TimerFragment();
-            p2time = initTime;
-            p2 = true;
-        }
-        */
 
         GomokuLogic.clearBoard(size,isFreeStyle);
         setContentView(R.layout.activity_board_screen);
         boardView = (RelativeLayout) findViewById(R.id.boardView);
         bArray = new ImageButton[size][size];
 
-        /*
         initTime = 600000;
         p1time = 0;
         p2time = 0;
         minuteTime = 60000;
         minuteTimer = false;
+
+        //p1timer = new Timer(getApplicationContext());
+        //p1timer = (Timer) findViewById(R.id.timer1);
+        //p2timer = (Timer) findViewById(R.id.timer2);
+
         p1timer = (Chronometer) findViewById(R.id.timer1);
         p2timer = (Chronometer) findViewById(R.id.timer2);
 
         //p1timer.setBase(initTime); //SystemClock.elapsedRealtime());
         //p2timer.setBase(initTime);
 
-        p1timer.setBase(SystemClock.elapsedRealtime());
-
-        //setContentView(R.layout.fragment_timer);
+        p1timer.setBase(SystemClock.uptimeMillis() - p2time);
+        p2timer.setBase(SystemClock.uptimeMillis() - p1time);
         //timerView = findViewById(R.id.timer1);
         //p1timer.resume();
         //p1timer.setCurrentTimeMillis(p1time);
@@ -116,9 +105,14 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         //p2timer.setText("10:00");
         //p1timer.setBase(p1time);
         //p2timer.setBase(p2time);
-        */
+
         //p1timer.start(); // Chronometer timer
 
+        //DOES NOT WORK
+        //p1timer.setText("10:00");
+        //p2timer.setText("10:00");
+
+        p1timer.start();
 
         for (int i =0; i<size; i++){
             for(int j = 0; j<size; j++){
@@ -138,15 +132,16 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
                         //p1timer.resume();
                         if(GomokuLogic.getTurn()>0) {
                             image = whitePieceImage;
+                            //p1timer.stopTimer();
+                            //p2timer.startTimer(p2time);
 
-                            /*
                             p1timer.stop();
-                            p1time = p1timer.getBase();
+                            p1time = SystemClock.uptimeMillis();
 
-                            resetTime(p2timer);
+                            //resetTime(p2timer);
                             p2timer.setBase(p2time);
                             p2timer.start();
-                            */
+
                             /*
                             deltap1time = p1timer.getBase() - p1time;// SystemClock.elapsedRealtime();
                             p1time += deltap1time;
@@ -168,15 +163,17 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
                         }
                         else{
                             image = blackPieceImage;
+                            //p2timer.stopTimer();
+                            //p1timer.startTimer(p1time);
 
-                            /*
+
                             p2timer.stop();
-                            p2time = p2timer.getBase();
+                            p2time = SystemClock.uptimeMillis();
 
-                            resetTime(p1timer);
+                            //resetTime(p1timer);
                             p1timer.setBase(p1time);
                             p1timer.start();
-                            */
+
 
                             /*
                             deltap2time = p2timer.getBase() - p2time; //SystemClock.elapsedRealtime();
@@ -223,14 +220,6 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         }
     }
 
-    /*
-        public void showTimer(String args) {
-            //
-            FragmentManager fm = getSupportFragmentManager();
-            fragment = TimerFragment.newInstance("Time: " + args);
-            fragment.show(fm, "activity_timer");
-        }
-    */
     public void resetTime(Chronometer timer) {
         timer.setBase(SystemClock.elapsedRealtime());
         timer.start();
@@ -240,6 +229,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         //if
     }
 
+/*
     public long checkTime(long playerTime) {
         System.out.println("checkTime value: " + playerTime);
         long timeSet;
@@ -266,6 +256,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
 
         return timeSet;
     }
+*/
 
     public void endGame(int winner) {
         String player;
