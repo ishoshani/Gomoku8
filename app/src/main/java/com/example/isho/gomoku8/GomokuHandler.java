@@ -14,11 +14,14 @@ class GomokuHandler extends AsyncTask<Integer,Void,Integer> {
     public boolean isOnline = false;
 
     int aiRow = 0, aiCol = 0 ;
+    int lastRow, int lastCol;
 
     @Override
     protected Integer doInBackground(Integer... position){
         int row = position[0];
         int col = position[1];
+        lastCol= col;
+        lastRow = row;
         Integer winner=0;
         if(isOnline){
             if(OnlineClient.isFirst){
