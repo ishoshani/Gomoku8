@@ -11,12 +11,15 @@ public class Timer extends AppCompatActivity {
 
     CountDownTimer timer;
     TextView timerText;
-    int initial = 600000, timeUnit = 1000, sec, min;
     boolean running;
+    boolean minuteTimer;
     long timeLeft;
 
     // Display format for min:sec
     public static final String FORMAT = "%02d:%02d";
+    public static final int initialTime = 600000;
+    public static final int minuteTime = 60000;
+    public static final int timeUnit = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,20 +27,30 @@ public class Timer extends AppCompatActivity {
         setContentView(R.layout.activity_board_screen);
 
         timerText = (TextView) findViewById(R.id.timer);
-        timer = new MyCountDownTimer(initial, timeUnit, timerText);
+        timer = new MyCountDownTimer(initialTime, timeUnit, timerText);
     }
 
-    public void start() {
-        timer.start();
+    public void startTimer(int time) {
+        if (minuteTimer) {
+            timeLeft = minuteTime;
+            timerText.setText("01:00");
+            timer.start();
+        } else {
+            timeLeft = time;
+            timer.start();
+        }
     }
 
-    public void stop() {
+
+    public void stopTimer() {
+
         timer.cancel();
     }
 
     public void timerReset() {
         //
     }
+
 
     public class MyCountDownTimer extends CountDownTimer {
         long initial, unit;
@@ -61,15 +74,20 @@ public class Timer extends AppCompatActivity {
         }
 
         public void pauseTimer() {
+
+            this.cancel();
             running = false;
         }
 
         public void resumeTimer() {
+
+            this.start();
             running = true;
         }
 
         //required onFinish() method
         public void onFinish() {
+
             countDownText.setText("Game Over!");
         }
     }
