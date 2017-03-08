@@ -68,7 +68,7 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black20);
         }
         else {
-            lsize = 42;
+            lsize = 44;
             bGrid.setBackgroundResource(R.drawable.grid20);
             whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white14); //10?
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black14);
