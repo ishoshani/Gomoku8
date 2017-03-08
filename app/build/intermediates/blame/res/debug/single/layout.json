@@ -32,12 +32,12 @@
         "source": "/Users/mmcbee/.android/build-cache/9ea4e4330291418e3b02da493b091359df09906a/output/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
-        "source": "/Users/mmcbee/.android/build-cache/9ea4e4330291418e3b02da493b091359df09906a/output/res/layout/support_simple_spinner_dropdown_item.xml"
-    },
-    {
         "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
         "source": "/Users/mmcbee/.android/build-cache/4ab956576bcc11845850f9a26c049f61c69f4e0f/output/res/layout/design_layout_tab_text.xml"
+    },
+    {
+        "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/mmcbee/.android/build-cache/9ea4e4330291418e3b02da493b091359df09906a/output/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
         "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/layout/activity_end_game_dialog.xml",

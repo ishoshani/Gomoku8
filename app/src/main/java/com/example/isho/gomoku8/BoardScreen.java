@@ -44,13 +44,13 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         setContentView(R.layout.activity_board_screen);
         bGrid = new LinearLayout(getApplicationContext());
         bGrid = (LinearLayout) findViewById(R.id.boardGrid);
+        /*
         int screenWidth = getApplicationContext().getResources().getDisplayMetrics().widthPixels;
         int screenHeight = getApplicationContext().getResources().getDisplayMetrics().heightPixels;
         bGrid.measure(screenWidth, screenHeight);
         int layoutWidth = bGrid.getMeasuredWidth();
-
         bGrid.setLayoutParams(new LinearLayout.LayoutParams(layoutWidth, layoutWidth));
-
+        */
         if(size==10){
             lsize = 85; // do not change
             bGrid.setBackgroundResource(R.drawable.grid10);
@@ -93,12 +93,12 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
                         }
                         if(GomokuLogic.getTurn()>0) {
                             image = whitePieceImage;
-                            playerTurn.setText(R.string.Player1);
+                            playerTurn.setText(R.string.Player2);
                             playerTurnPiece.setImageResource(R.drawable.black);
                         }
                         else{
                             image = blackPieceImage;
-                            playerTurn.setText(R.string.Player2);
+                            playerTurn.setText(R.string.Player1);
                             playerTurnPiece.setImageResource(R.drawable.white);
                         }
                         bArray[fi][fj].setImageIcon(image);
