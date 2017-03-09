@@ -1,23 +1,19 @@
 package com.example.isho.gomoku8;
 
-import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Icon;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutCompat;
-import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class BoardScreen extends AppCompatActivity implements AsyncResponse {
     ImageButton[][] bArray;
@@ -48,6 +44,13 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         setContentView(R.layout.activity_board_screen);
         bGrid = new LinearLayout(getApplicationContext());
         bGrid = (LinearLayout) findViewById(R.id.boardGrid);
+        /*
+        int screenWidth = getApplicationContext().getResources().getDisplayMetrics().widthPixels;
+        int screenHeight = getApplicationContext().getResources().getDisplayMetrics().heightPixels;
+        bGrid.measure(screenWidth, screenHeight);
+        int layoutWidth = bGrid.getMeasuredWidth();
+        bGrid.setLayoutParams(new LinearLayout.LayoutParams(layoutWidth, layoutWidth));
+        */
         if(size==10){
             lsize = 85; // do not change
             bGrid.setBackgroundResource(R.drawable.grid10);
@@ -55,13 +58,13 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black);
         }
         else if(size==15){
-            lsize = 58; // do not change
+            lsize = 58;
             bGrid.setBackgroundResource(R.drawable.grid15);
             whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white20); //20
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black20);
         }
         else { //20x20
-            lsize = 44;
+            lsize = 44; //dpToPX(300/20)
             bGrid.setBackgroundResource(R.drawable.grid20);
             whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white14); //10?
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black14);
@@ -70,6 +73,8 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         // Create board and dynamically create buttons for each space
         GomokuLogic.clearBoard(size,isFreeStyle);
         boardView = (RelativeLayout) findViewById(R.id.boardView);
+        final TextView playerTurn = (TextView) findViewById(R.id.currentPlayerTurn);
+        final ImageView playerTurnPiece = (ImageView) findViewById(R.id.currentPlayerImage);
         bArray = new ImageButton[size][size];
         for (int i =0; i<size; i++){
             for(int j = 0; j<size; j++){
@@ -88,9 +93,13 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
                         }
                         if(GomokuLogic.getTurn()>0) {
                             image = whitePieceImage;
+                            playerTurn.setText(R.string.Player2);
+                            playerTurnPiece.setImageResource(R.drawable.black);
                         }
                         else{
                             image = blackPieceImage;
+                            playerTurn.setText(R.string.Player1);
+                            playerTurnPiece.setImageResource(R.drawable.white);
                         }
                         bArray[fi][fj].setImageIcon(image);
                         bArray[fi][fj].setEnabled(false);
