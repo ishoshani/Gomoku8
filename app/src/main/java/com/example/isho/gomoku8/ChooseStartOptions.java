@@ -66,8 +66,15 @@ public class ChooseStartOptions extends AppCompatActivity {
         RadioGroup RoundID = (RadioGroup)findViewById(R.id.RoundsRadio);
         int rounds = RoundID.getCheckedRadioButtonId();
         RadioButton radioRound = (RadioButton) findViewById(rounds);
-        this.numRounds = Integer.parseInt(radioRound.getText().toString());
-
+        if(radioRound.getText().equals("1")){
+            this.numRounds = 1;
+        }
+        if(radioRound.getText().equals("3")){
+            this.numRounds = 3;
+        }
+        if(radioRound.getText().equals("5")){
+            this.numRounds = 5;
+        }
         Intent intent = new Intent(this, BoardScreen.class);
         Bundle bundle = new Bundle();
         intent.putExtra("gameStyle",this.gameStyle);

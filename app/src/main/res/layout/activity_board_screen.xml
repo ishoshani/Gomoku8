@@ -56,5 +56,32 @@
 
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="500dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "@string/outOfnum"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColorLink="@android:color/black"
+            android:id="@+id/RoundCounter"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/WinRecorder"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textColorLink="@android:color/black"
+            android:text=":"/>
+
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

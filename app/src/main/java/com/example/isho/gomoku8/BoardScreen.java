@@ -20,10 +20,16 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
     RelativeLayout boardView;
     LinearLayout bGrid;
     int size, lsize, playerSize, numRounds;
+    int currentRound;
+    int whiteWins;
+    int blackWins;
     String style;
     boolean isFreeStyle;
     Icon whitePieceImage, blackPieceImage;
+    TextView RoundCounter;
+    TextView WinRecorder;
     GameDialogFragment frag;
+    RoundEndFragmentDialog fragR;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +39,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         Bundle bundle = getIntent().getExtras();
         size = bundle.getInt("boardSize");
         style = bundle.getString("gameStyle","freestyle");
-        numRounds = bundle.getInt("numRound");
+        numRounds = bundle.getInt("numRounds");
         playerSize = bundle.getInt("playerSize");
         if(style.equals("Standard")){
             isFreeStyle = false;
@@ -41,10 +47,23 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
             isFreeStyle = true;
         }
 
-        // Dynamic board/piece sizing
+
+
         setContentView(R.layout.activity_board_screen);
+
+
+        //MultiRound win recorder and counter
+        RoundCounter = (TextView)findViewById(R.id.RoundCounter);
+        WinRecorder = (TextView)findViewById(R.id.WinRecorder);
+        whiteWins=0;
+        blackWins=0;
+        currentRound =1;
+        updateRecorder();
         bGrid = new LinearLayout(getApplicationContext());
         bGrid = (LinearLayout) findViewById(R.id.boardGrid);
+
+        // Dynamic board/piece sizing
+
         /*
         int screenWidth = getApplicationContext().getResources().getDisplayMetrics().widthPixels;
         int screenHeight = getApplicationContext().getResources().getDisplayMetrics().heightPixels;
@@ -129,23 +148,57 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
 
     public void endGame(int winner) {
         String player;
-        if (winner == 1)
+        if (winner == 1){
+            whiteWins++;
             player = "Player 1";
-        else
+    }
+        else {
+            blackWins++;
             player = "Player 2";
-
-        showDialog(player);
+        }
+        if(blackWins>numRounds/2 || whiteWins>numRounds/2) {
+            showFinalDialog(player);
+        }
+        else{
+            showRoundDialog(player);
+        }
     }
 
     // call this method to show dialog
-    private void showDialog(String args) {
+    private void showFinalDialog(String args) {
         FragmentManager fm = getSupportFragmentManager();
-        frag = GameDialogFragment.newInstance("Winner: " + args);
+        if(numRounds==1) {
+            frag = GameDialogFragment.newInstance("Winner: " + args);
+        }else{
+            frag = GameDialogFragment.newInstance("Final Winner: " + args);
+        }
         frag.show(fm, "activity_end_game_dialog");
+    }
+    private void showRoundDialog(String args){
+        FragmentManager fm = getSupportFragmentManager();
+        fragR = RoundEndFragmentDialog.newInstance("Round Winner: " + args);
+        fragR.show(fm, "activity_end_game_dialog");
+    }
+    public void nextRound(){
+        GomokuLogic.clearBoard(size, isFreeStyle);
+        currentRound++;
+        updateRecorder();
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                bArray[i][j].setImageIcon(null);
+                bArray[i][j].setBackgroundColor(Color.TRANSPARENT);
+                bArray[i][j].setEnabled(true);
+            }
+        }
+        fragR.dismiss();
     }
 
     public void resetMatch() {
         GomokuLogic.clearBoard(size, isFreeStyle);
+        whiteWins =0;
+        blackWins =0;
+        currentRound =1;
+        updateRecorder();
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 bArray[i][j].setImageIcon(null);
@@ -181,6 +234,12 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
         return (int)((px/displayMetrics.density) + 0.5);
 
+    }
+    public void updateRecorder(){
+        String roundText = currentRound+" out of "+numRounds;
+        String winText ="White  "+ whiteWins+" : "+blackWins+"  Black";
+        RoundCounter.setText(roundText);
+        WinRecorder.setText(winText);
     }
 
 }
