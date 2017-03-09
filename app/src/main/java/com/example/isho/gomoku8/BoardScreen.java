@@ -23,7 +23,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
     ImageButton[][] bArray;
     RelativeLayout boardView;
     LinearLayout bGrid;
-    int size, lsize, playerSize;
+    int size, lsize, playerSize, numRounds;
     String style;
     boolean isFreeStyle;
     Icon whitePieceImage, blackPieceImage;
@@ -37,6 +37,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         Bundle bundle = getIntent().getExtras();
         size = bundle.getInt("boardSize");
         style = bundle.getString("gameStyle","freestyle");
+        numRounds = bundle.getInt("numRound");
         playerSize = bundle.getInt("playerSize");
         if(style.equals("Standard")){
             isFreeStyle = false;

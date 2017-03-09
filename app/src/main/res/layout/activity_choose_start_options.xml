@@ -151,6 +151,55 @@
 
             </RadioGroup>
         </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:text="@string/num_rounds"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:id="@+id/num_rounds"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@android:color/background_light" />
+
+            <RadioGroup
+                android:id="@+id/RoundsRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:text="@string/single"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio1round"
+                    android:checked="true"
+                    android:textColor="@android:color/background_light" />
+
+                <RadioButton
+                    android:text="@string/three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio2round"
+                    android:textColor="@android:color/background_light"
+                    android:checked="false" />
+                <RadioButton
+                    android:text="@string/five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio3round"
+                    android:textColor="@android:color/background_light"
+                    android:checked="false" />
+
+
+            </RadioGroup>
+        </LinearLayout>
 
 
         <Button

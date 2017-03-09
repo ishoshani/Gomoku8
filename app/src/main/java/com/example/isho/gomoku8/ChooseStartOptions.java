@@ -13,6 +13,7 @@ public class ChooseStartOptions extends AppCompatActivity {
     String gameStyle;
     int boardSize = 10;
     int playerSize = 2;
+    int numRounds = 1;
     Intent intent;
     String msg = "*******Log******* ";
 
@@ -62,12 +63,17 @@ public class ChooseStartOptions extends AppCompatActivity {
         }
         else
             this.playerSize = 1;
+        RadioGroup RoundID = (RadioGroup)findViewById(R.id.RoundsRadio);
+        int rounds = RoundID.getCheckedRadioButtonId();
+        RadioButton radioRound = (RadioButton) findViewById(rounds);
+        this.numRounds = Integer.parseInt(radioRound.getText().toString());
 
         Intent intent = new Intent(this, BoardScreen.class);
         Bundle bundle = new Bundle();
         intent.putExtra("gameStyle",this.gameStyle);
         bundle.putInt("boardSize",this.boardSize);
         bundle.putInt("playerSize",this.playerSize);
+        bundle.putInt("numRounds",this.numRounds);
         intent.putExtras(bundle);
         //        Log.d(msg, this.gameStyle + this.boardSize + this.playerSize);
         startActivity(intent);

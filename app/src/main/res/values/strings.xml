@@ -10,6 +10,11 @@
     <string name="mode_type">Game Mode</string>
     <string name="one">One</string>
     <string name="two">Two</string>
+    <string name="num_rounds">Rounds</string>
+
+    <string name="single">1</string>
+    <string name="three">3</string>
+    <string name="five">5</string>
     <string name="start_game_online">Play Online</string>
     <string name="size10">10x10</string>
     <string name="size15">15x15</string>
