@@ -80,7 +80,7 @@
             android:textColor="@android:color/black"
             android:textSize="30sp"
             android:textColorLink="@android:color/black"
-            android:text=":"/>
+            android:text="@string/initialRecord"/>
 
     </LinearLayout>
 

@@ -12,6 +12,7 @@
     <string name="two">Two</string>
     <string name="num_rounds">Rounds</string>
     <string name="next_round">Next Round</string>
+    <string name="initialRecord">White 0:0 Black</string>
 
     <string name="single">1</string>
     <string name="three">3</string>
