@@ -24,6 +24,8 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.concurrent.TimeUnit;
+
 public class BoardScreen extends AppCompatActivity implements AsyncResponse {
     ImageButton[][] bArray;
     RelativeLayout boardView;
@@ -35,40 +37,22 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
     GameDialogFragment frag;
     int playerSize;
 
-    //Timer p1timer;
-    //Timer p2timer;
-    //View timerView;
+    //Timer variables
     TextView p1timerView;
     TextView p2timerView;
-
-    TextView timertest;
-
     Chronometer p1timer;
     Chronometer p2timer;
     Chronometer gametime;
-    int playerTurn;
-    //boolean p2;
+    //int playerTurn;
     long initTime;
     long p1time;
     long p2time;
-    long elapsedTime1;
-    long elapsedTime2;
+    long elapsedTime;
     long minuteTime;
     boolean minuteTimer1;
     boolean minuteTimer2;
-
     String p1timerText;
     String p2timerText;
-    //String p1timerString;
-    //String p2timerString;
-    long p1timerValue;
-    long p2timerValue;
-    //Long.parseLong("<string>", 10) //base 10
-
-    //boolean p1set;
-    //boolean p2set;
-    //long deltap1time;
-    //long deltap2time;
 
 
     @Override
@@ -88,9 +72,6 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
             isFreeStyle = true;
         }
 
-        //p1timer.isCountDown();
-
-
         GomokuLogic.clearBoard(size,isFreeStyle);
         setContentView(R.layout.activity_board_screen);
         boardView = (RelativeLayout) findViewById(R.id.boardView);
@@ -103,42 +84,9 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         minuteTimer1 = false;
         minuteTimer2 = false;
 
-        //timertest = (TextView) findViewById(R.id.timetester);
+        p1timerView = (TextView) findViewById(R.id.timer1);
+        p2timerView = (TextView) findViewById(R.id.timer2);
 
-        //p1timer = new Timer(getApplicationContext());
-        //p1timer = (Timer) findViewById(R.id.timer1);
-        //p2timer = (Timer) findViewById(R.id.timer2);
-
-        //p1timer = (Chronometer) findViewById(R.id.timer1);
-        //p2timer = (Chronometer) findViewById(R.id.timer2);
-
-        //p1timer.setBase(initTime); //SystemClock.elapsedRealtime());
-        //p2timer.setBase(initTime);
-
-        //p1timer.setBase(p1time);
-        //p2timer.setBase(p2time);
-
-        //timerView = findViewById(R.id.timer1);
-        //p1timer.resume();
-        //p1timer.setCurrentTimeMillis(p1time);
-
-        //p1timer.setBase(SystemClock.uptimeMillis());
-        //p1timer.setText("10:00");
-        //p2set = p2timer.setBase(SystemClock.setCurrentTimeMillis(600000));
-        //p2timer.setText("10:00");
-        //p1timer.setBase(p1time);
-        //p2timer.setBase(p2time);
-
-        //p1timer.start(); // Chronometer timer
-
-        //DOES NOT WORK
-        //p1timer.setText("10:00");
-        //p2timer.setText("10:00");
-
-        //p1timer.setCountDown(true);
-
-        //p1timer.start();
-        //beginTimer();
         resetTimer();
 
         for (int i =0; i<size; i++){
@@ -156,102 +104,17 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
                         if(playerSize == 1) {
                             localHandler.isAI = true;
                         }
-                        //p1timer.resume();
                         if(GomokuLogic.getTurn()>0) {
                             image = whitePieceImage;
-                            //p1timer.stopTimer();
-                            //p2timer.startTimer(p2time);
 
-                            /*
-                            p1timer.stop();
-                            p1timerText = p1timer.getText().toString();
-                            p1timerValue = Long.parseLong(p1timerText, 10);
-
-                            p2timer.start();
-                            */
-
-                            //p1time = (p1timer.getBase()/1000) - p1time;
-
-                            //resetTime(p2timer);
-
-                            //SINGLE TIMER
-                            keepTime(1);
+                            updateTime(1);
                             resetTimer();
-
-
-                            //p2timer.setBase(p2time);
-                            //p2timer.start();
-
-                            /*
-                            deltap1time = p1timer.getBase() - p1time;// SystemClock.elapsedRealtime();
-                            p1time += deltap1time;
-                            //checkTime(p2time);
-                            //p2timer.setBase(SystemClock.elapsedRealtime());
-                            //p2timer.setBase(p2time - p1time);
-                            */
-
-
-                            /*
-                            p1timer.pause();
-                            //p1timer.setBase(SystemClock.elapsedRealtime());
-                            if (p2) {
-                                playerTurn = 2;
-                                //timerView = findViewById(R.id.timer2);
-                                p2timer.resume();
-                            }
-                            */
-
                         }
                         else{
                             image = blackPieceImage;
 
-                            /*
-                            p2timer.stop();
-                            p2timerText = p2timer.getText().toString();
-                            p2timerValue = Long.parseLong(p2timerText, 10);
-
-                            p1timer.start();
-                            */
-
-                            //p2timer.stopTimer();
-                            //p1timer.startTimer(p1time);
-
-
-                            //p2timer.stop();
-                            //p2time = (p2timer.getBase()/1000) - p2time;
-
-                            //resetTime(p1timer);
-
-                            // SINGLE TIMER
-                            keepTime(1);
+                            updateTime(-1);
                             resetTimer();
-
-
-                            //p1timer.setBase(p1time);
-                            //p1timer.start();
-
-
-                            /*
-                            deltap2time = p2timer.getBase() - p2time; //SystemClock.elapsedRealtime();
-                            p2time += deltap2time;
-                            //checkTime(p1time);
-                            //p1timer.setCurrentTimeMillis(p1time);
-                            //p1timer.setBase(p1time);
-                            //p1timer.setBase(p1time - p2time);
-
-                            resetTime(p1timer);
-                            //p1timer.setBase(p1time - SystemClock.uptimeMillis()); //SystemClock.elapsedRealtime());
-                            //p1timer.start();
-                            */
-                            /*
-                            if (p2) {
-                                p2timer.pause();
-                                //p2timer.setBase(SystemClock.elapsedRealtime());
-                            }
-                            playerTurn = 1;
-                            //timerView = findViewById(R.id.timer1);
-                            p1timer.resume();
-                            */
                         }
                         bArray[fi][fj].setImageIcon(image);
                         bArray[fi][fj].setEnabled(false);
@@ -274,15 +137,6 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
 
             }
         }
-        ///////if()
-        /*
-        if(p1timer.isActivated()) {
-            p1timer.stop();
-        }
-        if(p2timer.isActivated()) {
-            p2timer.stop();
-        }
-        */
     }
 
     public void resetTimer() {
@@ -290,160 +144,49 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         ((Chronometer) findViewById(R.id.timer)).start();
     }
 
-/*
-    public void resetTimer(int playerTurn) {
+    public void updateTime(int playerTurn) {
 
-        if(playerTurn > 0) {
-
-            elapsedTime1 = SystemClock.uptimeMillis() -
-                    ((Chronometer) findViewById(R.id.timer)).getBase();
-            p1time += elapsedTime1;
-
-            ((Chronometer) findViewById(R.id.timer)).setBase(p1time);
-            ((Chronometer) findViewById(R.id.timer)).start();
-
-            timertest.setText(String.valueOf(p1time));
-            Log.d("p1time", String.valueOf(p1time));
-
-        } else {
-
-            elapsedTime2 = SystemClock.uptimeMillis() -
-                    ((Chronometer) findViewById(R.id.timer)).getBase();
-            p2time += elapsedTime2;
-
-            ((Chronometer) findViewById(R.id.timer)).setBase(p2time);
-            ((Chronometer) findViewById(R.id.timer)).start();
-
-            timertest.setText(String.valueOf(p2time));
-            Log.d("p1time", String.valueOf(p2time));
-
-        }
-    }
-    */
-
-/*
-    public void resetTimer1() {
-        ((Chronometer) findViewById(R.id.timer1)).setBase(SystemClock.elapsedRealtime());
-        ((Chronometer) findViewById(R.id.timer1)).start();
-    }
-
-    public void resetTimer2() {
-        ((Chronometer) findViewById(R.id.timer2)).setBase(SystemClock.elapsedRealtime());
-        ((Chronometer) findViewById(R.id.timer2)).start();
-    }
-*/
-
-
-    public void keepTime(int playerTurn) {
         if (playerTurn > 0) {
-            p1time = ((Chronometer) findViewById(R.id.timer)).getBase();
-            p1time /= 1000;
-            p1time += p1timerValue;
+            elapsedTime = SystemClock.elapsedRealtime()
+                    - ((Chronometer) findViewById(R.id.timer)).getBase();
 
-            //p1timerView = (TextView) findViewById(R.id.timer1);
-            //p1timerView.setText("Player 1: " + Long.toString(p1time));
-
-            //p1timerText = p1timer.getText().toString();
-
-            //p1timerString.toString();
-            //p1timerValue = Long.parseLong(p1timerText, 10);
-
-            //p1time += p1timerValue;
-
-            //timertest.setText(String.valueOf(p1time));
-            //Log.d("p1time", String.valueOf(p1time));
-            //System.out.println(p1time);
-        } else {
-            p2time = ((Chronometer) findViewById(R.id.timer)).getBase();
-            p2time /= 1000;
-            p2time += p2timerValue;
-
-            //p2timerView = (TextView) findViewById(R.id.timer2);
-            //p2timerView.setText("Player 2: " + Long.toString(p2time));
-
-            //p2timerText = ((Chronometer) findViewById(R.id.timer2)).getText().toString();
-
-            //p2timerValue = Long.parseLong(p2timerText, 10);
-
-            //p2time += p1timerValue;
-
-            //System.out.println(p2time);
-            //timertest.setText(String.valueOf(p2time));
-            //Log.d("p2time", String.valueOf(p2time));
-        }
-    }
-
-    /*
-    p1timerText = p1timer.getText().toString();
-    p1timerValue = Long.parseLong(p1timerText, 10);
-
-    public void keepTime(int playerTurn) {
-        if(playerTurn > 0) {
-            elapsedTime = SystemClock.e    public void keepTime(int playerTurn) {
-        if(playerTurn > 0) {
-            elapsedTime = SystemClock.elapsedRealtime() -
-                    ((Chronometer) findViewById(R.id.timer)).getBase();
             p1time += elapsedTime;
+            p1timerText = formatTime(p1time);
 
-            timertest.setText(String.valueOf(p1time));
-            Log.d("p1time", String.valueOf(p1time));
-            //System.out.println(p1time);
+            p1timerView.setText("Player 1 : " + p1timerText);
+
         } else {
-            elapsedTime = SystemClock.elapsedRealtime() -
-                    ((Chronometer) findViewById(R.id.timer)).getBase();
+            elapsedTime = SystemClock.elapsedRealtime()
+                    - ((Chronometer) findViewById(R.id.timer)).getBase();
+
             p2time += elapsedTime;
+            p2timerText = formatTime(p2time);
 
-            //System.out.println(p2time);
-            timertest.setText(String.valueOf(p2time));
-            Log.d("p2time", String.valueOf(p2time));
-        }
-    }lapsedRealtime() -
-                    ((Chronometer) findViewById(R.id.timer)).getBase();
-            p1time += elapsedTime;
+            p2timerView.setText("Player 2 : " + p2timerText);
 
-            timertest.setText(String.valueOf(p1time));
-            Log.d("p1time", String.valueOf(p1time));
-            //System.out.println(p1time);
-        } else {
-            elapsedTime = SystemClock.elapsedRealtime() -
-                    ((Chronometer) findViewById(R.id.timer)).getBase();
-            p2time += elapsedTime;
-
-            //System.out.println(p2time);
-            timertest.setText(String.valueOf(p2time));
-            Log.d("p2time", String.valueOf(p2time));
         }
     }
-    */
 
-/*
-    public long checkTime(long playerTime) {
-        System.out.println("checkTime value: " + playerTime);
-        long timeSet;
-        int otherPlayer;
+    public void checkTimerLength() {
 
-        timeSet = 0;
-        otherPlayer = GomokuLogic.getTurn() * -1;
-        if (minuteTimer) {
-            if (playerTime == 0) {
-                // store win
-                // Player.addWin(otherPlayer)
-
-                // player loses game
-                endGame(otherPlayer);
-            }
-            timeSet = minuteTime;
-        }
-        //if (playerTime > 0) {
-        //    timeReset = playerTime;
-        //}
-        if (!minuteTimer) {
-            timeSet = playerTime;
-        }
-
-        return timeSet;
     }
-*/
+
+    public String formatTime(long elapsedTime) {
+        int hours;
+        int minutes;
+        int seconds;
+        String min;
+        String sec;
+        String formattedTime;
+
+        hours = (int) elapsedTime / 3600000;
+        minutes = (int) (elapsedTime - hours * 3600000) / 60000;
+        seconds = (int) (elapsedTime - hours * 3600000 - minutes * 60000) / 1000;
+        formattedTime = String.format("%02d", minutes) + ":" + String.format("%02d", seconds);
+
+        return formattedTime;
+
+    }
 
     public void endGame(int winner) {
         String player;
