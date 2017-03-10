@@ -299,13 +299,11 @@
     <string name="size10">10x10</string>
     <string name="size15">15x15</string>
     <string name="size20">20x20</string>
-    <string name="spacer">***</string>
     <string name="standard_mode">Standard</string>
     <string name="start_game">Start</string>
     <string name="start_game_online"/>
     <string name="start_screen_title">GOMOKU</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="time">10:00</string>
     <string name="timer">00:00</string>
     <string name="timer1">Player 1 : 00:00</string>
     <string name="timer2">Player 2 : 00:00</string>

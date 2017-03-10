@@ -4,12 +4,12 @@
         "source": "/home/b/.android/build-cache/23f986882bc731d3f918fbdb6647298c341ca791/output/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
-        "merged": "/home/b/Gomoku/Gomoku8/app/build/intermediates/res/merged/debug/drawable/wood.jpg",
-        "source": "/home/b/Gomoku/Gomoku8/app/src/main/res/drawable/wood.jpg"
-    },
-    {
         "merged": "/home/b/Gomoku/Gomoku8/app/build/intermediates/res/merged/debug/drawable/grid10.png",
         "source": "/home/b/Gomoku/Gomoku8/app/src/main/res/drawable/grid10.png"
+    },
+    {
+        "merged": "/home/b/Gomoku/Gomoku8/app/build/intermediates/res/merged/debug/drawable/wood.jpg",
+        "source": "/home/b/Gomoku/Gomoku8/app/src/main/res/drawable/wood.jpg"
     },
     {
         "merged": "/home/b/Gomoku/Gomoku8/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",

@@ -2472,19 +2472,17 @@ containing a value of this type.
         public static final int size10=0x7f060025;
         public static final int size15=0x7f060026;
         public static final int size20=0x7f060027;
-        public static final int spacer=0x7f060028;
-        public static final int standard_mode=0x7f060029;
-        public static final int start_game=0x7f06002a;
-        public static final int start_game_online=0x7f06002b;
-        public static final int start_screen_title=0x7f06002c;
+        public static final int standard_mode=0x7f060028;
+        public static final int start_game=0x7f060029;
+        public static final int start_game_online=0x7f06002a;
+        public static final int start_screen_title=0x7f06002b;
         public static final int status_bar_notification_info_overflow=0x7f060013;
-        public static final int time=0x7f06002d;
-        public static final int timer=0x7f06002e;
-        public static final int timer1=0x7f06002f;
-        public static final int timer2=0x7f060030;
-        public static final int timerText=0x7f060031;
-        public static final int title_activity_board_screen=0x7f060032;
-        public static final int two=0x7f060033;
+        public static final int timer=0x7f06002c;
+        public static final int timer1=0x7f06002d;
+        public static final int timer2=0x7f06002e;
+        public static final int timerText=0x7f06002f;
+        public static final int title_activity_board_screen=0x7f060030;
+        public static final int two=0x7f060031;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f09007f;
