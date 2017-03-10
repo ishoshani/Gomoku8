@@ -35,14 +35,7 @@
     <string name="end">Game Finished</string>
     <string name="timerText">Time: </string>
     <string name="timer">00:00</string>
-
     <string name="timer1">Player 1 : 00:00</string>
     <string name="timer2">Player 2 : 00:00</string>
-    <string name="time">10:00</string>
-    <string name="spacer">***</string>
 
-    <string name="timertest">test</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
