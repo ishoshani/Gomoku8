@@ -107,13 +107,13 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
                         if(GomokuLogic.getTurn()>0) {
                             image = whitePieceImage;
 
-                            updateTime(1);
+                            updateTimer();
                             resetTimer();
                         }
                         else{
                             image = blackPieceImage;
 
-                            updateTime(-1);
+                            updateTimer();
                             resetTimer();
                         }
                         bArray[fi][fj].setImageIcon(image);
@@ -150,25 +150,61 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
             elapsedTime = SystemClock.elapsedRealtime()
                     - ((Chronometer) findViewById(R.id.timer)).getBase();
 
+            checkTimesUp(elapsedTime, playerTurn);
+
             p1time += elapsedTime;
             p1timerText = formatTime(p1time);
-
             p1timerView.setText("Player 1 : " + p1timerText);
 
         } else {
             elapsedTime = SystemClock.elapsedRealtime()
                     - ((Chronometer) findViewById(R.id.timer)).getBase();
 
+            checkTimesUp(elapsedTime, playerTurn);
+
             p2time += elapsedTime;
             p2timerText = formatTime(p2time);
-
             p2timerView.setText("Player 2 : " + p2timerText);
 
         }
     }
 
-    public void checkTimerLength() {
+    public void updateTimer() {
+        int player = GomokuLogic.getTurn();
 
+        if (player > 0) {
+            checkMinuteTime(player, p1time);
+            if (!minuteTimer1) {
+                updateTime(1);
+            } else {
+                p1timerView.setText("Player 1 : --:--");
+            }
+        } else {
+            checkMinuteTime(player, p2time);
+            if (!minuteTimer2) {
+                updateTime(-1);
+            } else {
+                p2timerView.setText("Player 2 : --:--");
+            }
+        }
+    }
+
+    public void checkMinuteTime(int playerTurn, long ms) {
+        if (ms >= 6000) {
+            if (playerTurn > 0) {
+                minuteTimer1 = true;
+            } else {
+                minuteTimer2 = true;
+            }
+        }
+    }
+
+    public void checkTimesUp(long time, int playerTurn) {
+        if (minuteTimer1 || minuteTimer2) {
+            if (time > minuteTime) {
+                endGame(-1 * playerTurn);
+            }
+        }
     }
 
     public String formatTime(long elapsedTime) {
