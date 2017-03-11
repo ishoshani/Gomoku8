@@ -226,6 +226,11 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
             Log.i("time","someone is on minute timer");
             Log.i("time", "elapsedTime is "+time );
             if (time > minuteTime) {
+                try {
+                    OnlineClient.SendEnd(0, 0);
+                }catch(IOException e){
+                    handleProblem(2);
+                }
                 endGame(-1 * playerTurn);
             }
         }
