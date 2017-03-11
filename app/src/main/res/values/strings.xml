@@ -17,6 +17,7 @@
     <string name="standard_mode">Standard</string>
     <string name="freestyle_mode">Freestyle</string>
     <string name="how_to">How to Play</string>
+    <string name="Player2">Player 2</string>
     <string name="title_activity_board_screen">BoardScreen</string>
     <string name="game_rules">
         Gomoku is a two-player board game. Each player has a type
@@ -35,6 +36,6 @@
     <string name="end">Game Finished</string>
     <string name="title_activity_online_board">OnlineBoard</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="PlayerTurn">Player 1</string>
+    <string name="Player1">Player 1</string>
 </resources>
