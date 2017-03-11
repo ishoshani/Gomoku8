@@ -252,7 +252,6 @@
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="Player1">Player 1</string>
     <string name="Player2">Player 2</string>
-    <string name="PlayerTurn">Player 1</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_home_description_format">%1$s, %2$s</string>
     <string name="abc_action_bar_home_subtitle_description_format">%1$s, %2$s, %3$s</string>

@@ -44,27 +44,21 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         setContentView(R.layout.activity_board_screen);
         bGrid = new LinearLayout(getApplicationContext());
         bGrid = (LinearLayout) findViewById(R.id.boardGrid);
-        /*
-        int screenWidth = getApplicationContext().getResources().getDisplayMetrics().widthPixels;
-        int screenHeight = getApplicationContext().getResources().getDisplayMetrics().heightPixels;
-        bGrid.measure(screenWidth, screenHeight);
-        int layoutWidth = bGrid.getMeasuredWidth();
-        bGrid.setLayoutParams(new LinearLayout.LayoutParams(layoutWidth, layoutWidth));
-        */
+        int layoutWidth = 333;
         if(size==10){
-            lsize = 85; // do not change
+            lsize = (dpToPX(layoutWidth)/10)-2;
             bGrid.setBackgroundResource(R.drawable.grid10);
             whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white); //30
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black);
         }
         else if(size==15){
-            lsize = 58;
+            lsize = dpToPX(layoutWidth)/15;
             bGrid.setBackgroundResource(R.drawable.grid15);
             whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white20); //20
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black20);
         }
         else { //20x20
-            lsize = 44; //dpToPX(300/20)
+            lsize = dpToPX(layoutWidth)/20;
             bGrid.setBackgroundResource(R.drawable.grid20);
             whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white14); //10?
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black14);
@@ -173,13 +167,14 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
 
     // image sizing conversions
     public int dpToPX(int dp) {
-        DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
-        return (int)((dp * displayMetrics.density) + 0.5);
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        return (int)(dp * metrics.density);
     }
     public int pxToDP(int px) {
-        DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
-        return (int)((px/displayMetrics.density) + 0.5);
-
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        return (int)(px/metrics.density);
     }
 
 }
