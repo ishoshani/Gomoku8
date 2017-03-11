@@ -5,5 +5,6 @@ package com.example.isho.gomoku8;
  */
 
 public interface AsyncResponse {
-    void finishProcess(Integer output, int aiRow, int aiCol);
+    void finishProcess(Integer output, int aiRow, int aiCol, int row, int col);
+    void handleError();
 }

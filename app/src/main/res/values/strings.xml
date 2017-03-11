@@ -11,12 +11,14 @@
     <string name="mode_type">Game Mode</string>
     <string name="one">One</string>
     <string name="two">Two</string>
+    <string name="start_game_online">Play Online</string>
     <string name="size10">10x10</string>
     <string name="size15">15x15</string>
     <string name="size20">20x20</string>
     <string name="standard_mode">Standard</string>
     <string name="freestyle_mode">Freestyle</string>
     <string name="how_to">How to Play</string>
+    <string name="Player2">Player 2</string>
     <string name="title_activity_board_screen">BoardScreen</string>
     <string name="game_rules">
         Gomoku is a two-player board game. Each player has a type
@@ -38,4 +40,8 @@
     <string name="timer1">Player 1 : 00:00</string>
     <string name="timer2">Player 2 : 00:00</string>
 
+    <string name="title_activity_online_board">OnlineBoard</string>
+
+    <string name="PlayerTurn">Player 1</string>
+    <string name="Player1">Player 1</string>
 </resources>

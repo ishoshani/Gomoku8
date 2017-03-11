@@ -14,12 +14,7 @@ public class GomokuLogic{
     static int turnsTaken;
     static boolean freestyle;
     static int turn;//goes between 1 and -1 two decide between players
-
-    public GomokuLogic(int n) {
-        boardMatrix = new int[n][n];
-        size = n;
-        turn = -1;
-    }
+    final static Boolean Mutex=true;
 
 
 
@@ -55,11 +50,22 @@ public class GomokuLogic{
         boardMatrix[i][j] = turn;
     }
 
-    static public void placePiece(int i, int j) {
+    static public synchronized int placePiece(int i, int j) {
 
         boardMatrix[i][j] = turn;
-        turn *= -1;
         turnsTaken++;
+        int winner = isWin(i,j);
+        turn *= -1;
+        Log.i("Logic","TurnSwitched");
+        return winner;
+    }
+    static public synchronized int placePieceforPlayer(int i, int j, int turn) {
+
+        boardMatrix[i][j] = turn;
+        turnsTaken++;
+        int winner = isWin(i,j);
+        Log.i("Logic","TurnSwitched");
+        return winner;
     }
 
     /*

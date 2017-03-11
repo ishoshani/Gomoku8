@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/b/Gomoku/Gomoku8/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+        "outputFile": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,31 @@
                     "endOffset": 106
                 },
                 "from": {
-                    "file": "/home/b/.android/build-cache/23f986882bc731d3f918fbdb6647298c341ca791/output/res/values-port/values-port.xml",
+                    "file": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-port/values-port.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 229,
+                        "endColumn": 55,
+                        "endOffset": 280
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 55,
+                    "endOffset": 106
+                },
+                "from": {
+                    "file": "/Users/mmcbee/.android/build-cache/9ea4e4330291418e3b02da493b091359df09906a/output/res/values-port/values-port.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
