@@ -38,15 +38,11 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
     boolean isFreeStyle;
     Icon whitePieceImage, blackPieceImage;
     GameDialogFragment frag;
-    int playerSize;
 
     //Timer variables
     TextView p1timerView;
     TextView p2timerView;
-    Chronometer p1timer;
-    Chronometer p2timer;
-    Chronometer gametime;
-    //int playerTurn;
+     //int playerTurn;
     long initTime;
     long p1time;
     long p2time;
@@ -172,6 +168,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
     }
 
 
+
     public void resetTimer() {
         ((Chronometer) findViewById(R.id.timer)).setBase(SystemClock.elapsedRealtime());
         ((Chronometer) findViewById(R.id.timer)).start();
@@ -210,6 +207,9 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
             if (!minuteTimer1) {
                 updateTime(1);
             } else {
+                elapsedTime = SystemClock.elapsedRealtime()
+                        - ((Chronometer) findViewById(R.id.timer)).getBase();
+                checkTimesUp(elapsedTime, player);
                 p1timerView.setText("Player 1 : --:--");
             }
         } else {
@@ -217,6 +217,9 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
             if (!minuteTimer2) {
                 updateTime(-1);
             } else {
+                elapsedTime = SystemClock.elapsedRealtime()
+                        - ((Chronometer) findViewById(R.id.timer)).getBase();
+                checkTimesUp(elapsedTime, player);
                 p2timerView.setText("Player 2 : --:--");
             }
         }
@@ -234,6 +237,8 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
 
     public void checkTimesUp(long time, int playerTurn) {
         if (minuteTimer1 || minuteTimer2) {
+            Log.i("time","someone is on minute timer");
+            Log.i("time", "elapsedTime is "+time );
             if (time > minuteTime) {
                 endGame(-1 * playerTurn);
             }
@@ -263,7 +268,6 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
             player = "Player 1";
         else
             player = "Player 2";
-
         showDialog(player);
     }
 

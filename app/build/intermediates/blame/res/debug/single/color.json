@@ -1,7 +1,7 @@
 [
     {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
-        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_primary_text_material_dark.xml"
+        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/color/abc_primary_text_material_dark.xml"
     },
     {
         "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
@@ -13,15 +13,15 @@
     },
     {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
-        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/switch_thumb_material_light.xml"
+        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/color/switch_thumb_material_light.xml"
     },
     {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_primary_text_disable_only_material_dark.xml"
+        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
-        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_secondary_text_material_dark.xml"
+        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/color/abc_secondary_text_material_dark.xml"
     },
     {
         "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
@@ -33,11 +33,11 @@
     },
     {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
-        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_secondary_text_material_light.xml"
+        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/color/abc_secondary_text_material_light.xml"
     },
     {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
-        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/switch_thumb_material_dark.xml"
+        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/color/switch_thumb_material_dark.xml"
     },
     {
         "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
@@ -49,11 +49,11 @@
     },
     {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
-        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_primary_text_disable_only_material_light.xml"
+        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/color/abc_primary_text_disable_only_material_light.xml"
     },
     {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
-        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_primary_text_material_light.xml"
+        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/color/abc_primary_text_material_light.xml"
     },
     {
         "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
@@ -61,7 +61,7 @@
     },
     {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
-        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/color/abc_search_url_text.xml"
+        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/color/abc_search_url_text.xml"
     },
     {
         "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
