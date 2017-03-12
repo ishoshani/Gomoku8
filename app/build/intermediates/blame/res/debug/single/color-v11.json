@@ -1,18 +1,10 @@
 [
     {
-        "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
-        "source": "/Users/mmcbee/.android/build-cache/9ea4e4330291418e3b02da493b091359df09906a/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
         "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
     },
     {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
         "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
-        "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
-        "source": "/Users/mmcbee/.android/build-cache/9ea4e4330291418e3b02da493b091359df09906a/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
     }
 ]
