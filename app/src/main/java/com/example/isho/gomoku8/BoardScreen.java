@@ -86,9 +86,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         updateRecorder();
         bGrid = new LinearLayout(getApplicationContext());
         bGrid = (LinearLayout) findViewById(R.id.boardGrid);
-        RelativeLayout roundview = (RelativeLayout)findViewById(R.id.RoundView);
-        roundview.setVisibility(View.INVISIBLE);
-        int layoutWidth = 333;
+         int layoutWidth = 333;
 
         // Dynamic board/piece sizing
 

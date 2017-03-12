@@ -23,11 +23,12 @@ class GomokuHandler extends AsyncTask<Integer,Void,Integer> {
         lastCol= col;
         lastRow = row;
         Integer winner=0;
+        Log.i("online","isOnline "+isOnline);
         if(isOnline){
             if(OnlineClient.isFirst){
-                GomokuLogic.placePieceforPlayer(row,col,1);
+                winner=GomokuLogic.placePieceforPlayer(row,col,1);
             }else{
-                GomokuLogic.placePieceforPlayer(row,col,-1);
+                winner=GomokuLogic.placePieceforPlayer(row,col,-1);
             }
         }else {
             winner = GomokuLogic.placePiece(row, col);

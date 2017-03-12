@@ -57,16 +57,19 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
         // Import menu settings and game style
         super.onCreate(savedInstanceState);
         Bundle bundle = getIntent().getExtras();
-        size = bundle.getInt("boardSize");
-        style = bundle.getString("gameStyle","freestyle");
-        playerSize = bundle.getInt("playerSize");
+        size = 10;
+        style = "standard";
+        playerSize = 2;
         isFreeStyle = !style.equals("Standard");
 
         // Dynamic board/piece sizing
         setContentView(R.layout.activity_board_screen);
-        Snackbar.make(findViewById(android.R.id.content),"Looking For Game",Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(findViewById(android.R.id.content),"Looking For Game",Snackbar.LENGTH_INDEFINITE).show();
         bGrid = new LinearLayout(getApplicationContext());
         bGrid = (LinearLayout) findViewById(R.id.boardGrid);
+        RelativeLayout roundview = (RelativeLayout)findViewById(R.id.RoundView);
+        roundview.setVisibility(View.INVISIBLE);
+
 
         int layoutWidth = 333;
 
@@ -97,7 +100,6 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
 
         p1timerView = (TextView) findViewById(R.id.timer1);
         p2timerView = (TextView) findViewById(R.id.timer2);
-        resetTimer();
 
         // Create board and dynamically create buttons for each space
         GomokuLogic.clearBoard(size,isFreeStyle);
@@ -324,6 +326,7 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
     }
     public void showConnectionStart(){
         if(OnlineClient.isFirst) {
+            resetTimer();
             Snackbar.make(findViewById(android.R.id.content), "Found Game,Your Turn", Snackbar.LENGTH_LONG).show();
         }else{
             Snackbar.make(findViewById(android.R.id.content),"Found Game, Other Player's Turn",Snackbar.LENGTH_LONG).show();
