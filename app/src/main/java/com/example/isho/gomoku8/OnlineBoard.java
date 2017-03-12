@@ -60,31 +60,30 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
         size = bundle.getInt("boardSize");
         style = bundle.getString("gameStyle","freestyle");
         playerSize = bundle.getInt("playerSize");
-        if(style.equals("Standard")){
-            isFreeStyle = false;
-        }else{
-            isFreeStyle = true;
-        }
+        isFreeStyle = !style.equals("Standard");
 
         // Dynamic board/piece sizing
         setContentView(R.layout.activity_board_screen);
         Snackbar.make(findViewById(android.R.id.content),"Looking For Game",Snackbar.LENGTH_SHORT).show();
         bGrid = new LinearLayout(getApplicationContext());
         bGrid = (LinearLayout) findViewById(R.id.boardGrid);
+
+        int layoutWidth = 333;
+
         if(size==10){
-            lsize = 85; // do not change
+            lsize = (dpToPX(layoutWidth)/10)-2;
             bGrid.setBackgroundResource(R.drawable.grid10);
             whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white); //30
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black);
         }
         else if(size==15){
-            lsize = 58; // do not change
+            lsize = dpToPX(layoutWidth)/15;
             bGrid.setBackgroundResource(R.drawable.grid15);
             whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white20); //20
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black20);
         }
-        else {
-            lsize = 44;
+        else { //20x20
+            lsize = dpToPX(layoutWidth)/20;
             bGrid.setBackgroundResource(R.drawable.grid20);
             whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white14); //10?
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black14);

@@ -70,11 +70,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         style = bundle.getString("gameStyle","freestyle");
         numRounds = bundle.getInt("numRounds");
         playerSize = bundle.getInt("playerSize");
-        if(style.equals("Standard")){
-            isFreeStyle = false;
-        }else{
-            isFreeStyle = true;
-        }
+        isFreeStyle = !style.equals("Standard");
 
 
 
@@ -90,6 +86,8 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         updateRecorder();
         bGrid = new LinearLayout(getApplicationContext());
         bGrid = (LinearLayout) findViewById(R.id.boardGrid);
+        RelativeLayout roundview = (RelativeLayout)findViewById(R.id.RoundView);
+        roundview.setVisibility(View.INVISIBLE);
         int layoutWidth = 333;
 
         // Dynamic board/piece sizing
@@ -326,6 +324,11 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         GomokuLogic.clearBoard(size, isFreeStyle);
         currentRound++;
         updateRecorder();
+        resetTimer();
+        minuteTimer1 = false;
+        minuteTimer2 = false;
+        p1time = 0;
+        p2time = 0;
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 bArray[i][j].setImageIcon(null);
@@ -342,6 +345,11 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         blackWins =0;
         currentRound =1;
         updateRecorder();
+        resetTimer();
+        minuteTimer1 = false;
+        minuteTimer2 = false;
+        p1time = 0;
+        p2time = 0;
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 bArray[i][j].setImageIcon(null);
