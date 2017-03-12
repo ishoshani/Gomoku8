@@ -1,11 +1,115 @@
 [
     {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\.android\\build-cache\\d109ee44ec7b01ff01eebe02938e93e960d2cad1\\output\\res\\anim\\design_fab_in.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\.android\\build-cache\\f145e5e5aa5b0f02ab3f49b763217fed5e1a1a31\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\.android\\build-cache\\f145e5e5aa5b0f02ab3f49b763217fed5e1a1a31\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\.android\\build-cache\\f145e5e5aa5b0f02ab3f49b763217fed5e1a1a31\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
         "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/anim/abc_popup_exit.xml"
     },
     {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
         "source": "/Users/isho/.android/build-cache/fc9f08c40c24eff216aaaea7b99116570c77e0d6/output/res/anim/design_snackbar_out.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\.android\\build-cache\\f145e5e5aa5b0f02ab3f49b763217fed5e1a1a31\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\.android\\build-cache\\d109ee44ec7b01ff01eebe02938e93e960d2cad1\\output\\res\\anim\\design_fab_out.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\.android\\build-cache\\d109ee44ec7b01ff01eebe02938e93e960d2cad1\\output\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_enter.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_fab_out.xml"
     },
     {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
@@ -20,39 +124,103 @@
         "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/anim/abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
-        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/anim/abc_popup_enter.xml"
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\.android\\build-cache\\f145e5e5aa5b0f02ab3f49b763217fed5e1a1a31\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\.android\\build-cache\\d109ee44ec7b01ff01eebe02938e93e960d2cad1\\output\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_in.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\.android\\build-cache\\f145e5e5aa5b0f02ab3f49b763217fed5e1a1a31\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\.android\\build-cache\\f145e5e5aa5b0f02ab3f49b763217fed5e1a1a31\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_fab_in.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_fab_out.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_snackbar_in.xml"
     },
     {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
         "source": "/Users/isho/.android/build-cache/fc9f08c40c24eff216aaaea7b99116570c77e0d6/output/res/anim/design_fab_out.xml"
     },
     {
-        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
-        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_fade_out.xml"
     },
     {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
         "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/anim/abc_slide_in_top.xml"
     },
     {
-        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
-        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/anim/abc_slide_out_top.xml"
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\.android\\build-cache\\f145e5e5aa5b0f02ab3f49b763217fed5e1a1a31\\output\\res\\anim\\abc_slide_out_top.xml"
     },
     {
-        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
-        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/anim/abc_fade_in.xml"
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\.android\\build-cache\\f145e5e5aa5b0f02ab3f49b763217fed5e1a1a31\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\Jason\\.android\\build-cache\\f145e5e5aa5b0f02ab3f49b763217fed5e1a1a31\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/anim/abc_slide_out_top.xml"
     },
     {
         "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
         "source": "/Users/isho/.android/build-cache/fc9f08c40c24eff216aaaea7b99116570c77e0d6/output/res/anim/design_snackbar_in.xml"
     },
     {
-        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
-        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/anim/abc_slide_in_bottom.xml"
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_snackbar_in.xml"
     },
     {
-        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
-        "source": "/Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/res/anim/abc_slide_out_bottom.xml"
+        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "/Users/isho/AndroidStudioProjects/Gomoku8/C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\anim\\design_fab_in.xml"
     }
 ]

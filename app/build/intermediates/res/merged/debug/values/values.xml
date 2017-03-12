@@ -280,7 +280,6 @@
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="end">Game Finished</string>
     <string name="exit">Quit</string>
-    <string name="five">5</string>
     <string name="freestyle_mode">Freestyle</string>
     <string name="game_rules">
         Gomoku is a two-player board game. Each player has a type
@@ -293,19 +292,13 @@
         not count. In freestyle mode, a line of six or more adjacent
         stones is allowed.
     </string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="how_to">How to Play</string>
-    <string name="initialRecord">White 0:0 Black</string>
     <string name="menu">Menu</string>
     <string name="mode_type">Game Mode</string>
     <string name="new_game">New Game</string>
-    <string name="next_round">Next Round</string>
     <string name="num_players">Players</string>
-    <string name="num_rounds">Rounds</string>
     <string name="one">One</string>
-    <string name="outOfnum">out of</string>
     <string name="rematch">Rematch</string>
-    <string name="single">1</string>
     <string name="size10">10x10</string>
     <string name="size15">15x15</string>
     <string name="size20">20x20</string>
@@ -314,7 +307,10 @@
     <string name="start_game_online">Play Online</string>
     <string name="start_screen_title">GOMOKU</string>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <string name="three">3</string>
+    <string name="timer">00:00</string>
+    <string name="timer1">Player 1 : 00:00</string>
+    <string name="timer2">Player 2 : 00:00</string>
+    <string name="timerText">Time: </string>
     <string name="title_activity_board_screen">BoardScreen</string>
     <string name="title_activity_online_board">OnlineBoard</string>
     <string name="two">Two</string>

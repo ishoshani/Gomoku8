@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.example.isho.gomoku8.BoardScreen"
     android:background="@drawable/wood">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,18 +44,43 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/boardGrid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_gravity="center"
-        android:id="@+id/boardGrid">
+        android:gravity="center">
 
         <RelativeLayout
-            android:orientation="vertical"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:id="@+id/boardView"
+            android:layout_width="333dp"
+            android:layout_height="333dp"
             android:gravity="center"
-            android:id="@+id/boardView" />
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:gravity="left"
+            android:text="@string/timerText"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <Chronometer
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:gravity="right"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
 
 
     </LinearLayout>
@@ -83,5 +111,32 @@
             android:text="@string/initialRecord"/>
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/timer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="@string/timer1"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/timer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/timer2"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
