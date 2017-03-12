@@ -53,7 +53,7 @@ public class SinglePlayerAI{
         while (isDisabled(i, j) == true) {
             i = rn.nextInt(9);
             j = rn.nextInt(9);
-            Log.d("DEBUG regular move", "i " +i+" j "+j);
+//            Log.d("DEBUG regular move", "i " +i+" j "+j);
         }
         move[0] = i;
         move[1] = j;
@@ -276,7 +276,7 @@ public class SinglePlayerAI{
     // need to check two moves ahead
     // *** deprecated ***
     public boolean isWin(int row, int col) {
-        Log.d("isWin check", " Row " + row + " Col " + col);
+//        Log.d("isWin check", " Row " + row + " Col " + col);
         int original = GomokuLogic.boardMatrix[row][col];
         boolean ret = false;
         // check for edges
@@ -284,12 +284,12 @@ public class SinglePlayerAI{
         if (isDisabled(row, col) == false) {
             GomokuLogic.boardMatrix[row][col] = 1;
             GomokuLogic.turn = 1;
-            Log.d("DEBUG STATE", " isDisabled " + GomokuLogic.isWin(row, col));
+//            Log.d("DEBUG STATE", " isDisabled " + GomokuLogic.isWin(row, col));
             if (GomokuLogic.isWin(row, col) == 1) {
                 ret = true;
             }
         }
-        Log.d("iswin check", "isWin  is : " + ret);
+//        Log.d("iswin check", "isWin  is : " + ret);
         GomokuLogic.boardMatrix[row][col] = original; // reset the board position
         GomokuLogic.turn *=-1; // reset the turn
         return ret;
@@ -374,7 +374,7 @@ public class SinglePlayerAI{
         moves[1] = col;
         // right to left
         if (row+1 >= this.boardSize-1 ) {
-        Log.d("DEBUG diagonal check", "condition " + col);
+//        Log.d("DEBUG diagonal check", "condition " + col);
             int i = row;
             int j = col;
             while (GomokuLogic.boardMatrix[i][j] != 0) {
@@ -394,7 +394,6 @@ public class SinglePlayerAI{
             moves[1] = j;
         } else
             return null;
-        Log.d("DEBUG edge block", "move was " + moves[0] +" "+moves[1]);
         return moves;
     }
 
