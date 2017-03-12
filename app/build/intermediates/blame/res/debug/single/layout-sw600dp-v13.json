@@ -1,10 +1,14 @@
 [
     {
-        "merged": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
-        "source": "/Users/mmcbee/Documents/MEGHAN/PSU/Winter17/CS454/PROJECT/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout-sw600dp/design_layout_snackbar.xml"
+        "merged": "C:\\Users\\Jason\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "C:\\Users\\Jason\\.android\\build-cache\\d109ee44ec7b01ff01eebe02938e93e960d2cad1\\output\\res\\layout-sw600dp\\design_layout_snackbar.xml"
     },
     {
-        "merged": "/Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
-        "source": "/Users/isho/.android/build-cache/fc9f08c40c24eff216aaaea7b99116570c77e0d6/output/res/layout-sw600dp/design_layout_snackbar.xml"
+        "merged": "C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "C:\\Users\\isho\\AndroidStudioProjects\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\layout-sw600dp\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "C:\\Users\\mmcbee\\Documents\\MEGHAN\\PSU\\Winter17\\CS454\\PROJECT\\Gomoku8\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\layout-sw600dp\\design_layout_snackbar.xml"
     }
 ]
