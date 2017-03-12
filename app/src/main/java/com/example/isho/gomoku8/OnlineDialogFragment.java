@@ -48,7 +48,6 @@ public class OnlineDialogFragment extends DialogFragment {
         super.onViewCreated(view, savedInstanceState);
         Title = (TextView)view.findViewById(R.id.VictoryText);
         MenuButton = (Button)view.findViewById(R.id.MenuButton);
-        ExitButton = (Button)view.findViewById(R.id.QuitButton);
         Title.setText(winner);
 
         MenuButton.setOnClickListener(new View.OnClickListener() {
@@ -58,14 +57,7 @@ public class OnlineDialogFragment extends DialogFragment {
                 parent.finish();
             }
         });
-        ExitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                OnlineBoard parent = (OnlineBoard) getActivity();
-                parent.finish();
-                System.exit(0);
-            }
-        });
+
 
 
         // fetches title from Bundle and sets it

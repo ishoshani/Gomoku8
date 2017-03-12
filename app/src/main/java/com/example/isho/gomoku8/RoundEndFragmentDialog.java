@@ -21,7 +21,6 @@ import org.w3c.dom.Text;
 public class RoundEndFragmentDialog extends DialogFragment {
     Button NextRoundButton;
     Button MenuButton;
-    Button ExitButton;
     TextView Title;
     static String winner;
     public RoundEndFragmentDialog() {
@@ -50,7 +49,6 @@ public class RoundEndFragmentDialog extends DialogFragment {
         Title = (TextView)view.findViewById(R.id.VictoryText);
         NextRoundButton = (Button)view.findViewById(R.id.NextButton);
         MenuButton = (Button)view.findViewById(R.id.MenuButton);
-        ExitButton = (Button)view.findViewById(R.id.QuitButton);
         Title.setText(winner);
         NextRoundButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,13 +58,6 @@ public class RoundEndFragmentDialog extends DialogFragment {
             }
         });
         MenuButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                BoardScreen parent = (BoardScreen)getActivity();
-                parent.finish();
-            }
-        });
-        ExitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 BoardScreen parent = (BoardScreen)getActivity();

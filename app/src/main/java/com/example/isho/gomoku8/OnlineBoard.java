@@ -56,12 +56,10 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
         Snackbar.make(findViewById(android.R.id.content),"Looking For Game",Snackbar.LENGTH_INDEFINITE).show();
         bGrid = new LinearLayout(getApplicationContext());
         bGrid = (LinearLayout) findViewById(R.id.boardGrid);
-        int layoutWidth = 333;
+        int layoutWidth = 335;
         RelativeLayout roundview = (RelativeLayout)findViewById(R.id.RoundView);
         roundview.setVisibility(View.INVISIBLE);
 
-
-        int layoutWidth = 333;
 
         if(size==10){
             lsize = (dpToPX(layoutWidth)/10)-2;

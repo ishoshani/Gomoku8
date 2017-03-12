@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@android:color/darker_gray"
+
     android:layout_height="match_parent">
 
     <TextView
@@ -10,24 +12,39 @@
         android:layout_height="wrap_content"
         android:id="@+id/VictoryText"
         android:fontFamily="sans-serif"
+        android:textColor="@android:color/black"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:padding="5dp"
         android:textSize="24sp" />
 
     <Button
         android:text="@string/next_round"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/NextButton"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/background_dark"
+        android:padding="5dp"
+        android:textSize="18sp"
         />
 
     <Button
-        android:text="@string/menu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/MenuButton" />
+        style="@style/Widget.AppCompat.Button.Colored"
 
-    <Button
-        android:text="@string/exit"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/QuitButton" />
+        android:id="@+id/MenuButton"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/background_dark"
+        android:padding="5dp"
+        android:text="@string/menu"
+        android:textSize="18sp"/>
+
 </LinearLayout>
