@@ -19,9 +19,9 @@ ADDED from /Users/isho/AndroidStudioProjects/Gomoku8/app/src/main/AndroidManifes
 		ADDED from /Users/isho/AndroidStudioProjects/Gomoku8/app/src/main/AndroidManifest.xml:4:22-64
 application
 ADDED from /Users/isho/AndroidStudioProjects/Gomoku8/app/src/main/AndroidManifest.xml:6:5-32:19
-MERGED from [com.android.support:design:23.1.1] /Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.1.1] /Users/isho/.android/build-cache/fc9f08c40c24eff216aaaea7b99116570c77e0d6/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/isho/.android/build-cache/9459552febf5df6172a3b64d923f8ed5e03263b0/output/AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from /Users/isho/AndroidStudioProjects/Gomoku8/app/src/main/AndroidManifest.xml:9:9-41
 	android:supportsRtl
@@ -76,10 +76,10 @@ ADDED from /Users/isho/AndroidStudioProjects/Gomoku8/app/src/main/AndroidManifes
 		ADDED from /Users/isho/AndroidStudioProjects/Gomoku8/app/src/main/AndroidManifest.xml:29:13-40
 uses-sdk
 INJECTED from /Users/isho/AndroidStudioProjects/Gomoku8/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:design:23.1.1] /Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/isho/AndroidStudioProjects/Gomoku8/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.1.1] /Users/isho/.android/build-cache/fc9f08c40c24eff216aaaea7b99116570c77e0d6/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/isho/.android/build-cache/8a4497fca5dc6446f6a8acbad4f373883ae365d2/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/isho/.android/build-cache/7a293ce0c3b031942d21f5014a1e64e520bbb648/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/isho/.android/build-cache/9459552febf5df6172a3b64d923f8ed5e03263b0/output/AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		INJECTED from /Users/isho/AndroidStudioProjects/Gomoku8/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/isho/AndroidStudioProjects/Gomoku8/app/src/main/AndroidManifest.xml
