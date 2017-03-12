@@ -1,33 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical">
 
     <TextView
-        android:text="@string/end"
+        android:id="@+id/VictoryText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/VictoryText"
         android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/end"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
         android:textSize="24sp" />
 
     <Button
-        android:text="@string/rematch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/rematchButton"
-        android:onClick="resetMatch"/>
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/background_dark"
+        android:onClick="resetMatch"
+        android:padding="5dp"
+        android:text="@string/rematch"
+        android:textSize="18sp" />
 
     <Button
+        android:id="@+id/MenuButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/background_dark"
+        android:padding="5dp"
         android:text="@string/menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/MenuButton" />
+        android:textSize="18sp" />
 
-    <Button
-        android:text="@string/exit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/QuitButton" />
 </LinearLayout>

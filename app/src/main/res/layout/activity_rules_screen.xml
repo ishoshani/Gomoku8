@@ -16,18 +16,18 @@
         android:paddingRight="25dp">
 
         <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="@string/game_rules"
             android:id="@+id/textView"
-            android:textSize="20sp"
-            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:textColor="@android:color/background_light"
             android:gravity="center_horizontal"
+            android:paddingStart="15dp"
+            android:paddingEnd="20dp"
+            android:text="@string/game_rules"
             android:textAlignment="center"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
     </FrameLayout>
 
 </android.support.design.widget.CoordinatorLayout>
