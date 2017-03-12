@@ -1,23 +1,19 @@
 package com.example.isho.gomoku8;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Icon;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutCompat;
-import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -30,22 +26,16 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
     LinearLayout bGrid;
     int size, lsize;
     String style;
-    boolean isFreeStyle;
+    boolean isFreeStyle = true;
     Icon whitePieceImage, blackPieceImage;
     OnlineDialogFragment frag;
     int playerSize;
-    long initTime;
-    long p1time;
-    long p2time;
-    long elapsedTime;
-    long minuteTime;
-    boolean minuteTimer1;
-    boolean minuteTimer2;
-    String p1timerText;
-    String p2timerText;
+
     //Timer variables
-    TextView p1timerView;
-    TextView p2timerView;
+    long initTime, p1time, p2time, elapsedTime, minuteTime;
+    boolean minuteTimer1, minuteTimer2;
+    String p1timerText, p2timerText;
+    TextView p1timerView, p2timerView;
 
 
     @Override
@@ -62,8 +52,6 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
         playerSize = bundle.getInt("playerSize");
         if(style.equals("Standard")){
             isFreeStyle = false;
-        }else{
-            isFreeStyle = true;
         }
 
         // Dynamic board/piece sizing
@@ -71,20 +59,21 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
         Snackbar.make(findViewById(android.R.id.content),"Looking For Game",Snackbar.LENGTH_SHORT).show();
         bGrid = new LinearLayout(getApplicationContext());
         bGrid = (LinearLayout) findViewById(R.id.boardGrid);
+        int layoutWidth = 333;
         if(size==10){
-            lsize = 85; // do not change
+            lsize = (dpToPX(layoutWidth)/10)-2;
             bGrid.setBackgroundResource(R.drawable.grid10);
             whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white); //30
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black);
         }
         else if(size==15){
-            lsize = 58; // do not change
+            lsize = (dpToPX(layoutWidth)/15);
             bGrid.setBackgroundResource(R.drawable.grid15);
             whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white20); //20
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black20);
         }
         else {
-            lsize = 44;
+            lsize = (dpToPX(layoutWidth)/20);
             bGrid.setBackgroundResource(R.drawable.grid20);
             whitePieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.white14); //10?
             blackPieceImage = Icon.createWithResource(getApplicationContext(),R.drawable.black14);
@@ -103,6 +92,8 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
         // Create board and dynamically create buttons for each space
         GomokuLogic.clearBoard(size,isFreeStyle);
         boardView = (RelativeLayout) findViewById(R.id.boardView);
+        final TextView playerTurn = (TextView) findViewById(R.id.currentPlayerTurn);
+        final ImageView playerTurnPiece = (ImageView) findViewById(R.id.currentPlayerImage);
         bArray = new ImageButton[size][size];
         for (int i =0; i<size; i++){
             for(int j = 0; j<size; j++){
@@ -120,8 +111,12 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
                             localHandler.isOnline = true;
                             if (OnlineClient.isFirst) {
                                 image = whitePieceImage;
+                                playerTurn.setText(R.string.Player2);
+                                playerTurnPiece.setImageResource(R.drawable.black);
                             } else {
                                 image = blackPieceImage;
+                                playerTurn.setText(R.string.Player1);
+                                playerTurnPiece.setImageResource(R.drawable.white);
                             }
                             updateTimer();
                             resetTimer();
@@ -129,7 +124,6 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
                             bArray[fi][fj].setEnabled(false);
                             localHandler.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, fi, fj);
                             Snackbar.make(findViewById(android.R.id.content),"Waiting For Opponents Turn",Snackbar.LENGTH_LONG).show();
-
                         }
 
 
@@ -237,24 +231,17 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
     }
 
     public String formatTime(long elapsedTime) {
-        int hours;
-        int minutes;
-        int seconds;
-        String min;
-        String sec;
+        int hours, minutes, seconds;
         String formattedTime;
 
         hours = (int) elapsedTime / 3600000;
         minutes = (int) (elapsedTime - hours * 3600000) / 60000;
         seconds = (int) (elapsedTime - hours * 3600000 - minutes * 60000) / 1000;
         formattedTime = String.format("%02d", minutes) + ":" + String.format("%02d", seconds);
-
         return formattedTime;
-
     }
-
-
     //End Timey Stuff
+
 
     public void endGame(int winner) {
         String player;
@@ -352,7 +339,6 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
     public int pxToDP(int px) {
         DisplayMetrics displayMetrics = getApplicationContext().getResources().getDisplayMetrics();
         return (int)((px/displayMetrics.density) + 0.5);
-
     }
 
 }

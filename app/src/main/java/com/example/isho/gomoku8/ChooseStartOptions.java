@@ -13,7 +13,6 @@ public class ChooseStartOptions extends AppCompatActivity {
     String gameStyle;
     int boardSize = 10;
     int playerSize = 2;
-    Intent intent;
     String msg = "*******Log******* ";
 
     @Override
