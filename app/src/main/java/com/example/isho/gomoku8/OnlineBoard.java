@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.os.StrictMode;
 import java.io.IOException;
 
 public class OnlineBoard extends AppCompatActivity implements AsyncResponse,OnlineMoveProcessor {
@@ -34,10 +35,17 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
     boolean minuteTimer1, minuteTimer2;
     String p1timerText, p2timerText;
     TextView p1timerView, p2timerView;
+    TextView playerTurn;
+    ImageView playerTurnPiece;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
+
         TCPtask connect = new TCPtask();
         connect.delegate = this;
         connect.execute();
@@ -92,8 +100,8 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
         // Create board and dynamically create buttons for each space
         GomokuLogic.clearBoard(size,isFreeStyle);
         boardView = (RelativeLayout) findViewById(R.id.boardView);
-        final TextView playerTurn = (TextView) findViewById(R.id.currentPlayerTurn);
-        final ImageView playerTurnPiece = (ImageView) findViewById(R.id.currentPlayerImage);
+        playerTurn = (TextView) findViewById(R.id.currentPlayerTurn);
+        playerTurnPiece = (ImageView) findViewById(R.id.currentPlayerImage);
         bArray = new ImageButton[size][size];
         for (int i =0; i<size; i++){
             for(int j = 0; j<size; j++){
@@ -109,15 +117,12 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
                             GomokuHandler localHandler = new GomokuHandler();
                             localHandler.delegate = OnlineBoard.this;
                             localHandler.isOnline = true;
-                            if (OnlineClient.isFirst) {
+                            if(OnlineClient.isFirst){
                                 image = whitePieceImage;
-                                playerTurn.setText(R.string.Player2);
-                                playerTurnPiece.setImageResource(R.drawable.black);
-                            } else {
+                            }else{
                                 image = blackPieceImage;
-                                playerTurn.setText(R.string.Player1);
-                                playerTurnPiece.setImageResource(R.drawable.white);
                             }
+
                             updateTimer();
                             resetTimer();
                             bArray[fi][fj].setImageIcon(image);
@@ -311,6 +316,13 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
 
     }
     public void showConnectionStart(){
+        if (OnlineClient.isFirst) {
+            playerTurn.setText(R.string.Player1);
+            playerTurnPiece.setImageResource(R.drawable.white);
+        } else {
+            playerTurn.setText(R.string.Player2);
+            playerTurnPiece.setImageResource(R.drawable.black);
+        }
         if(OnlineClient.isFirst) {
             resetTimer();
             Snackbar.make(findViewById(android.R.id.content), "Found Game,Your Turn", Snackbar.LENGTH_LONG).show();

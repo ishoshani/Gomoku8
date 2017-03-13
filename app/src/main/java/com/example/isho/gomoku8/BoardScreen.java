@@ -2,6 +2,7 @@ package com.example.isho.gomoku8;
 
 import android.graphics.Color;
 import android.graphics.drawable.Icon;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.app.Fragment;
@@ -45,6 +46,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
 
         // Import menu settings and game style
         super.onCreate(savedInstanceState);
@@ -146,7 +148,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
                         }
                         bArray[fi][fj].setImageIcon(image);
                         bArray[fi][fj].setEnabled(false);
-                        localHandler.execute(fi,fj);
+                        localHandler.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR,fi,fj);
                     }
                 });
 

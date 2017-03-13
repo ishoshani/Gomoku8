@@ -32,12 +32,14 @@ public class SinglePlayerAI{
         if (move == null)
             move = regularMove();
         lastAImove = move;
-
         return move;
     }
 
     // put a piece next to the adjacent player slot
     private int[] offense(){
+        int row = lastAImove[0];
+        int col = lastAImove[1];
+
         return null;
     }
 
@@ -72,8 +74,8 @@ public class SinglePlayerAI{
         move[1] = col;
 //        Log.d("DEBUG EDGE CHECK", "isEdge was " + isEdge(row, col));
         if (checkCol(row, col)){
-            if (isEdge(row, col) != null){
-                move = isEdge(row, col);
+            if (isColEdge(row, col) != null){
+                move = isColEdge(row, col);
             }
             else if (GomokuLogic.boardMatrix[row][col+1] == 0) {
                 move[1] = col + 1;
@@ -90,8 +92,8 @@ public class SinglePlayerAI{
                 move[1] = col - 1;
         }
         else if (checkRow(row, col)) {
-            if (isEdge(row, col) != null){
-                move = isEdge(row, col);
+            if (isRowEdge(row, col) != null){
+                move = isRowEdge(row, col);
             }
             else if (GomokuLogic.boardMatrix[row+1][col] == 0) {
                 move[0] = row + 1;
@@ -303,7 +305,33 @@ public class SinglePlayerAI{
     }
 
     // check for out of bound
-    private int[] isEdge(int row, int col) {
+    private int[] isColEdge(int row, int col) {
+
+        int[] moves = new int[2];
+        moves[0] = row;
+        moves[1] = col;
+
+        if (col-1 <= 0) {
+            int j = 0;
+            while (GomokuLogic.boardMatrix[row][j] != 0) {
+                j++;
+            }
+            moves[1] = j;
+        }
+        else if (col+1 >= this.boardSize-1) {
+            int j = this.boardSize - 1;
+            while (GomokuLogic.boardMatrix[row][j] != 0) {
+                j--;
+            }
+            moves[1] = j;
+        }
+        else
+            return null;
+
+        return moves;
+    }
+
+    private int[] isRowEdge(int row, int col) {
         int[] moves = new int[2];
         moves[0] = row;
         moves[1] = col;
@@ -321,20 +349,6 @@ public class SinglePlayerAI{
                 i--;
             }
             moves[0] = i;
-        }
-        else if (col-1 <= 0) {
-            int j = 0;
-            while (GomokuLogic.boardMatrix[row][j] != 0) {
-                j++;
-            }
-            moves[1] = j;
-        }
-        else if (col+1 >= this.boardSize-1) {
-            int j = this.boardSize-1;
-            while (GomokuLogic.boardMatrix[row][j] != 0) {
-                j--;
-            }
-            moves[1] = j;
         }
         else
             return null;
