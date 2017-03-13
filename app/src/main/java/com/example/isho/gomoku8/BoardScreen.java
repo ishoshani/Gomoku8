@@ -273,7 +273,7 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
             whiteWins++;
             player = "Player 1";
     }
-        if(winner ==-1) {
+        else if(winner ==-1) {
             blackWins++;
             player = "Player 2";
         }else{
