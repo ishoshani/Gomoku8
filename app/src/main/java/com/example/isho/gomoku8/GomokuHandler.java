@@ -39,9 +39,9 @@ class GomokuHandler extends AsyncTask<Integer,Void,Integer> {
             AI.setPlayerMove(row, col);
             Log.d("GomokuHandler Debug", "Player move was " + row + " " + col);
             int[] aiMoves = AI.aiMove();
+            Log.d("GomokuHandler Debug", "genereated AI move was " + aiMoves[0] + " " + aiMoves[1]);
             aiRow = aiMoves[0];
             aiCol = aiMoves[1];
-            Log.d("GomokuHandler Debug", "genereated AI move was " + aiRow + " " + aiCol);
             winner = GomokuLogic.placePiece(aiRow, aiCol);
         }
         return winner;
