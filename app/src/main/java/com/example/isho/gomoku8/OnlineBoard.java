@@ -17,7 +17,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import java.io.IOException;
 
 public class OnlineBoard extends AppCompatActivity implements AsyncResponse,OnlineMoveProcessor {
