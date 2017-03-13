@@ -74,15 +74,6 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         bGrid = (LinearLayout) findViewById(R.id.boardGrid);
         int layoutWidth = 335;
 
-        // Dynamic board/piece sizing
-
-        /*
-        int screenWidth = getApplicationContext().getResources().getDisplayMetrics().widthPixels;
-        int screenHeight = getApplicationContext().getResources().getDisplayMetrics().heightPixels;
-        bGrid.measure(screenWidth, screenHeight);
-        int layoutWidth = bGrid.getMeasuredWidth();
-        bGrid.setLayoutParams(new LinearLayout.LayoutParams(layoutWidth, layoutWidth));
-        */
         if(size==10){
             lsize = (dpToPX(layoutWidth)/10)-6;
             bGrid.setBackgroundResource(R.drawable.grid10);
@@ -346,6 +337,8 @@ public class BoardScreen extends AppCompatActivity implements AsyncResponse {
         if(playerSize == 1) {
             bArray[aiRow][aiCol].setEnabled(false);
             bArray[aiRow][aiCol].setImageIcon(blackPieceImage);
+            playerTurn.setText(R.string.Player1);
+            playerTurnPiece.setImageResource(R.drawable.white);
         }
         if(output!=0){
             endGame(output);
