@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.os.StrictMode;
 import java.io.IOException;
 
 public class OnlineBoard extends AppCompatActivity implements AsyncResponse,OnlineMoveProcessor {
@@ -38,6 +39,11 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (android.os.Build.VERSION.SDK_INT > 9) {
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+        }
+
         TCPtask connect = new TCPtask();
         connect.delegate = this;
         connect.execute();
