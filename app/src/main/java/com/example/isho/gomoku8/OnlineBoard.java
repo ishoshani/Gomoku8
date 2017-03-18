@@ -119,11 +119,12 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
                             localHandler.isOnline = true;
                             if(OnlineClient.isFirst){
                                 image = whitePieceImage;
+                                updateTimer(1);
                             }else{
                                 image = blackPieceImage;
+                                updateTimer(-1);
                             }
 
-                            updateTimer();
                             resetTimer();
                             bArray[fi][fj].setImageIcon(image);
                             bArray[fi][fj].setEnabled(false);
@@ -184,8 +185,7 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
         }
     }
 
-    public void updateTimer() {
-        int player = GomokuLogic.getTurn();
+    public void updateTimer(int player) {
 
         if (player > 0) {
             checkMinuteTime(player, p1time);
@@ -306,9 +306,13 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
 
         if (!OnlineClient.isFirst) {
             bArray[row][col].setImageIcon(whitePieceImage);
+            updateTimer(1);
+
         } else {
             bArray[row][col].setImageIcon(blackPieceImage);
+            updateTimer(-1);
         }
+        resetTimer();
         if (winner != 0) {
             endGame(winner);
         }
@@ -323,8 +327,8 @@ public class OnlineBoard extends AppCompatActivity implements AsyncResponse,Onli
             playerTurn.setText(R.string.Player2);
             playerTurnPiece.setImageResource(R.drawable.black);
         }
+        resetTimer();
         if(OnlineClient.isFirst) {
-            resetTimer();
             Snackbar.make(findViewById(android.R.id.content), "Found Game,Your Turn", Snackbar.LENGTH_LONG).show();
         }else{
             Snackbar.make(findViewById(android.R.id.content),"Found Game, Other Player's Turn",Snackbar.LENGTH_LONG).show();
